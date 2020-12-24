@@ -1,6 +1,12 @@
---- --- {% include head.html %} {% include head/custom.html %} {% include_cached skip-links.html %} {% include_cached browser-upgrade.html %} {% include_cached masthead.html %}
+--- layout: default --- {% if page.header.overlay_color or page.header.overlay_image or page.header.image %} {% include page__hero.html %} {% elsif page.header.video.id and page.header.video.provider %} {% include page__hero_video.html %} {% endif %} {% if page.url != "/" and site.breadcrumbs %} {% unless paginator %} {% include breadcrumbs.html %} {% endunless %} {% endif %}
 
-{{
+{% include sidebar.html %}
+
+{% unless page.header.overlay_color or page.header.overlay_image %}
+
+# {{ page.title }
+
+
 
 ### 학력
 
@@ -48,15 +54,8 @@
 - TOEIC 815점 (2018.01.28)
 - OPIC IM1 (2019.03.09)
 
- }}
 
-{% if site.search == true %}
 
-{% include_cached search/search_form.html %}
+# }
 
-{% endif %}
-
-{% include footer/custom.html %} {% include_cached footer.html %}
-
-{% include scripts.html %}
-
+{% endunless %} {{ content }}
