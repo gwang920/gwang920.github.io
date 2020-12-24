@@ -1,9 +1,3 @@
----
-layout: page
-title: About
-permalink: /about/
----
-
 ### 학력사항
 
 - 2008.03.01 - 2011.02.28  배재고등학교 (졸업)
