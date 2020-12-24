@@ -29,6 +29,8 @@ exclude:
 
 # Jekyll SEO Tag (Optional)
 # =========================
+baseurl: ""
+url: "https://gwang920.github.io/"
 twitter:
   username: ngzhio
   card: summary
