@@ -1,13 +1,12 @@
 # Site Author
-author: 
-  name: 광근 서
-  avatar: /logo.png
-  bio: "어제의 나보다 조금 더"
-  location: "South Korea"
-  email: gwang92@naver.com
-  title: "개발자 지망생"
-  subtitle: "어제"
-  description: "어제의 나보다"
+author: 광근 서
+title: "개발자 지망생"
+subtitle: "어제"
+avatar: /logo.png
+description: "어제의 나보다"
+bio: "어제의 나보다 조금 더"
+location: "South Korea"
+email: gwang92@naver.com
 
 plugins:
   - jekyll-seo-tag
