@@ -1,10 +1,8 @@
 ---
 layout: archive-years
-title: project
+title: Project
 permalink: /project/
 ---
-
-# 프로젝트
 
 # 1. Spring Framework 기반의 메뉴추천시스템
 
@@ -71,3 +69,9 @@ permalink: /project/
 ### 리뷰 및 댓글 표현 기능
 
 [![image](https://user-images.githubusercontent.com/49560745/101631953-865a3280-3a68-11eb-9814-5251fb7777da.png)](https://user-images.githubusercontent.com/49560745/101631953-865a3280-3a68-11eb-9814-5251fb7777da.png)
+
+
+
+### 소스코드
+
+https://github.com/gwang920/MenuRecommandationSystemProject
