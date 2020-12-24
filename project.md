@@ -1,7 +1,7 @@
 ---
 layout: archive-years
-title: Years
-permalink: /years/
+title: project
+permalink: /project/
 ---
 
 # 프로젝트
