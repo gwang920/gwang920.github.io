@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "광근 서"
-  avatar           : "/logo"
+  avatar           : "/logo.png"
   bio              : "**늦깍이** 개발자 지망생!"
   location         : "South Korea"
   email            :
