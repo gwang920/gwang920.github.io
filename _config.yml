@@ -1,12 +1,17 @@
 # Site Author
-author: 광근 서
-title: "개발자 지망생"
-subtitle: "어제"
-avatar: /logo.png
-description: "어제의 나보다"
-bio: "어제의 나보다 조금 더"
-location: "South Korea"
-email: gwang92@naver.com
+author:
+  name             : "취미코딩하는 개발자"
+  avatar           : "/assets/images/bio-photo-keyboard.jpg"
+  bio              : "회사에서는 월급 받고 집에서는 취미로 코딩하는 개발자"
+  location         : "South Korea"
+  email            :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:devinlifeidea@gmail.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://devinlife.com"
 
 plugins:
   - jekyll-seo-tag
