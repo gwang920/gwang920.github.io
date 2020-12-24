@@ -1,4 +1,10 @@
-### 학력사항
+--- layout: default --- {% if page.header.overlay_color or page.header.overlay_image or page.header.image %} {% include page__hero.html %} {% elsif page.header.video.id and page.header.video.provider %} {% include page__hero_video.html %} {% endif %} {% if page.url != "/" and site.breadcrumbs %} {% unless paginator %} {% include breadcrumbs.html %} {% endunless %} {% endif %}
+
+{% include sidebar.html %}
+
+{% unless page.header.overlay_color or page.header.overlay_image %}
+
+# {{ 학력사항
 
 - 2008.03.01 - 2011.02.28  배재고등학교 (졸업)
 - 2012.03.01 - 2018.08.31  강원대학교 춘천캠퍼스 - 전기전자공학과 3.26/4.5 (졸업)
@@ -43,4 +49,10 @@
 - 컴퓨터활용능력 1급 (2016.10.14)
 - TOEIC 815점 (2018.01.28)
 - OPIC IM1 (2019.03.09)
+
+#  }}
+
+{% endunless %} {{ content }}
+
+
 
