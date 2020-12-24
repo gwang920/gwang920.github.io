@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Your Name"
-  avatar           : "/assets/images/logo.png"
+  avatar           : "/assets/images/logo.jpg"
   bio              : "I am an **amazing** person."
   location         : "South Korea"
   email            :
