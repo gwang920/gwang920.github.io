@@ -97,11 +97,9 @@ author:
   avatar           : "/assets/images/logo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Seoul, South Korea"
-  email            : 
+  email            : "gwang92@naver.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "gwang92@naver.com"
+    
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
