@@ -1,5 +1,5 @@
 title: Guen
-description: Guen의 블로그
+description: A minimal and beautiful Jekyll theme best for writing and note-taking.
 author: Gwangguen Seo
 avatar: /logo.png
 email: gwang92@naver.com
@@ -29,12 +29,15 @@ exclude:
 
 # Jekyll SEO Tag (Optional)
 # =========================
-baseurl: ""
-url: "https://gwang920.github.io/"
+twitter:
+  username: ngzhio
+  card: summary
 logo: logo.png
 social:
-  name: Gwangguen Seo
+  name: Shangzhi Huang
   links:
-    - https://github.com/gwang920
+    - https://twitter.com/ngzhio
+    - https://www.facebook.com/ngzhio
+    - https://github.com/ngzhio
 google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
 lang: en
