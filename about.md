@@ -1,23 +1,21 @@
---- layout: default --- {% if page.header.overlay_color or page.header.overlay_image or page.header.image %} {% include page__hero.html %} {% elsif page.header.video.id and page.header.video.provider %} {% include page__hero_video.html %} {% endif %} {% if page.url != "/" and site.breadcrumbs %} {% unless paginator %} {% include breadcrumbs.html %} {% endunless %} {% endif %}
+--- --- {% include head.html %} {% include head/custom.html %} {% include_cached skip-links.html %} {% include_cached browser-upgrade.html %} {% include_cached masthead.html %}
 
-{% include sidebar.html %}
+{{
 
-{% unless page.header.overlay_color or page.header.overlay_image %}
-
-# {{ 학력사항
+### 학력
 
 - 2008.03.01 - 2011.02.28  배재고등학교 (졸업)
 - 2012.03.01 - 2018.08.31  강원대학교 춘천캠퍼스 - 전기전자공학과 3.26/4.5 (졸업)
 
 
 
-### 경력사항
+### 경력
 
 - 2019.09.17 - 2019.10.16  현대엠엔소프트 인턴 (수료)
 
 
 
-### 아르바이트 사항
+### 아르바이트
 
 - 2012.01.10 - 2012.12.31  Lotto Sports 굽은다리역점 고객 응대
 
@@ -37,7 +35,7 @@
 
 
 
-### 교육사항
+### 교육
 
 - 2019.05.10 - 2019.09.10  삼성멀티캠퍼스 주관 - 빅데이터를 활용한 IOT 시스템 개발 (feat.커넥티드카) 교육과정 수강
 - 2020.07.27 - 2020.08.21  네이버 커넥트재단 주관 - 부스트캠프 챌린지 과정 수료
@@ -50,9 +48,15 @@
 - TOEIC 815점 (2018.01.28)
 - OPIC IM1 (2019.03.09)
 
-#  }}
+ }}
 
-{% endunless %} {{ content }}
+{% if site.search == true %}
 
+{% include_cached search/search_form.html %}
 
+{% endif %}
+
+{% include footer/custom.html %} {% include_cached footer.html %}
+
+{% include scripts.html %}
 
