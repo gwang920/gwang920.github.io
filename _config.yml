@@ -1,10 +1,10 @@
 # Site Author
 author: 광근 서
-title: 개발자 지망생
+title: "개발자 지망생"
 subtitle: 어제
 avatar: /logo.png
-description: 어제의 나보다
-bio: 어제의 나보다 조금 더
+description: "어제의 나보다"
+bio: "어제의 나보다 조금 더"
 location: "South Korea"
 email: gwang92@naver.com
 
@@ -40,6 +40,6 @@ logo: logo.png
 social:
   name: Gwangguen Seo
   links:
-    - https://github.com/ngzhio
+    - https://github.com/gwang920
 google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
 lang: en
