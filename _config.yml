@@ -1,10 +1,10 @@
 # Site Author
 author: 
-name: Gwangguen Seo
-title: ´Ê±ïÀÌ °³¹ßÀÚ Áö¸Á»ı!
-description: 
-avatar: /logo.png
-email: gwang92@naver.com
+name: "Gwangguen Seo"
+title: "´Ê±ïÀÌ °³¹ßÀÚ Áö¸Á»ı!"
+description: "¹İ°©½À´Ï´Ù"
+avatar: "/logo.png"
+email: "gwang92@naver.com"
 
 plugins:
   - jekyll-seo-tag
