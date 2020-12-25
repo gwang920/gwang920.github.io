@@ -34,6 +34,11 @@ jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
 url은 /categories/로 설정하자.
 
 ```
+파일명 : navigation.yml
+위치 : _data/naivgation.yml
+```
+
+```
 ---
 # main links
 main:
@@ -49,6 +54,11 @@ main:
 
 
 ##### 2. 게시글에 category 등록하기
+
+```
+파일명 : 2020-12-25-category-config.md
+위치 : _posts/2020-12-25-category-config.md
+```
 
 ```
 ---
@@ -74,6 +84,11 @@ last_modified_at:
 게시글은 _posts/2020-12-25-category-config.md로 저장되어있다. 우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  
 
 ##### 3. categories 페이지 등록하기
+
+```
+파일명 : category_archive.md
+위치 : _pages/category_archive.md
+```
 
 ```
 ---
@@ -115,9 +130,15 @@ category_archive:
 
 
 
-##### 4. 
+##### 4.  결과
 
+![image](https://user-images.githubusercontent.com/49560745/103131791-83587680-46e5-11eb-90d4-12145a38303f.png)
 
+1~3의 작업을 완료하고 categort 네비게이션바를 클릭하면, 카테고리가 설정됐음을 확인할 수 있다!
+
+자세한 디렉토리, 파일 구조는 Github을 참고하기 바랍니다!
+
+깃허브 URL - https://github.com/gwang920/gwang920.github.io
 
 ### Reference
 
