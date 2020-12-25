@@ -14,15 +14,35 @@ last_modified_at:
 
 ### Github 블로그 커스터마이징 - 카테고리편
 
-jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
+jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자. 이번편은 네비게이션바에 카테고리 항목을 추가해, 
+게시한 글을 범주화 시키는 작업을 진행한다. 테마는 'minimal-mistakes'를 활용했다. 
 
-이번편은 네비게이션바에 카테고리 항목을 추가해, 
-게시한 글을 범주화 시키는 작업을 진행한다. 
-테마는 'minimal-mistakes'를 활용했다. 
+##### 1. 네비게이션바 생성
+
+![image](https://user-images.githubusercontent.com/49560745/103127642-e3dfb780-46d5-11eb-86b3-5c7e2d2057af.png)
 
 
 
-##### 1. 게시글에 category 등록하기
+우선, 카테코리를 네비게이션바에 추가해준다. 내비게이션 항목은 _data/navigation.yml 파일에 추가할 수 있다.
+
+url은 /categories/로 설정해줬다.
+
+```
+---
+# main links
+main:
+  - title: "Categories"
+    url: /categories/
+  - title: "Project"
+    url: /project/
+  - title: "About"
+    url: /about/
+---
+```
+
+
+
+##### 2. 게시글에 category 등록하기
 
 ```
 ---
@@ -45,12 +65,9 @@ last_modified_at:
 - tags : # 태그
 - last_modified_at: #수정 시간
 
-게시글은 _posts/2020-12-25-category-config.md로 저장되어있다. 
-우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  
+게시글은 _posts/2020-12-25-category-config.md로 저장되어있다. 우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  
 
-
-
-#### 2. categories 페이지 등록하기
+##### 3. categories 페이지 등록하기
 
 ```
 ---
@@ -65,11 +82,7 @@ author_profile: true
 - layout:  #categoires
 - permalink: #/categories/
 
-categories 페이지는 _pages/category_archive.md로 저장되어있다. 
-반드시 이 형식(파일명 _archive.md)과 일치하도록 파일명을 설정하고,   
-해당 경로에 집어넣어줘야한다. 
-참고로, permalink는 _config.yml 파일의 category_archive설정의 
-path 경로와 같음을 기억하자!
+categories 페이지는 _pages/category_archive.md로 저장되어있다. 반드시 이 형식(파일명 _archive.md)과 일치하도록 파일명을 설정하고, 해당 경로에 집어넣어줘야한다.  참고로, permalink는 _config.yml 파일의 category_archive설정의 path 경로와 같음을 기억하자!
 
 
 
@@ -92,7 +105,7 @@ category_archive:
 
 
 
-#### 3. 
+##### 4. 
 
 
 
