@@ -1,0 +1,65 @@
+---
+layout: archive
+classes: layout--home
+author_profile: true
+
+title: Github 블로그 커스터마이징 - 카테고리
+categories:	
+    - Blog_config
+tags:
+    - github.io
+	- 깃허브 블로그
+last_modified_at:
+---
+
+
+
+### Github 블로그 커스터마이징 - 카테고리편
+
+jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
+
+이번편은 네비게이션바에 카테고리 항목을 추가해, 게시한 글을 범주화 시키는 작업을 진행한다. 테마는 'minimal-mistakes'를 활용했다. 
+
+
+
+##### 1. 게시글에 category 등록하기
+
+![image-20201225163937282](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20201225163937282.png)
+
+- title : #게시글 제목
+- categories : # - 카테고리 제목
+- tags : # 태그
+- last_modified_at: #수정 시간
+
+
+
+이 게시글은 _posts/2020-12-25-category-config.md 에 저장되어있다. 우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  
+
+
+
+#### 2. categories 페이지 등록하기
+
+![image-20201225164627153](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20201225164627153.png)
+
+- title : #카테고리 페이지 제목
+- layout:  #categoires
+- permalink: #/categories/
+
+
+
+categories 페이지는 _pages/category_archive.md로 저장되어있다.  반드시 이 형식에 맞도록 파일명을 설정하고, 경로에 집어넣어줘야한다. 참고로, permalink는 _config.yml 파일의 category_archive 설정의 path 경로와 같다.
+
+
+
+#### 3. 
+
+
+
+### Reference
+
+- https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories
+
+- https://devinlife.com/howto%20github%20pages/category-tag/
+
+
+
