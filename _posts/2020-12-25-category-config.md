@@ -134,9 +134,9 @@ category_archive:
 
 ![image](https://user-images.githubusercontent.com/49560745/103131791-83587680-46e5-11eb-90d4-12145a38303f.png)
 
-1~3의 작업을 완료하고 categort 네비게이션바를 클릭하면, 카테고리가 설정됐음을 확인할 수 있다!
+1~3의 작업을 완료하고 category 네비게이션바를 클릭하면, 카테고리가 설정됐음을 확인할 수 있다!
 
-자세한 디렉토리, 파일 구조는 Github을 참고하기 바랍니다!
+자세한 디렉토리, 파일 구조는 Github 링크에서 참고하기 바랍니다!
 
 깃허브 URL - https://github.com/gwang920/gwang920.github.io
 
