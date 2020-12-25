@@ -2,13 +2,11 @@
 layout: archive
 classes: layout--home
 author_profile: true
-
 title: Github 블로그 커스터마이징 - 카테고리
 categories:	
     - Blog_config
 tags:
-    - github.io
-	- 깃허브 블로그
+    - github.io - 깃허브 블로그
 last_modified_at:
 ---
 
