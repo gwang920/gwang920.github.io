@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: archive
+classes: taxonomy__index
 title: About
 ---
 
