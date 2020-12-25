@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "무작정, 기록하기"
+title                    : "무작정, 기록해보기"
 title_separator          : "-"
 subtitle                 : "습관처럼 성장하는 블로그"
 name                     : "광근 서"
