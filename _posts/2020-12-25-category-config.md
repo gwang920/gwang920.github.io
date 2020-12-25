@@ -45,8 +45,10 @@ jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
 
 ```
 categories 페이지는 _pages/category_archive.md로 저장되어있다. 
-반드시 이 형식(파일명 _archive.md)과 일치하도록 파일명을 설정하고, 해당 경로에 집어넣어줘야한다. 
-참고로, permalink는 _config.yml 파일의 category_archive 설정의 path 경로와 같음을 기억하자!
+반드시 이 형식(파일명 _archive.md)과 일치하도록 파일명을 설정하고, 
+해당 경로에 집어넣어줘야한다. 
+참고로, permalink는 _config.yml 파일의 category_archive설정의 
+path 경로와 같음을 기억하자!
 ```
 
 
