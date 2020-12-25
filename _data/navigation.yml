@@ -2,10 +2,10 @@
 main:
   - title: "Categories"
     url: /categories/
-  - title: "About"
-    url: /about/
   - title: "Project"
     url: /project/
+  - title: "About"
+    url: /about/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
