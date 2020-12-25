@@ -2,16 +2,10 @@
 layout: archive
 classes: layout--home
 author_profile: true
-permalink: /
-title: About
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+title: Foo
+layout: category
+permalink: /categories/foo/
+taxonomy: foo
 ---
 
 
