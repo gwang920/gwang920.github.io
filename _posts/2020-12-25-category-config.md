@@ -25,7 +25,7 @@ jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자. 이�
 
 우선, 카테코리를 네비게이션바에 추가해준다. 내비게이션 항목은 _data/navigation.yml 파일에 추가할 수 있다.
 
-url은 /categories/로 설정해줬다.
+url은 /categories/로 설정하자.
 
 ```
 ---
