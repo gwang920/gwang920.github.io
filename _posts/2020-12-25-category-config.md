@@ -22,7 +22,7 @@ jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
 
 ##### 1. 게시글에 category 등록하기
 
-![image-20201225163937282](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20201225163937282.png)
+![image](https://user-images.githubusercontent.com/49560745/103126714-85fda080-46d2-11eb-9b18-205621a70e61.png)
 
 - title : #게시글 제목
 - categories : # - 카테고리 제목
@@ -37,7 +37,7 @@ jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
 
 #### 2. categories 페이지 등록하기
 
-![image-20201225164627153](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20201225164627153.png)
+![image](https://user-images.githubusercontent.com/49560745/103126697-6f574980-46d2-11eb-8d36-40c730163a75.png)
 
 - title : #카테고리 페이지 제목
 - layout:  #categoires
