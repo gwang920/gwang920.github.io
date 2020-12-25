@@ -5,7 +5,7 @@ main:
   - title: "About"
     url: /_nav-page/about/
   - title: "Project"
-     url: /_nav-page/project/
+    url: /_nav-page/project/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

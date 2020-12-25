@@ -1,7 +1,8 @@
 ---
-layout: archive-years
+layout: archive
+classes: layout--home
+author_profile: true
 title: Project
-permalink: /project/
 ---
 
 # 1. Spring Framework 기반의 메뉴추천시스템
