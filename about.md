@@ -1,6 +1,6 @@
 ---
 layout: archive
-classes: taxonomy__index
+classes: layout--home
 title: About
 ---
 
