@@ -65,7 +65,11 @@ author_profile은 페이지 좌측에 프로필을 표시할 것이냐의 여부
 
 
 
-**두번째**로 github.io의 모든 게시글은 posts에서 관리된다. 작성한 md 파일을 **_posts** 폴더에 저장해주면 게시글 업로드 작업이 끝난다. 정말 간단하다.
+
+
+**두번째**로 github.io의 모든 게시글은 posts에서 관리된다. 작성한 md 파일을 **_posts** 폴더에 저장해주면 게시글 업로드 작업이 끝난다. 정말 간단하다. (단, md 파일의 파일명은 형식에 맞게 작성해야한다. minimal-mistakes 기준 : **yyyy-mm-dd-파일명**)
+
+![image](https://user-images.githubusercontent.com/49560745/103145849-07f9d200-4784-11eb-9fbf-2c1a8b7eb71a.png)
 
 
 
