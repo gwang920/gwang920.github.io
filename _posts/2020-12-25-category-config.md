@@ -163,6 +163,8 @@ tags페이지 등록도 **categories 페이지 등록 과정**을 그대로 진�
 
 ##### 5.  결과
 
+
+
  **카테고리 Page**
 
 ![image](https://user-images.githubusercontent.com/49560745/103131791-83587680-46e5-11eb-90d4-12145a38303f.png)
@@ -171,7 +173,7 @@ tags페이지 등록도 **categories 페이지 등록 과정**을 그대로 진�
 
 ![image](https://user-images.githubusercontent.com/49560745/103145413-71c2ad80-477d-11eb-8d1c-b04db0b9dc31.png)
 
-**태그 페이지**
+**태그 page**
 
 ![image](https://user-images.githubusercontent.com/49560745/103145426-97e84d80-477d-11eb-880b-60543651c382.png)
 
