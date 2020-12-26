@@ -1,7 +1,4 @@
 ---
-layout: archive
-classes: layout--home
-author_profile: true
 title: Github 블로그 커스터마이징 - 카테고리
 categories:	
     - Blog_config
@@ -20,6 +17,10 @@ jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
 게시한 글을 범주화 시키는 작업을 진행한다. 
 
 테마는 'minimal-mistakes'를 적용했다. 
+
+layout: archive
+classes: layout--home
+author_profile: true
 
 ##### 1. 네비게이션바 생성
 
