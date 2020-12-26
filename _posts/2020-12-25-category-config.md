@@ -4,7 +4,7 @@ categories:
     - Blog_config
 tags:
     - github.io 
-	- 깃허브 블로그
+	- 깃허브블로그
 last_modified_at: 
 ---
 
