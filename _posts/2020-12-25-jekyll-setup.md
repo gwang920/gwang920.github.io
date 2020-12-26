@@ -1,7 +1,4 @@
 ---
-layout: archive
-classes: layout--home
-author_profile: true
 title: Github 블로그 커스터마이징 - jekyll
 categories:	
     - Blog_config
