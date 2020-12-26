@@ -69,7 +69,8 @@ title: Github 블로그 커스터마이징 - 카테고리
 categories:	
     - Blog_config
 tags:
-    - github.io - 깃허브 블로그
+- github.io 
+- 깃허브 블로그
 last_modified_at:
 ---
 ```
@@ -81,7 +82,13 @@ last_modified_at:
 - tags : # 태그
 - last_modified_at: #수정 시간
 
-게시글은 _posts/2020-12-25-category-config.md로 저장되어있다. 우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  
+게시글은 _posts/2020-12-25-category-config.md로 저장되어있다. 우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  tags에 여러 개의 태그를 등록할 경우에는 줄 바꿈을 해주어야 한다. 이때, 줄 바꿈 이후 tab 키를 사용할 경우 아래와 같은 오류가 발생한다. 이점에 주의하고, 바짝 붙여서 **- 태그명** 형식으로 작성하자.
+
+
+
+![image](https://user-images.githubusercontent.com/49560745/103145330-e694e800-477b-11eb-9533-55d88546ed98.png)
+
+
 
 ##### 3. categories 페이지 등록하기
 
