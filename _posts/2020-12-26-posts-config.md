@@ -61,7 +61,7 @@ classes는 HTML, CSS를 다뤄봤다면 익숙할 것이다. 게시글에 원하
 
 **author_profile**
 
-author_profile은 페이지 좌측에 프로필을 표시할 것이냐의 여부를 결정해준다. default는 false이고, 항상 표시하고 싶을 경우 true로 설정해주자.  
+author_profile은 페이지 좌측에 프로필을 표시할 것이냐의 여부를 결정해준다. default는 false이고, 항상 표시하고 싶을 경우 true로 설정해주자.    
 
   
 
