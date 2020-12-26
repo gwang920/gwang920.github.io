@@ -61,21 +61,19 @@ classes는 HTML, CSS를 다뤄봤다면 익숙할 것이다. 게시글에 원하
 
 **author_profile**
 
-author_profile은 페이지 좌측에 프로필을 표시할 것이냐의 여부를 결정해준다. default는 false이고, 항상 표시하고 싶을 경우 true로 설정해주자.
+author_profile은 페이지 좌측에 프로필을 표시할 것이냐의 여부를 결정해준다. default는 false이고, 항상 표시하고 싶을 경우 true로 설정해주자.  
 
+  
 
-
-
+  
 
 **두번째**로 github.io의 모든 게시글은 posts에서 관리된다. 작성한 md 파일을 **_posts** 폴더에 저장해주면 게시글 업로드 작업이 끝난다. 정말 간단하다. (단, md 파일의 파일명은 형식에 맞게 작성해야한다. minimal-mistakes 기준 : **yyyy-mm-dd-파일명**)
 
-![image](https://user-images.githubusercontent.com/49560745/103145849-07f9d200-4784-11eb-9fbf-2c1a8b7eb71a.png)
+![image](https://user-images.githubusercontent.com/49560745/103145849-07f9d200-4784-11eb-9fbf-2c1a8b7eb71a.png)  
 
-
+  
 
 #### 결과
-
-
 
 ![image](https://user-images.githubusercontent.com/49560745/103145763-f06e1980-4782-11eb-97e2-e69024b864d4.png)
 
