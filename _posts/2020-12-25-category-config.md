@@ -10,12 +10,18 @@ last_modified_at:
 
 
 
-### Github 블로그 커스터마이징 - 카테고리편
+### Github 블로그 커스터마이징 - 카테고리&태그편
 
 jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자. 
 
-이번편은 네비게이션바에 카테고리 항목을 추가해, 
-게시한 글을 범주화 시키는 작업을 진행한다. 
+이번편은 
+
+**1) 네비게이션바에 카테고리 항목을 추가해,** 
+게시한 글을 범주화하고, 
+
+**2) 글에 태그를 추가해,** 
+
+태그로 해당하는 글을 식별하고, 접근할 수 있도록 한다. 
 
 테마는 'minimal-mistakes'를 적용했다. 
 
@@ -25,13 +31,13 @@ jekyll를 기반으로 깃허브 블로그를 커스터마이징해보자.
 
 ![image](https://user-images.githubusercontent.com/49560745/103127642-e3dfb780-46d5-11eb-86b3-5c7e2d2057af.png)
 
-
+네비게이션바를 통해 카테고리 페이지에 접근하고 싶을 경우에 한해 아래와 같은 작업을 진행하자.
 
 우선, 카테고리를 네비게이션바에 추가해준다. 
 
-네비게이션 항목은 _data/navigation.yml 파일 설정을 통해 추가할 수 있다.
+네비게이션 항목은 **_data/navigation.yml** 파일 설정을 통해 추가할 수 있다.
 
-url은 /categories/로 설정하자.
+**url은 /categories/**로 설정하자.
 
 ```
 파일명 : navigation.yml
@@ -82,7 +88,7 @@ last_modified_at:
 - tags : # 태그
 - last_modified_at: #수정 시간
 
-게시글은 _posts/2020-12-25-category-config.md로 저장되어있다. 우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  tags에 여러 개의 태그를 등록할 경우에는 줄 바꿈을 해주어야 한다. 이때, 줄 바꿈 이후 tab 키를 사용할 경우 아래와 같은 오류가 발생한다. 이점에 주의하고, 바짝 붙여서 **- 태그명** 형식으로 작성하자.
+게시글은 **_posts/2020-12-25-category-config.md**로 저장되어있다. 우선, 위 사진처럼 분류 기준에 따라 YFM 설정을 완료한다.  tags에 여러 개의 태그를 등록할 경우에는 줄 바꿈을 해주어야 한다. 이때, 줄 바꿈 이후 tab 키를 사용할 경우 아래와 같은 오류가 발생한다. 이점에 주의하고, 바짝 붙여서 **- 태그명** 형식으로 작성하자.
 
 
 
@@ -110,7 +116,7 @@ author_profile: true
 - layout:  #categoires
 - permalink: #/categories/
 
-categories 페이지는 _pages/category_archive.md로 저장되어있다. 
+categories 페이지는 **_pages/category_archive.md**로 저장되어있다. 
 
 반드시 이 형식(파일명 _archive.md)과 일치하도록 파일명을 설정하고, 해당 경로에 집어넣어줘야한다.  
 
@@ -135,13 +141,41 @@ category_archive:
 
 ```
 
+##### 4.tags 페이지 등록하기
 
+```
+파일명 : tag_archive.md
+위치 : _pages/tag_archive.md
+```
 
-##### 4.  결과
+````
+title: "Posts by Tag"
+layout: tags
+permalink: /tags/
+author_profile: true
+````
+
+- title : #타이틀 페이지 제목
+- layouts: #tags
+- permalink: #/tags/
+
+tags페이지 등록도 categories 페이지 등록 과정을 그대로 진행하면된다.
+
+##### 5.  결과
 
 ![image](https://user-images.githubusercontent.com/49560745/103131791-83587680-46e5-11eb-90d4-12145a38303f.png)
 
-1~3의 작업을 완료하고 category 네비게이션바를 클릭하면, 카테고리가 설정됐음을 확인할 수 있다!
+![image](https://user-images.githubusercontent.com/49560745/103145413-71c2ad80-477d-11eb-8d1c-b04db0b9dc31.png)
+
+
+
+![image](https://user-images.githubusercontent.com/49560745/103145426-97e84d80-477d-11eb-880b-60543651c382.png)
+
+
+
+1~4의 작업을 완료하고 category 네비게이션바를 클릭하면, 카테고리가 설정됐음을 확인할 수 있다.
+
+마찬가지로, 글 하단에 tags와 tags페이지에 접근할 수 있음을 알 수 있다.
 
 자세한 디렉토리, 파일 구조는 Github 링크에서 참고하기 바랍니다!
 
