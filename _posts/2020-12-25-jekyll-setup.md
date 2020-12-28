@@ -1,7 +1,7 @@
 ---
 title: Github 블로그 커스터마이징 - jekyll
 categories:	
-    - Blog_config
+    - Blog_Customizing
 tags:
 - github.io
 - 깃허브블로그
