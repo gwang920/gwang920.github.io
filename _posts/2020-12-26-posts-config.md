@@ -47,7 +47,9 @@ author_profile: true
 
 **layout**
 
-jekyll 테마에는 다양항 layout이 포함되어있다. (_layousts 폴더에서 확인할 수 있다.) layout은 게시글의 형식 즉, **Frame**이라 할 수 있다. 이 레이아웃을 적용하지 않고, 블로그에 글을 게시한다면 네비게이션바나 프로필과 같이 부가적인 요소들이 나타나지 않고, 순수한 md 파일 내용만이 블로그에 기재된다. layout에 대한 자세한 정보는 공식 사이트에서 확인하자. => https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories
+jekyll 테마에는 다양항 layout이 포함되어있다. (_layousts 폴더에서 확인할 수 있다.) layout은 게시글의 형식 즉, **Frame**이라 할 수 있다. 이 레이아웃을 적용하지 않고, 블로그에 글을 게시한다면 네비게이션바나 프로필과 같이 부가적인 요소들이 나타나지 않고, 순수한 md 파일 내용만이 블로그에 기재된다. layout에 대한 자세한 정보는 공식 사이트에서 확인할 수 있다. 
+
+- mmistakes URL - https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories
 
 
 
