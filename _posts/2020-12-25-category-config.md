@@ -185,7 +185,9 @@ tags페이지 등록도 **categories 페이지 등록 과정**을 그대로 진�
 
 깃허브 URL - https://github.com/gwang920/gwang920.github.io
 
-### Reference
+
+
+# Reference
 
 - https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories
 

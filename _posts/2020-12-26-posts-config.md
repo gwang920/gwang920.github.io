@@ -1,5 +1,6 @@
 ---
 title: Github 블로그 커스터마이징 - Posts
+toc: true
 categories:	
     - Blog_Customizing
 tags:

@@ -1,5 +1,6 @@
 ---
 title: Array vs ArrayList vs LinkedList
+toc: true
 categories:	
     - DataStructure
 tags:
