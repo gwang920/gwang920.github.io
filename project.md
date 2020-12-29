@@ -1,6 +1,5 @@
 ---
 layout: archive
-classes: layout--home
 author_profile: true
 title: Project
 toc: true
