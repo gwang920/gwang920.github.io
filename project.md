@@ -4,6 +4,8 @@ classes: layout--home
 author_profile: true
 title: Project
 toc: true
+toc_label: "Project Summary"
+toc_icon: "cog"
 ---
 
 
