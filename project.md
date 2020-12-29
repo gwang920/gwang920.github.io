@@ -3,6 +3,7 @@ layout: archive
 author_profile: true
 title: Project
 toc: true
+toc_sticky: true
 toc_label: "Project Summary"
 toc_icon: "cog"
 ---
