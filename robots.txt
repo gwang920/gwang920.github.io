@@ -1,2 +1,3 @@
 User-agent: *
-Allow:/
+Allow: /
+Sitemap: https://gwang920.github.io/sitemap.xml
