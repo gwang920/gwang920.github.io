@@ -20,7 +20,7 @@
 <description>{{ post.content | xml_escape }}</description>
 {% endif %}
 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-<link>https://your_site_url{{ post.url }}</link>
+<link>https://gwang920.github.io{{ post.url }}</link>
 <guid isPermaLink="true">https://gwang920.github.io/{{ post.url }}</guid>
 </item>
 {% endfor %}
