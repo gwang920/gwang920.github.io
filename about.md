@@ -6,7 +6,7 @@ title: About
 toc: true
 ---
 
-# Who Am I
+## Who Am I
 
 졸업 후 개발자의 길에 도전하고있는 **늦깍이** 개발자 지망생입니다.
 
