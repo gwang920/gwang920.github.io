@@ -108,9 +108,9 @@ toc: true
 
 [![image](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)
 
-## 화면 설계
+## 화면 구현
 
-{% include gallery caption="프로젝트 화면 Site 맵 - 이미지를 클릭해보세요!" %}
+{% include gallery caption="프로젝트 화면 구현 Site 맵 - 이미지 Click" %}
 
 #### 소스코드
 
