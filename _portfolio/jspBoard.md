@@ -11,8 +11,6 @@ sidebar:
     text: "100%, 개인 토이프로젝트"
 layout: archive
 classes: layout--home
-author_profile: true
-toc: true
 ---
 
 
