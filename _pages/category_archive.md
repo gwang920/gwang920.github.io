@@ -1,6 +1,6 @@
 ---
-title: "Posts by Category"
+title: "Posts by Tech"
 layout: categories
-permalink: /categories/
+permalink: /tech/
 author_profile: true
 ---
