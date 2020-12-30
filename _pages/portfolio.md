@@ -2,6 +2,7 @@
 defaults:
   # _portfolio
 permalink: /project/
+author_profile: true
   - scope:
       path: ""
       type: portfolio
