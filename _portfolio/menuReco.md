@@ -44,7 +44,8 @@ toc: true
 ```
 - 주제 및 기획의도
 - 기능 개요
-- 시스템 구조도 및 시나리오
+- 시스템 구조도
+- 시나리오
 - 개발 환경
 - ERD 설계
 - 화면 설계
@@ -77,11 +78,13 @@ toc: true
 
 
 
-## 시스템 구조도 및 시나리오
+## 시스템 구조도
 
 [![image](https://user-images.githubusercontent.com/49560745/101629531-d9ca8180-3a64-11eb-9787-5cfe40075abd.png)](https://user-images.githubusercontent.com/49560745/101629531-d9ca8180-3a64-11eb-9787-5cfe40075abd.png)
 
-[![image](https://user-images.githubusercontent.com/49560745/102046855-861eb600-3e1f-11eb-91fa-54911180a94c.png)](https://user-images.githubusercontent.com/49560745/102046855-861eb600-3e1f-11eb-91fa-54911180a94c.png)
+## 시나리오
+
+[![image](https://user-images.githubusercontent.com/49560745/103353706-d9198e00-4aec-11eb-94f7-0141654629d9.png)](https://user-images.githubusercontent.com/49560745/103353706-d9198e00-4aec-11eb-94f7-0141654629d9.png)
 
 ```
 1. 회원가입/로그인
