@@ -1,12 +1,8 @@
 ---
-title: Spring Framework 기반의 메뉴추천시스템
-permalink: /project/
-toc: true
-project:	
-    - Spring Framework 기반의 메뉴추천시스템
-tags:
-- Spring
-last_modified_at:
+layout: archive
+classes: layout--home
+author_profile: true
+title: About
 ---
 
 
