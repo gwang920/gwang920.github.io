@@ -13,9 +13,22 @@ gallery:
   - url: /assets/images/2048.jpg
     image_path: assets/images/2048-th.jpg
     alt: "placeholder image 1"
-  - url: /assets/images/board.jpg
-    image_path: assets/images/board-th.jpg
+  - url: /assets/images/2048.jpg
+    image_path: assets/images/2048-th.jpg
     alt: "placeholder image 2"
+  - url: /assets/images/2048.jpg
+    image_path: assets/images/2048-th.jpg
+    alt: "placeholder image 3"
+  - url: /assets/images/2048.jpg
+    image_path: assets/images/2048-th.jpg
+    alt: "placeholder image 4"
+  - url: /assets/images/2048.jpg
+    image_path: assets/images/2048-th.jpg
+    alt: "placeholder image 5"
+  - url: /assets/images/2048.jpg
+    image_path: assets/images/2048-th.jpg
+    alt: "placeholder image 6"
+  
 layout: archive
 classes: layout--home
 toc: true
