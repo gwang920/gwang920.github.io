@@ -92,6 +92,7 @@ analytics:
 
 # Collection
 collections:
+collectionsdir: my_collection/_recipes
   my_collection:
     output: true
     permalink: /project/
