@@ -90,7 +90,10 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
-
+# Collections
+collections:
+  staff_members:
+    output: true
 
 # Site Author
 author:
