@@ -1,8 +1,8 @@
 # main links
 main:
-  - title: "Categories"
+  - title: "Tech"
     url: /categories/
-  - title: "Project"
+  - title: "Portfolio"
     url: /project/
   - title: "About"
     url: /about/
