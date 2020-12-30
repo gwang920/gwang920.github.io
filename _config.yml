@@ -94,7 +94,7 @@ analytics:
 collections:
   portfolio:
     output: true
-    permalink: /project/
+    permalink: /:collection/:path/
 
 # Site Author
 author:
