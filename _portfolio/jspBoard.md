@@ -74,19 +74,19 @@ toc: true
 
 ### 로그인
 
-[![image](https://user-images.githubusercontent.com/49560745/98513962-15c6c700-22ac-11eb-8b0a-04a4bd85bb42.png)](https://user-images.githubusercontent.com/49560745/103337322-4661fa80-4abe-11eb-9c18-5476b1b8dc11.png)
+[![image](https://user-images.githubusercontent.com/49560745/98513962-15c6c700-22ac-11eb-8b0a-04a4bd85bb42.png)](https://user-images.githubusercontent.com/49560745/98513962-15c6c700-22ac-11eb-8b0a-04a4bd85bb42.png)
 
 ### 게시판 목록
 
-[![image](https://user-images.githubusercontent.com/49560745/98535043-ccd13b80-22c8-11eb-82a4-b941f59d247b.png)](https://user-images.githubusercontent.com/49560745/103337335-537ee980-4abe-11eb-99db-e76662aaecb9.png)
+[![image](https://user-images.githubusercontent.com/49560745/98535043-ccd13b80-22c8-11eb-82a4-b941f59d247b.png)](https://user-images.githubusercontent.com/49560745/98535043-ccd13b80-22c8-11eb-82a4-b941f59d247b.png)
 
 ### 게시판 글쓰기
 
-[![image](https://user-images.githubusercontent.com/49560745/98516195-891e0800-22af-11eb-865a-5136b9783c44.png)](https://user-images.githubusercontent.com/49560745/103337349-61346f00-4abe-11eb-9ac0-c2f646311d1b.png)
+[![image](https://user-images.githubusercontent.com/49560745/98516195-891e0800-22af-11eb-865a-5136b9783c44.png)](https://user-images.githubusercontent.com/49560745/98516195-891e0800-22af-11eb-865a-5136b9783c44.png)
 
 ### 게시판 글보기
 
-[![image](https://user-images.githubusercontent.com/49560745/98537750-158af380-22cd-11eb-962f-3804a91b6dcc.png)]((https://user-images.githubusercontent.com/49560745/103337362-6e515e00-4abe-11eb-86f9-acf3c8c2b87a.png))
+[![image](https://user-images.githubusercontent.com/49560745/98537750-158af380-22cd-11eb-962f-3804a91b6dcc.png)](https://user-images.githubusercontent.com/49560745/98537750-158af380-22cd-11eb-962f-3804a91b6dcc.png)
 
 ## 게시판 글 수정
 
