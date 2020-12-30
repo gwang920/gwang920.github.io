@@ -110,7 +110,7 @@ toc: true
 
 ## 화면 설계
 
-{% include gallery caption="프로젝트 화면 Site 맵" %}
+{% include gallery caption="프로젝트 화면 Site 맵 - 이미지를 클릭해보세요!" %}
 
 #### 소스코드
 
