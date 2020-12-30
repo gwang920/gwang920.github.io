@@ -111,9 +111,7 @@ toc: true
 
 [![image](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)
 
-## 화면 구성
-
-<br/>
+## 화면 구성                                                                                                                                                                                        
 
 ```
 프로젝트 화면 구성 Site 맵 - 이미지를 클릭해주세요!
