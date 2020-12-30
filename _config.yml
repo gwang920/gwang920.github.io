@@ -94,6 +94,7 @@ analytics:
 collections:
   staff_members:
     output: true
+    permalink: /project/
 
 # Site Author
 author:
