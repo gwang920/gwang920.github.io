@@ -14,14 +14,25 @@ classes: layout--home
 toc: true
 ---
 
-## I. 주제 및 기획의도
+```
+- 주제 및 기획의도
+- 기능 개요
+- 시스템 구조도 및 시나리오
+- 개발 환경
+- ERD 설계
+- 화면 설계
+```
+
+
+
+## 주제 및 기획의도
 
 - 주제 : Spring Framework기반 메뉴추천 시스템
 - 기획의도 : 식사 시간마다 고민되는 메뉴 선택을 돕는 웹서비스 개발
 
 
 
-## II. 기능 개요
+## 기능 개요
 
 - 회원가입을 통해 사용자를 인식하여 관심 메뉴 / 기피 메뉴 선택권한을 이용자에게 부여
 - 위치 검색 기능을 도입하여 룰렛에서 선정 된 메뉴에 대한 식당 추천
@@ -29,7 +40,7 @@ toc: true
 
 
 
-## III. 시스템 구조도 및 시나리오
+## 시스템 구조도 및 시나리오
 
 [![image](https://user-images.githubusercontent.com/49560745/101629531-d9ca8180-3a64-11eb-9787-5cfe40075abd.png)](https://user-images.githubusercontent.com/49560745/101629531-d9ca8180-3a64-11eb-9787-5cfe40075abd.png)
 
@@ -44,19 +55,19 @@ toc: true
 
 
 
-## IIII. 개발 환경
+## 개발 환경
 
 [![image](https://user-images.githubusercontent.com/49560745/101629583-efd84200-3a64-11eb-9793-8a3312ee1664.png)](https://user-images.githubusercontent.com/49560745/101629583-efd84200-3a64-11eb-9793-8a3312ee1664.png)
 
 
 
-## IV. ERD 설계
+## ERD 설계
 
 **사진 Click!**
 
 [![image](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)
 
-## V. 화면 설계
+## 화면 설계
 
 #### main - 네비게이션바
 

@@ -14,16 +14,24 @@ classes: layout--home
 toc: true
 ---
 
+```
+- 주제 및 기획의도
+- 기능 개요
+- 개발 환경
+- ERD 설계
+- 화면 설계
+```
 
 
-## I. 주제 및 기획의도
+
+## 주제 및 기획의도
 
 - 주제 : JSP를 활용한 게시판 제작
 - 기획의도 : Spring MVC 패턴과 MVC1 패턴의 차이 알아보기
 
 
 
-## II. 기능 개요
+## 기능 개요
 
 - 회원가입, 로그인 기능
 - 게시판 기능
@@ -32,19 +40,19 @@ toc: true
 
 
 
-## III. 개발 환경
+## 개발 환경
 
 [![image](https://user-images.githubusercontent.com/49560745/103338477-e5d4bc80-4ac1-11eb-8488-69edd37d19f3.png)](https://user-images.githubusercontent.com/49560745/103338477-e5d4bc80-4ac1-11eb-8488-69edd37d19f3.png)
 
 
 
-## IIII.ERD 설계
+## ERD 설계
 
 [![image](https://user-images.githubusercontent.com/49560745/103337133-a86e3000-4abd-11eb-8759-97a877f21512.png)](https://user-images.githubusercontent.com/49560745/103337133-a86e3000-4abd-11eb-8759-97a877f21512.png)
 
 
 
-## V. 화면 설계
+## 화면 설계
 
 ### 메인화면
 
