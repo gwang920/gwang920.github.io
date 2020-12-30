@@ -110,35 +110,7 @@ toc: true
 
 ## 화면 설계
 
-#### main - 네비게이션바
-
-[![image](https://user-images.githubusercontent.com/49560745/101631569-e56b7780-3a67-11eb-8841-f1237112aaa9.png)](https://user-images.githubusercontent.com/49560745/101631569-e56b7780-3a67-11eb-8841-f1237112aaa9.png)
-
-#### 회원가입
-
-[![image](https://user-images.githubusercontent.com/49560745/101631642-046a0980-3a68-11eb-86f7-a9970b52fa7a.png)](https://user-images.githubusercontent.com/49560745/101631642-046a0980-3a68-11eb-86f7-a9970b52fa7a.png)
-
-#### 로그인
-
-[![image](https://user-images.githubusercontent.com/49560745/101631612-f4522a00-3a67-11eb-920e-a5bca6ef3af9.png)](https://user-images.githubusercontent.com/49560745/101631612-f4522a00-3a67-11eb-920e-a5bca6ef3af9.png)
-
-#### 메뉴추가
-
-[![image](https://user-images.githubusercontent.com/49560745/101631717-26638c00-3a68-11eb-9066-9d6291afc9d6.png)](https://user-images.githubusercontent.com/49560745/101631717-26638c00-3a68-11eb-9066-9d6291afc9d6.png)
-
-#### 룰렛돌리기
-
-[![image](https://user-images.githubusercontent.com/49560745/101631860-63c81980-3a68-11eb-820b-9bd412e98bb2.png)](https://user-images.githubusercontent.com/49560745/101631860-63c81980-3a68-11eb-820b-9bd412e98bb2.png)
-
-#### 위치 검색
-
-[![image](https://user-images.githubusercontent.com/49560745/101631896-74788f80-3a68-11eb-9260-2cacc51facf3.png)](https://user-images.githubusercontent.com/49560745/101631896-74788f80-3a68-11eb-9260-2cacc51facf3.png)
-
-#### 리뷰 및 댓글 표현 기능
-
-[![image](https://user-images.githubusercontent.com/49560745/101631953-865a3280-3a68-11eb-9814-5251fb7777da.png)](https://user-images.githubusercontent.com/49560745/101631953-865a3280-3a68-11eb-9814-5251fb7777da.png)
-
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
+{% include gallery caption="프로젝트 화면 Site 맵" %}
 
 #### 소스코드
 
