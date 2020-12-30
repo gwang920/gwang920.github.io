@@ -113,7 +113,9 @@ toc: true
 
 ## 화면 구성
 
+```
 프로젝트 화면 구성 Site 맵 - 이미지를 클릭해주세요!
+```
 
 {% include gallery caption="" %}
 
