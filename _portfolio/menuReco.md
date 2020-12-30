@@ -4,6 +4,11 @@ excerpt: Spring Framework을 기반으로 룰렛을 도입해 재미요소를 �
 header:
   image: /assets/images/whateat.jpg
   teaser: /assets/images/whateat.jpg
+sidebar:
+  - title: "담당 역할"
+    text: "Front-End & Back-End"
+  - title: "기여도"
+    text: "30%, 4인 프로젝트"
 gallery:
   - url: /assets/images/2048.jpg
     image_path: assets/images/2048-th.jpg
@@ -11,11 +16,6 @@ gallery:
   - url: /assets/images/board.jpg
     image_path: assets/images/board-th.jpg
     alt: "placeholder image 2"
-sidebar:
-  - title: "담당 역할"
-    text: "Front-End & Back-End"
-  - title: "기여도"
-    text: "30%, 4인 프로젝트"
 layout: archive
 classes: layout--home
 toc: true
