@@ -122,7 +122,7 @@ toc: true
 
 [![image](https://user-images.githubusercontent.com/49560745/101631953-865a3280-3a68-11eb-9814-5251fb7777da.png)](https://user-images.githubusercontent.com/49560745/101631953-865a3280-3a68-11eb-9814-5251fb7777da.png)
 
-
+{% include gallery caption="This is a sample gallery to go along with this case study." %}
 
 #### 소스코드
 
