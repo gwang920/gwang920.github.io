@@ -10,26 +10,26 @@ sidebar:
   - title: "기여도"
     text: "30%, 4인 프로젝트"
 gallery:
+  - url: /assets/images/MenuRecommend/메뉴메인.jpg
+    image_path: assets/images/MenuRecommend/메뉴메인-th.jpg
+    alt: "placeholder image 1"
+  - url: /assets/images/MenuRecommend/메뉴회원가입.jpg
+    image_path: assets/images/MenuRecommend/메뉴회원가입-th.jpg
+    alt: "placeholder image 2"
   - url: /assets/images/MenuRecommend/메뉴로그인.jpg
     image_path: assets/images/MenuRecommend/메뉴로그인-th.jpg
-    alt: "placeholder image 1"
-  - url: /assets/images/MenuRecommend/메뉴룰렛돌리기.jpg
-    image_path: assets/images/MenuRecommend/메뉴룰렛돌리기-th.jpg
-    alt: "placeholder image 2"
-  - url: /assets/images/MenuRecommend/메뉴리뷰.jpg
-    image_path: assets/images/MenuRecommend/메뉴리뷰-th.jpg
     alt: "placeholder image 3"
   - url: /assets/images/MenuRecommend/메뉴메뉴추가.jpg
     image_path: assets/images/MenuRecommend/메뉴메뉴추가-th.jpg
     alt: "placeholder image 4"
-  - url: /assets/images/MenuRecommend/메뉴메인.jpg
-    image_path: assets/images/MenuRecommend/메뉴메인-th.jpg
+  - url: /assets/images/MenuRecommend/메뉴룰렛돌리기.jpg
+    image_path: assets/images/MenuRecommend/메뉴룰렛돌리기-th.jpg
     alt: "placeholder image 5"
   - url: /assets/images/MenuRecommend/메뉴위치검색.jpg
     image_path: assets/images/MenuRecommend/메뉴위치검색-th.jpg
     alt: "placeholder image 6"
-  - url: /assets/images/MenuRecommend/메뉴회원가입.jpg
-    image_path: assets/images/MenuRecommend/메뉴회원가입-th.jpg
+  - url: /assets/images/MenuRecommend/메뉴리뷰.jpg
+    image_path: assets/images/MenuRecommend/메뉴리뷰-th.jpg
     alt: "placeholder image 7"
   
 layout: archive
