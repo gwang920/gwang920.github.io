@@ -66,10 +66,6 @@ toc: true
 
 ## 화면 설계
 
-### 메인화면
-
- [![image](https://user-images.githubusercontent.com/49560745/103345074-bf1f8180-4ad3-11eb-9f45-df98cd4deec6.png)](https://user-images.githubusercontent.com/49560745/103337292-2b8f8600-4abe-11eb-8b35-a548b9d3ce1e.png)
-
 
 
 ### 회원가입
