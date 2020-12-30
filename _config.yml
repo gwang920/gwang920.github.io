@@ -90,6 +90,13 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
+# Collection
+collections:
+  my_collection:
+    output: true
+    permalink: /project/
+  order: 
+    - posts/2020-12-29-메뉴추천시스템.md
 
 # Site Author
 author:
