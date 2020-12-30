@@ -24,13 +24,13 @@ toc: true
 - 회원가입, 로그인 기능
 - 게시판 기능
 - 댓글 기능
-- isAvailable을 활용해 클라이언트 삭제 요청을 수행하고, DB에 데이터 보존
+- 클라이언트 삭제 요청 수행 시, **isAvailable**을 통해 DB에 데이터 보존
 
 
 
 ## III. 개발 환경
 
-![image](https://user-images.githubusercontent.com/49560745/103338171-e0c33d80-4ac0-11eb-9580-07a963464487.png)
+![image](https://user-images.githubusercontent.com/49560745/103338477-e5d4bc80-4ac1-11eb-8488-69edd37d19f3.png)
 
 
 
