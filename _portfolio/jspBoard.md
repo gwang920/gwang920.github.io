@@ -30,7 +30,7 @@ toc: true
 
 ## III. 개발 환경
 
-![image](https://user-images.githubusercontent.com/49560745/103338108-ac4f8180-4ac0-11eb-97bd-dfac12bf0bd8.png)
+![image](https://user-images.githubusercontent.com/49560745/103338171-e0c33d80-4ac0-11eb-9580-07a963464487.png)
 
 
 
