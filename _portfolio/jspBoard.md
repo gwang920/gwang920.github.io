@@ -70,7 +70,7 @@ toc: true
 
 ### 회원가입
 
-[![image](https://user-images.githubusercontent.com/49560745/98510044-bd8cc680-22a5-11eb-95c4-709d265b03b9.png)](https://user-images.githubusercontent.com/49560745/103337306-39450b80-4abe-11eb-8aa9-1dd1d5467df3.png)
+[![image](https://user-images.githubusercontent.com/49560745/98510044-bd8cc680-22a5-11eb-95c4-709d265b03b9.png)](https://user-images.githubusercontent.com/49560745/98510044-bd8cc680-22a5-11eb-95c4-709d265b03b9.png)
 
 ### 로그인
 
