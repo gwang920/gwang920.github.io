@@ -84,7 +84,7 @@ toc: true
 
 ## 시나리오
 
-[![image](https://user-images.githubusercontent.com/49560745/103353706-d9198e00-4aec-11eb-94f7-0141654629d9.png)](https://user-images.githubusercontent.com/49560745/103353706-d9198e00-4aec-11eb-94f7-0141654629d9.png)
+[![image](https://user-images.githubusercontent.com/49560745/103353804-2695fb00-4aed-11eb-96d0-2a4d57851d67.png)](https://user-images.githubusercontent.com/49560745/103353804-2695fb00-4aed-11eb-96d0-2a4d57851d67.png)
 
 ```
 1. 회원가입/로그인
