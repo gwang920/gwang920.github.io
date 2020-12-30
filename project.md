@@ -2,7 +2,7 @@
 layout: archive
 classes: layout--home
 author_profile: true
-title: About
+title: Project
 ---
 
 

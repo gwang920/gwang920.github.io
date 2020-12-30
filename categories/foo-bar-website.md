@@ -1,13 +1,10 @@
 ---
-layout: archive
-classes: layout--home
-author_profile: true
-taxonomy: # category name
-entries_layout: # list (default), grid
-title: Foo
-layout: category
-permalink: /categories/foo/
-taxonomy: foo
+title: Portfolio
+layout: collection
+permalink: /portfolio/
+collection: portfolio
+entries_layout: grid
+classes: wide
 ---
 
 

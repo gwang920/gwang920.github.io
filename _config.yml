@@ -92,9 +92,9 @@ analytics:
 
 # Collections
 collections:
-  staff_members:
+  portfolio:
     output: true
-    permalink: /project/
+    permalink: /:collection/:path/
 
 # Site Author
 author:
