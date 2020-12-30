@@ -48,6 +48,8 @@ toc: true
 
 ## IV. ERD 설계
 
+사진 Click!
+
 [![image](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)
 
 ## V. 화면 설계
