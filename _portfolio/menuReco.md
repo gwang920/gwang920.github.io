@@ -1,10 +1,13 @@
 ---
-title: Spring Framework 기반의 메뉴추천시스템
-toc: true
-excerpt: Spring Framework을 기반으로 룰렛을 도입해 재미요소를 더 하고, 식당 검색 및 평점/리뷰 기능 도입
+title: 오늘 뭐 먹지?
+excerpt: Spring Framework을 기반으로 룰렛을 도입해 재미요소를 더 하고, 식당 검색 및 평점/리뷰 기능을 도입해 식당을 추천해주는 웹 서비스
+header:
+  image: /assets/images/whateat.jpg
+  teaser: /assets/images/whateat.jpg
 layout: archive
 classes: layout--home
 author_profile: true
+toc: true
 ---
 
 
