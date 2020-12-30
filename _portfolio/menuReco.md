@@ -4,9 +4,13 @@ excerpt: Spring Framework을 기반으로 룰렛을 도입해 재미요소를 �
 header:
   image: /assets/images/whateat.jpg
   teaser: /assets/images/whateat.jpg
+sidebar:
+  - title: "담당 역할"
+    text: "Front-End & Back-End"
+  - title: "기여도"
+    text: "30%, 4인 프로젝트"
 layout: archive
 classes: layout--home
-author_profile: true
 toc: true
 ---
 

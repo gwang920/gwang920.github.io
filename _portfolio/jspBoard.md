@@ -4,6 +4,11 @@ excerpt: JSP를 활용한 게시판 서비스
 header:
   image: /assets/images/board.jpg
   teaser: /assets/images/board.jpg
+sidebar:
+  - title: "담당 역할"
+    text: "Front-End & Back-End"
+  - title: "기여도"
+    text: "100%, 개인 토이프로젝트"
 layout: archive
 classes: layout--home
 author_profile: true
