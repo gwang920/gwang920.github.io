@@ -1,10 +1,6 @@
 ---
 title: Spring Framework 기반의 메뉴추천시스템
-layout: collection
-permalink: /portfolio/
-collection: portfolio
-entries_layout: grid
-classes: wide
+excerpt: Spring 프로젝트!!!!!!!!!
 ---
 
 
