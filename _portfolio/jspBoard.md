@@ -9,6 +9,25 @@ sidebar:
     text: "Front-End & Back-End"
   - title: "기여도"
     text: "100%, 개인 토이프로젝트"
+gallery:
+  - url: /assets/images/JSP/회원가입.jpg
+    image_path: assets/images/JSP/회원가입-th.jpg
+    alt: "placeholder image 1"
+  - url: /assets/images/JSP/로그인.jpg
+    image_path: assets/images/JSP/로그인-th.jpg
+    alt: "placeholder image 2"
+  - url: /assets/images/JSP/게시판글목록.jpg
+    image_path: assets/images/JSP/게시판글목록-th.jpg
+    alt: "placeholder image 3"
+  - url: /assets/images/JSP/게시판글쓰기.jpg
+    image_path: assets/images/JSP/게시판글쓰기-th.jpg
+    alt: "placeholder image 4"
+  - url: /assets/images/JSP/게시판글보기.jpg
+    image_path: assets/images/JSP/게시판글보기-th.jpg
+    alt: "placeholder image 5"
+  - url: /assets/images/JSP/게시판글수정.jpg
+    image_path: assets/images/JSP/게시판글수정-th.jpg
+    alt: "placeholder image 6"
 layout: archive
 classes: layout--home
 toc: true
@@ -64,9 +83,13 @@ toc: true
 
 
 
-## 화면 설계
+## 화면 구성
 
+```
+프로젝트 화면 구성 Site 맵 - 이미지를 클릭해주세요!
+```
 
+{% include gallery caption="" %}
 
 ### 회원가입
 
