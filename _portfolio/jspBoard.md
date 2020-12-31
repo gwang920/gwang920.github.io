@@ -16,8 +16,8 @@ gallery:
   - url: /assets/images/JSP/로그인.jpg
     image_path: assets/images/JSP/로그인.jpg
     alt: "placeholder image 2"
-  - url: /assets/images/JSP/게시판글목록.jpg
-    image_path: assets/images/JSP/게시판글목록.jpg
+  - url: /assets/images/JSP/게시판목록.jpg
+    image_path: assets/images/JSP/게시판목록.jpg
     alt: "placeholder image 3"
   - url: /assets/images/JSP/게시판글쓰기.jpg
     image_path: assets/images/JSP/게시판글쓰기.jpg
