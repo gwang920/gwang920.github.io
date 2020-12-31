@@ -95,6 +95,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  pets:
+    output: true
+    permalink: /:collection/:path/
 
 # Site Author
 author:
@@ -120,6 +123,16 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+
+
+# _pets
+  - scope:
+      path: ""
+      type: pets
+    values:
+      layout: single
+      author_profile: true
+      share: true
 
 # Site Footer
 footer:
