@@ -1,8 +1,59 @@
 ---
-title: "Lhasa Apso"
-excerpt: "The Lhasa Apso is a non-sporting dog breed originating in Tibet."
+title: "이력사항"
+excerpt: "이력사항"
 ---
 
-> The Lhasa Apso (/ˈlɑːsə ˈæpsoʊ/ lah-sə ap-soh) is a non-sporting dog breed originating in Tibet. It was bred as an interior sentinel in the Buddhist monasteries, to alert the monks to any intruders who entered. Lhasa is the capital city of Tibet, and apso is a word in the Tibetan language meaning "bearded", so, Lhasa Apso simply means "long-haired Lhasa dog". There are, however, some who claim that the word "apso" is a form of the Tibetan word "rapso", meaning "goat-like", which would make the equivalent translation "wooly Lhasa dog".
 
-> <cite>From Wikipedia, the free encyclopedia</cite>
+
+### 학력
+
+> 2008.03.01 - 2011.02.28  배재고등학교 (졸업)
+>
+> 2012.03.01 - 2018.08.31  강원대학교 춘천캠퍼스 - 전기전자공학과 (학사)
+
+
+
+### 경력
+
+> 2019.09.17 - 2019.10.16  현대엠엔소프트 인턴
+
+
+
+### 아르바이트
+
+> 2012.01.10 - 2012.12.31  Lotto Sports 굽은다리역점
+>
+> 2015.03.10 - 2015.10.20  공룡고기 개롱역점
+>
+> 2015.07.31 - 2015.09.16  숙이네조개전골 방이먹자골목점 
+>
+> 2016.01.10 - 2016.12.31  CU 편의점 마천점
+>
+> 2018.09.01 - 2019.01.01  양재고시원 총무
+>
+> 2019.03.01 - 현재  신삼풍독서실 총무
+
+
+
+### 대외활동
+
+> 강원대학교 캡스톤디자인 프레젠테이션 대회 - 학내 10위권
+
+
+
+### 교육
+
+> 2019.05.10 - 2019.09.10  삼성멀티캠퍼스 주관 - 빅데이터를 활용한 IOT 시스템 개발 (feat.커넥티드카) 교육과정
+>
+> 2020.07.27 - 2020.08.21  네이버 커넥트재단 주관 - 부스트캠프 챌린지 과정
+
+
+
+### 자격 및 어학
+
+> 컴퓨터활용능력 1급 (2016.10.14)
+>
+> TOEIC 815점 (2018.01.28)
+>
+> OPIC IM1 (2019.03.09)
+

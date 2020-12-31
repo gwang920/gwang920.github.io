@@ -1,5 +1,5 @@
 ---
-title: Project
+title: About
 layout: collection
 permalink: /about/
 collection: pets
