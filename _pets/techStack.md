@@ -3,6 +3,8 @@ title: "기술 스택[Tech Stack]"
 excerpt: "제가 사용할 수 있는 기술 스택입니다."
 ---
 
+ 활용 가능한 기술 스택을 소개합니다.
+
 <br/>
 
 # Language
