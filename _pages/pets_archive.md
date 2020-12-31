@@ -1,8 +1,8 @@
 ---
 title: Project
 layout: collection
-permalink: /about/
-collection: pets
+permalink: /portfolio/
+collection: portfolio
 entries_layout: grid
 classes: wide
 author_profile: true
