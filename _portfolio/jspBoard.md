@@ -83,7 +83,7 @@ toc: true
 
 
 
-## 화면 구성
+## 화면 구성	
 
 ```
 프로젝트 화면 구성 Site 맵 - 이미지를 클릭해주세요!
@@ -91,29 +91,7 @@ toc: true
 
 {% include gallery caption="" %}
 
-### 회원가입
 
-[![image](https://user-images.githubusercontent.com/49560745/98510044-bd8cc680-22a5-11eb-95c4-709d265b03b9.png)](https://user-images.githubusercontent.com/49560745/98510044-bd8cc680-22a5-11eb-95c4-709d265b03b9.png)
-
-### 로그인
-
-[![image](https://user-images.githubusercontent.com/49560745/98513962-15c6c700-22ac-11eb-8b0a-04a4bd85bb42.png)](https://user-images.githubusercontent.com/49560745/98513962-15c6c700-22ac-11eb-8b0a-04a4bd85bb42.png)
-
-### 게시판 목록
-
-[![image](https://user-images.githubusercontent.com/49560745/98535043-ccd13b80-22c8-11eb-82a4-b941f59d247b.png)](https://user-images.githubusercontent.com/49560745/98535043-ccd13b80-22c8-11eb-82a4-b941f59d247b.png)
-
-### 게시판 글쓰기
-
-[![image](https://user-images.githubusercontent.com/49560745/98516195-891e0800-22af-11eb-865a-5136b9783c44.png)](https://user-images.githubusercontent.com/49560745/98516195-891e0800-22af-11eb-865a-5136b9783c44.png)
-
-### 게시판 글보기
-
-[![image](https://user-images.githubusercontent.com/49560745/98537750-158af380-22cd-11eb-962f-3804a91b6dcc.png)](https://user-images.githubusercontent.com/49560745/98537750-158af380-22cd-11eb-962f-3804a91b6dcc.png)
-
-## 게시판 글 수정
-
-[![image](https://user-images.githubusercontent.com/49560745/98539819-4ae51080-22d0-11eb-8c85-2ce0186a9b09.png)](https://user-images.githubusercontent.com/49560745/98539819-4ae51080-22d0-11eb-8c85-2ce0186a9b09.png)
 
 ## 소스코드
 https://github.com/gwang920/TIL/tree/master/JSP%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%EB%93%A4%EA%B8%B0
