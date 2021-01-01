@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 
 // https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing
-$sans-serif: 'Nanum Brush Script', cursive;
+$global-font-family: 'Nanum Brush Script', cursive;
 $monospace: 'Ubuntu Mono';
 $type-size-4-5: 0.75em !default; // Ubuntu Mono is a bit small
 .language-plaintext {
