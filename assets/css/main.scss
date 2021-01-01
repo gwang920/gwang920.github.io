@@ -7,7 +7,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
-
+$sans-serif: 'Nanum Brush Script', cursive;
 .language-plaintext {
     font-family: 'Nanum Brush Script', cursive;
     font-size: $type-size-8;
