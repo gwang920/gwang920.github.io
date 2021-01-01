@@ -65,13 +65,15 @@ gallery2:
 
 **style**태그를 제외하고 복사 한 후에 **/assets/css/main.scss** 파일에 붙여 넣어주자.
 
-**font-family**는 **/_sass/minimal-mistakes/_variable.scss** 경로에 붙여 넣어주면, font 적용이 완료된다.
+
 
 ```scss
 $global-font-family: 'Noto Sans KR', sans-serif;
 $header-font-family: 'Noto Sans KR', sans-serif;
 $caption-font-family: 'Noto Sans KR', sans-serif;
 ```
+
+**font-family**는 **/_sass/minimal-mistakes/_variable.scss** 경로에 붙여 넣어주면, font 적용이 완료된다.
 
 **$global-font-family**는 게시글의 본문,
 
