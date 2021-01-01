@@ -14,7 +14,6 @@ gallery2:
   - url: /assets/images/test.jpg
     image_path: /assets/images/test.jpg
     alt: "Made for open text placement"
-comments: true
 ---
 
 ### Github 블로그 커스터마이징 - font편
