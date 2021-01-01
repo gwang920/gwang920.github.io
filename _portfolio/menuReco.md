@@ -109,5 +109,5 @@ toc: true
 
 {% include gallery caption="" %}
 
-# [소스코드](https://github.com/gwang920/MenuRecommandationSystemProject)
+# [Github-Source Code](https://github.com/gwang920/MenuRecommandationSystemProject)
 
