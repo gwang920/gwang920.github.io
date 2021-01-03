@@ -61,8 +61,6 @@ excerpt: "활용 가능한 기술 스택입니다."
 
 # OS
 
->**Windows**
->
 >**Linux**
 >
 >​		Shell 명령어, Linux의 구조를 이해하고, 활용할 수 있습니다.
