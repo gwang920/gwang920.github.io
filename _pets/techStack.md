@@ -44,6 +44,8 @@ excerpt: "활용 가능한 기술 스택입니다."
 >**Mybatis**
 >
 >​		Spring Framework과 연동해 활용할 수 있습니다.
+>
+>**Hadoop**
 
 
 
@@ -76,6 +78,4 @@ excerpt: "활용 가능한 기술 스택입니다."
 >**IntelliJ**
 >
 >**Dev C++**
->
->**Hadoop**
 
