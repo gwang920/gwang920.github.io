@@ -44,7 +44,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 
 
- IDEA 혹은 cmd에서 build하는 과정은 다음과 같다.
+ IDEA 혹은 cmd에서 build하는 과정은 다음과 같다.(포스팅은 Gitbash 기준)
 
 우선, 프로젝트 폴더로 이동하자.
 
@@ -81,11 +81,11 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 ![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
 
-2- **cd build/libs**로 이동한 후
+2 - **cd build/libs**로 이동한 후
 
-3- 마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 
+3 - 마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 
 
-4- 위와 같은 화면이 출력되면 성공이다!
+4 - 위와 같은 화면이 출력되면 성공이다!
 
 # 오류
 
