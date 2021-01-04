@@ -116,7 +116,7 @@ ex) localhost:8000/hello-static.html
 
 Spring Boot에서는 `/resources/appication.properties` 파일에 정적 리소스 매핑 패턴을 설정할 수 있다.
 
-`srping.mvc.static-path-pattern=/` 이후에 경로를 지정하자. (default는 `srping.mvc.static-path-pattern=/**`)이다.  mappig 패턴을 `/static/**`으로 변경해보자.
+매핑 패턴은 `srping.mvc.static-path-pattern=/` 이후에 경로 설정하여 변경가능하다. (default는 `srping.mvc.static-path-pattern=/**`)이다.  mappig 패턴을 `/static/**`으로 바꿔보자.
 
 ```
 spring.mvc.static-path-pattern=/static/**
@@ -219,11 +219,13 @@ spring.resources.static-locations=classpath:/new-sattic/
 
 ![image](https://user-images.githubusercontent.com/49560745/103530898-9defd400-4ecb-11eb-8992-70a0876aac7e.png)
 
-
+<br/>
 
 ### 정적 리소스 설정
 
 **WebMvcConfigurer**를 구현하는 클래스에서 **addResourceHandlers**를 **override**하여 정적 리소스 핸들러를 새롭게 설정할 수 있다. 위 **override** 문제를 해결하는 방법이다. 즉, 스프링 부트에서 **default**로 제공되는 정적 리소스 핸들러는 그대로 사용하면서 **사용자 커스텀 핸들러가 추가**되는 것이다.
+
+<br/>
 
 우선, `/java/hello.hellospring/config` 위치에 `WebConfig` class 와 `/resources/` 밑에 `test`폴더와 그 아래 `static.html` 을 아래와 같이 생성하자.
 
@@ -276,13 +278,13 @@ WebMvcConfigurer로 WebConfig 설정하기
 </html
 ```
 
-
+<br/>
 
 설정한 경로를 요청하면 page가 load 된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103535769-a8fb3200-4ed4-11eb-9a8e-6f02b9337d9d.png)
 
-
+<br/>
 
 기본 경로를 요청해도 page가 load 됨을 확인할 수 있다.
 
