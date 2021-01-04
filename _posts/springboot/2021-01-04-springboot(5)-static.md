@@ -130,7 +130,7 @@ spring.mvc.static-path-pattern=/static/**
 
 
 
-그리고 요청을 보내보자. `hello-static.html` 파일은 여전히 패턴 변경 전과 동일한 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Errop page** 가 로드된다.
+그리고 요청을 보내보자. `hello-static.html` 파일은 여전히 패턴 변경 전과 동일한 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Error page** 가 로드된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
 
