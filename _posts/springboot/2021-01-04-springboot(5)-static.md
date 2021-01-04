@@ -116,7 +116,11 @@ ex) localhost:8000/hello-static.html
 
 Spring Boot에서는 `/resources/appication.properties` 파일에 정적 리소스 매핑 패턴을 설정할 수 있다.
 
-매핑 패턴은 `srping.mvc.static-path-pattern=/` 이후에 경로 설정하여 변경가능하다. (default는 `srping.mvc.static-path-pattern=/**`)이다.  mappig 패턴을 `/static/**`으로 바꿔보자.
+매핑 패턴은 `srping.mvc.static-path-pattern=/` 이후에 경로를 설정하여 변경가능하다. (default는 `srping.mvc.static-path-pattern=/**`)이다.  
+
+<br/>
+
+mappig 패턴을 `/static/**`으로 바꿔보자.
 
 ```
 spring.mvc.static-path-pattern=/static/**
