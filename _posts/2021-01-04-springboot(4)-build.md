@@ -46,12 +46,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
  IDEA 혹은 cmd에서 build하는 과정은 다음과 같다.
 
-```
-1) ./gradlew build
-2) cd build/libs
-3) java -jar hello-spring-0.0.1-SNAPSHOT.jar
-4) 실행확인
-```
+우선, 프로젝트 폴더로 이동하자.
 
 
 
@@ -63,9 +58,20 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 기본 폴더구조는 위와 같다.
 
+이제, Build 해보자.
+
+```
+1) ./gradlew build
+2) cd build/libs
+3) java -jar hello-spring-0.0.1-SNAPSHOT.jar
+4) 실행확인
+```
+
+순서는 위와 같다.
+
 ![image](https://user-images.githubusercontent.com/49560745/103510191-0d53cc80-4ea8-11eb-8682-f897bd7be985.png)
 
-**./gradlew build** 입력
+1 - **./gradlew build** 입력
 
 ![image](https://user-images.githubusercontent.com/49560745/103506195-78e56c00-4e9f-11eb-89cb-f51aba82d958.png)
 
@@ -75,7 +81,11 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 ![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
 
-마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 위와 같은 화면이 출력되면 성공이다!
+2- **cd build/libs**로 이동한 후
+
+3- 마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 
+
+4- 위와 같은 화면이 출력되면 성공이다!
 
 # 오류
 
