@@ -118,7 +118,7 @@ this version of the Java Runtime only recognizes class file versions up to 52.0"
 
 **해결방법**
 
-1. 환경변수 변경하기
+1 - 환경변수 변경하기
 
 ```
 Windows 10 기준 환경 변수 설정하기
@@ -134,13 +134,13 @@ sysdm.cpl 입력 => 고급 => 환경 변수
 
 ```
 
-2. 기존 Jdk 버전 삭제 하기
+2 - 기존 Jdk 버전 삭제 하기
 
 ````
 프로그램 추가/제거 => java 기존 버전 삭제
 ````
 
-3. 버전 확인하기
+3 - 버전 확인하기
 
 ```
 cmd(명령 프롬프트)
@@ -158,7 +158,7 @@ C:\Users\User>javac -version
 javac 11.0.9
 ```
 
-4. IntelliJ 내 환경 설정
+4 - IntelliJ 내 환경 설정
 
 ```
 1. [File] - [Project탭]
