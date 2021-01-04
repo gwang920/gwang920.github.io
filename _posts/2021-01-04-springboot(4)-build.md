@@ -16,7 +16,9 @@ Spring boot기반 프로젝트를 빌드하는 방법에 대해 알아보자.
 **Build란?**
 
 ```
-컴퓨터 소프트웨어 분야에서 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다. 
+컴퓨터 소프트웨어 분야에서 소프트웨어 빌드는 소스 코드 파일을 
+컴퓨터나 휴대폰에서 실행할 수 있는 독립 소프트웨어 가공물로 
+변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다. 
 출처 - 위키백과
 ```
 
@@ -40,7 +42,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 
 
-build하는 과정은 다음과 같다.
+ IDEA 혹은 cmd에서 build하는 과정은 다음과 같다.
 
 ```
 1) ./gradlew build
@@ -71,35 +73,23 @@ build하는 과정은 다음과 같다.
 
 마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 위와 같은 화면이 출력되면 성공이다!
 
-
+- Version Error
 
 ```
 Exception in thread "main" java.lang.UnsupportedClassVersionError: hello/hellospring/HelloSpringApplication has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
 
         at java.lang.ClassLoader.defineClass1(Native Method)
-
         at java.lang.ClassLoader.defineClass(Unknown Source)
-
         at java.security.SecureClassLoader.defineClass(Unknown Source)
-
         at java.net.URLClassLoader.defineClass(Unknown Source)
-
         at java.net.URLClassLoader.access$100(Unknown Source)
-
         at java.net.URLClassLoader$1.run(Unknown Source)
-
         at java.net.URLClassLoader$1.run(Unknown Source)
-
         at java.security.AccessController.doPrivileged(Native Method)
-
         at java.net.URLClassLoader.findClass(Unknown Source)
-
         at java.lang.ClassLoader.loadClass(Unknown Source)
-
         at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:151)
-
         at java.lang.ClassLoader.loadClass(Unknown Source)
-
         at java.lang.Class.forName0(Native Method)
         at java.lang.Class.forName(Unknown Source)
         at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:46)
@@ -108,10 +98,19 @@ Exception in thread "main" java.lang.UnsupportedClassVersionError: hello/hellosp
         at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
 ```
 
+55 = Java 11 버전
 
+52 = Java 8 버전
+
+"has been compiled by a more recent version of the Java Runtime (class file version 55.0)
+
+this version of the Java Runtime only recognizes class file versions up to 52.0" 
+
+메시지를 자세히보면, 로컬 PC에서 자바 버전이 8로 운영되고 있기 때문에 **버전 에러**가 발생하는 것이다.
 
 
 
 # Reference
 
 - https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/lecture/48553?tab=curriculum&q=107977
+- https://www.inflearn.com/questions/53693
