@@ -102,7 +102,7 @@ ex) localhost:8000/hello-static.html
 
 ### mapping 패턴 변경하기
 
-`/resources/appication.properties` 파일에서 정적 리소스 매핑 패턴을 설정할 수 있다.
+`/resources/appication.properties` 파일에서 정적 리소스 매핑 패턴을 설정한다.
 
 `srping.mvc.static-path-pattern=/` 이후에 경로를 지정할 수 있다. (default는 `srping.mvc.static-path-pattern=/**`)이다.  mappig 패턴을 `/static/**`으로 변경해보자.
 
