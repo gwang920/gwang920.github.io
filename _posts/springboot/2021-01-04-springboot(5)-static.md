@@ -112,9 +112,9 @@ ex) localhost:8000/hello-static.html
 매핑 경로 : https://localhost:8000/main/cTest
 ```
 
+<br/>
 
-
-`/resources/appication.properties` 파일에서 정적 리소스 매핑 패턴을 설정할 수 있다.
+Spring Boot에서는 `/resources/appication.properties` 파일에 정적 리소스 매핑 패턴을 설정할 수 있다.
 
 `srping.mvc.static-path-pattern=/` 이후에 경로를 지정하자. (default는 `srping.mvc.static-path-pattern=/**`)이다.  mappig 패턴을 `/static/**`으로 변경해보자.
 
@@ -128,13 +128,13 @@ spring.mvc.static-path-pattern=/static/**
 
 
 
-
+<br/>
 
 그리고 요청을 보내보자. `hello-static.html` 파일은 여전히 패턴 변경 전과 동일한 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Error page** 가 로드된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
 
-
+<br/>
 
 **appication.properties**에 설정한 매핑 패턴으로 접근해야 비로소 `hello-static.html`이 로드됨을 확인할 수 있다.
 
@@ -171,13 +171,13 @@ classpath:/resources/
 
 ![image](https://user-images.githubusercontent.com/49560745/103537333-933b3c00-4ed7-11eb-997b-fd4d9d4cf1c8.png)
 
-
+<br/>
 
 그리고 새로운 `hello-static.html` 파일 을 생성하자.
 
 ![image](https://user-images.githubusercontent.com/49560745/103529313-caeeb780-4ec8-11eb-8184-bd0cfcd4d7e1.png)
 
-
+<br/>
 
 `/resources/appication.properties` 에 `new-static` 폴더를 정적 리소스의 Location으로 설정하자. `spring.resources.static-locations=classpath:` 이후에 경로를 지정할 수 있다.
 
@@ -191,7 +191,7 @@ spring.resources.static-locations=classpath:/new-sattic/
 
 
 
-
+<br/>
 
 그리고 `localhost:8000/hello-static.html`을 요청하면 정상적으로 html이 로드됨을 확인할 수 있다.
 
@@ -207,13 +207,13 @@ spring.resources.static-locations=classpath:/new-sattic/
 
 ![image](https://user-images.githubusercontent.com/49560745/103530738-510bfd80-4ecb-11eb-96ed-c9a68842e59a.png)
 
-
+<br/>
 
 그리고 `localhost:8000/hello-static.html`에 요청을 보내면 아래 처럼 **Error Page**가 로드된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103530772-5e28ec80-4ecb-11eb-8ca3-434f7f9abec1.png)
 
-
+<br/>
 
  `spring.resources.static-locations=classpath:/new-static` 이  `spring.resources.static-locations=classpath:/` 를 **Override** 했기 때문이다.
 
