@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 게시판 만들기[1] - 환경구축
+title: Spring boot기반 Web 구축하기[1] - 환경구축
 toc: true
 categories:	
     - Spring boot

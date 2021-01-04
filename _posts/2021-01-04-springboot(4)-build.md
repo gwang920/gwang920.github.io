@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 게시판 만들기[4] - 빌드하기
+title: Spring boot기반 Web 구축하기[4] - 빌드하기
 toc: true
 categories:	
     - Spring boot
