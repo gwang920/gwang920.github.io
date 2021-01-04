@@ -1,5 +1,5 @@
 ---
-title: Intellij & Gitbash 연동하기
+title: Intellij & Git Bash 연동하기
 toc: true
 categories:	
     - IntelliJ
