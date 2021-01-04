@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web 구축하기[4] - 정적 컨텐츠
+title: Spring boot기반 Web 구축하기[5] - 정적 컨텐츠
 toc: true
 categories:	
     - Spring boot
