@@ -30,7 +30,7 @@ Spring boot에서는 정적 컨텐츠 기능을 제공한다.
 
 자세한 내용은 [Spring Boot Features](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-static-content)에서 "static content"를 검색해보자.
 
-
+<br/>
 
 # 정적 컨텐츠 생성
 
@@ -82,9 +82,51 @@ ex) localhost:8000/hello-static.html
 3) "hello-static.html" 브라우저로 전송
 ```
 
+<br/>
+
+# 정적 컨텐츠 더 알아보기
+
+## 정적 리소스 mapping URL 패턴
+
+![image](https://user-images.githubusercontent.com/49560745/103527492-ca085680-4ec5-11eb-9574-2e7709e46362.png)
 
 
-# 정적 컨텐츠 심화
+
+![image](https://user-images.githubusercontent.com/49560745/103526482-56b21500-4ec4-11eb-9daa-0480519d9475.png)
+
+
+
+정적 리소스는 기본적으로 `/**(루트)` 부터 매핑이 된다. 따라서, 위 예시처럼 `localhost:8000/hello-static.html`을 요청하면 정적 리소스의 location(위치)에서 정적 컨텐츠를 찾아 응답한다.
+
+
+
+### mapping 패턴 변경하기
+
+`/resources/appication.properties` 파일에서 정적 리소스 매핑 패턴을 설정할 수 있다.
+
+![image](https://user-images.githubusercontent.com/49560745/103527310-7dbd1680-4ec5-11eb-837e-fea53e950c65.png)
+
+`srping.mvc.static-path-pattern=/` 이후에 경로를 지정할 수 있다. (default는 `srping.mvc.static-path-pattern=/**`)이다. 
+
+mappig 패턴을 `/static/**`으로 변경해보자.
+
+
+
+![image](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
+
+`hello-static.html` 파일은 여전히 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 Errop page 가 로드된다.
+
+
+
+![image](https://user-images.githubusercontent.com/49560745/103526597-7f3a0f00-4ec4-11eb-8d75-1f149582f135.png)
+
+**appication.properties**에 설정한 매핑 패턴으로 접근하면 `hello-static.html`이 로드됨을 확인할 수 있다.
+
+
+
+
+
+## 정적 리소스 Location
 
 기본적으로 Spring boot는 정적 컨텐츠를 `/staic` or`/public` or `/resources` or `/META-INF/resources` 로 부터 불러온다. 즉,  4가지 경로는 정적 리소스의 위치를 뜻한다.
 
