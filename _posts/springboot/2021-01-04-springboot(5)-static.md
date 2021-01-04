@@ -134,7 +134,9 @@ spring.mvc.static-path-pattern=/static/**
 
 ![image](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
 
-**appication.properties**에 설정한 매핑 패턴으로 접근하면 `hello-static.html`이 로드됨을 확인할 수 있다.
+
+
+**appication.properties**에 설정한 매핑 패턴으로 접근해야 비로소 `hello-static.html`이 로드됨을 확인할 수 있다.
 
 
 
@@ -144,7 +146,7 @@ spring.mvc.static-path-pattern=/static/**
 
 
 
-* 이 프로퍼티는 **WebMvcProperties**에 구현되어 있다.
+* [참고] 이 프로퍼티는 **WebMvcProperties**에 구현되어 있다.
 
 <br/>
 
@@ -169,9 +171,13 @@ classpath:/resources/
 
 ![image](https://user-images.githubusercontent.com/49560745/103537333-933b3c00-4ed7-11eb-997b-fd4d9d4cf1c8.png)
 
+
+
 그리고 새로운 `hello-static.html` 파일 을 생성하자.
 
 ![image](https://user-images.githubusercontent.com/49560745/103529313-caeeb780-4ec8-11eb-8184-bd0cfcd4d7e1.png)
+
+
 
 `/resources/appication.properties` 에 `new-static` 폴더를 정적 리소스의 Location으로 설정하자. `spring.resources.static-locations=classpath:` 이후에 경로를 지정할 수 있다.
 
@@ -185,9 +191,13 @@ spring.resources.static-locations=classpath:/new-sattic/
 
 
 
+
+
 그리고 `localhost:8000/hello-static.html`을 요청하면 정상적으로 html이 로드됨을 확인할 수 있다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103529806-a810d300-4ec9-11eb-9dd7-1d8af4a5bc1f.png)
+
+
 
 
 
@@ -197,9 +207,13 @@ spring.resources.static-locations=classpath:/new-sattic/
 
 ![image](https://user-images.githubusercontent.com/49560745/103530738-510bfd80-4ecb-11eb-96ed-c9a68842e59a.png)
 
+
+
 그리고 `localhost:8000/hello-static.html`에 요청을 보내면 아래 처럼 **Error Page**가 로드된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103530772-5e28ec80-4ecb-11eb-8ca3-434f7f9abec1.png)
+
+
 
  `spring.resources.static-locations=classpath:/new-static` 이  `spring.resources.static-locations=classpath:/` 를 **Override** 했기 때문이다.
 
@@ -262,9 +276,13 @@ WebMvcConfigurer로 WebConfig 설정하기
 </html
 ```
 
+
+
 설정한 경로를 요청하면 page가 load 된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103535769-a8fb3200-4ed4-11eb-9a8e-6f02b9337d9d.png)
+
+
 
 기본 경로를 요청해도 page가 load 됨을 확인할 수 있다.
 
