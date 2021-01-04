@@ -63,7 +63,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 기본 폴더구조는 위와 같다.
 
-![image](https://user-images.githubusercontent.com/49560745/103506091-3c197500-4e9f-11eb-85c6-d5c111014727.png)
+![image](https://user-images.githubusercontent.com/49560745/103510191-0d53cc80-4ea8-11eb-8682-f897bd7be985.png)
 
 **./gradlew build** 입력
 
