@@ -40,7 +40,77 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 
 
- 
+build하는 과정은 다음과 같다.
+
+```
+1) ./gradlew build
+2) cd build/libs
+3) java -jar hello-spring-0.0.1-SNAPSHOT.jar
+4) 실행확인
+```
+
+
+
+![image](https://user-images.githubusercontent.com/49560745/103506005-10968a80-4e9f-11eb-92fe-c1ead0873b1d.png)
+
+ command에서 프로젝트 폴더로 이동
+
+![image](https://user-images.githubusercontent.com/49560745/103506221-8995e200-4e9f-11eb-9bf9-366a372d7b69.png)
+
+기본 폴더구조는 위와 같다.
+
+![image](https://user-images.githubusercontent.com/49560745/103506091-3c197500-4e9f-11eb-85c6-d5c111014727.png)
+
+**./gradlew build** 입력
+
+![image](https://user-images.githubusercontent.com/49560745/103506195-78e56c00-4e9f-11eb-89cb-f51aba82d958.png)
+
+**./gradlew build**를 실행하고, ls를 입력하면 build 폴더에 **libs** 폴더가 생성되어있음을 확인할 수 있다.
+
+![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
+
+마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 위와 같은 화면이 출력되면 성공이다!
+
+
+
+```
+Exception in thread "main" java.lang.UnsupportedClassVersionError: hello/hellospring/HelloSpringApplication has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+
+        at java.lang.ClassLoader.defineClass1(Native Method)
+
+        at java.lang.ClassLoader.defineClass(Unknown Source)
+
+        at java.security.SecureClassLoader.defineClass(Unknown Source)
+
+        at java.net.URLClassLoader.defineClass(Unknown Source)
+
+        at java.net.URLClassLoader.access$100(Unknown Source)
+
+        at java.net.URLClassLoader$1.run(Unknown Source)
+
+        at java.net.URLClassLoader$1.run(Unknown Source)
+
+        at java.security.AccessController.doPrivileged(Native Method)
+
+        at java.net.URLClassLoader.findClass(Unknown Source)
+
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+
+        at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:151)
+
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+
+        at java.lang.Class.forName0(Native Method)
+        at java.lang.Class.forName(Unknown Source)
+        at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:46)
+        at org.springframework.boot.loader.Launcher.launch(Launcher.java:109)
+        at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+        at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+```
+
+
+
+
 
 # Reference
 
