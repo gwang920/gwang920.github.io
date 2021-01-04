@@ -88,7 +88,7 @@ ex) localhost:8000/hello-static.html
 
 ## 정적 리소스 mapping URL 패턴
 
-![image](https://user-images.githubusercontent.com/49560745/103527492-ca085680-4ec5-11eb-9574-2e7709e46362.png)
+![image](https://user-images.githubusercontent.com/49560745/103530335-8e23c000-4eca-11eb-9322-05f6a5d55778.png)
 
 
 
@@ -161,7 +161,7 @@ classpath:/resources/
 
 ![image](https://user-images.githubusercontent.com/49560745/103529313-caeeb780-4ec8-11eb-8184-bd0cfcd4d7e1.png)
 
-`/resources/appication.properties` 에 `new-static` 폴더를 정적 리소스의 Location으로 설정하자.`spring.resources.static-locations=classpath:` 이후에 경로를 지정할 수 있다.
+`/resources/appication.properties` 에 `new-static` 폴더를 정적 리소스의 Location으로 설정하자. `spring.resources.static-locations=classpath:` 이후에 경로를 지정할 수 있다.
 
 ```
 spring.resources.static-locations=classpath:/new-sattic/
@@ -176,6 +176,28 @@ spring.resources.static-locations=classpath:/new-sattic/
 그리고 `localhost:8000/hello-static.html`을 요청하면 정상적으로 html이 로드됨을 확인할 수 있다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103529806-a810d300-4ec9-11eb-9dd7-1d8af4a5bc1f.png)
+
+
+
+하지만, 이 방법은 한 가지 **문제**가 있다. `spring.resources.static-locations=classpath:` 으로 location을 설정하는 방법은 스프링 부트에서 기본으로 제공하는 locations를 **override**하기 때문에 설정 후에는 기본 location을 사용할 수 없다. 아래 예시를 보자.
+
+위에서 설정한 `new-static` 폴더를 제거하자.
+
+![image](https://user-images.githubusercontent.com/49560745/103530738-510bfd80-4ecb-11eb-96ed-c9a68842e59a.png)
+
+그리고 `localhost:8000/hello-static.html`에 요청을 보내면 아래 처럼 **Error Page**가 로드된다.
+
+![image](https://user-images.githubusercontent.com/49560745/103530772-5e28ec80-4ecb-11eb-8ca3-434f7f9abec1.png)
+
+ `spring.resources.static-locations=classpath:/new-static` 이  `spring.resources.static-locations=classpath:/` 를 **Override** 했기 때문이다.
+
+![image](https://user-images.githubusercontent.com/49560745/103530898-9defd400-4ecb-11eb-8992-70a0876aac7e.png)
+
+
+
+### 정적 리소스 설정
+
+**WebMvcConfigurer**를 구현하는 클래스에서 **addResourceHandlers**를 **override**하여 정적 리소스 핸들러를 새롭게 설정할 수 있다. 위 **override** 문제를 해결하는 방법이다. 즉, 스프링 부트에서 default로 제공되는 정적 리소스 핸들러는 그대로 사용하면서 사용자 커스텀 핸들러가 추가되는 것이다.
 
 # Reference
 

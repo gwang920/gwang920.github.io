@@ -180,13 +180,13 @@ javac 11.0.9
 1. [File] - [Project탭]
 ```
 
-Project SDK에 11version으로 맞춰놓고 11version의 jdk의 경로를 설정해준다.
+Project SDK에 11.0.9 version으로 맞춰놓고 11.0.9  version의 jdk의 경로를 설정해준다.
 
 ```
 2. [File] - [Setting] - [Build, Execution, Deployment 탭] - [Gradle 탭]
 ```
 
-Gralde JVM - 1.8 version으로 설정되어 있는 것을 1.11version으로 변경해준다.
+Gralde JVM - 1.8 version으로 설정되어 있는 것을 11.0.9 version으로 변경해준다.
 
 
 
