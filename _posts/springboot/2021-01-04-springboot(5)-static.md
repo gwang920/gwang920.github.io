@@ -11,7 +11,7 @@ last_modified_at:
 
 
 
-Spring boot기반 **정적 컨텐츠** 구축에 대해 간단하게 알아보자.
+Spring boot기반 **정적 컨텐츠**에 대해 간단하게 알아보자.
 
 **정적 컨텐츠란?**
 
@@ -80,7 +80,16 @@ ex) localhost:8000/hello-static.html
 
 
 
-기본적으로 Spring boot는 정적 컨텐츠를 `/staic` or`/public` or `/resources` or `/META-INF/resources` 로 부터 불러온다.
+기본적으로 Spring boot는 정적 컨텐츠를 `/staic` or`/public` or `/resources` or `/META-INF/resources` 로 부터 불러온다. 즉,  4가지 경로는 정적 리소스의 위치를 뜻한다.
+
+```
+classpath:/META-INF/resources/
+classpath:/resources/
+"classpath:/static/"
+"classpath:/public/"
+```
+
+
 
 
 
@@ -88,6 +97,5 @@ ex) localhost:8000/hello-static.html
 
 - https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/lecture/49576?tab=curriculum
 
-
-
 - https://armontad-1202.tistory.com/entry/%EC%9B%B9%EC%9D%98-%EC%A0%95%EC%A0%81-%EB%8F%99%EC%A0%81-%EC%BD%98%ED%85%90%EC%B8%A0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A0%95%EC%A0%81-%EB%8F%99%EC%A0%81-%EC%BD%98%ED%85%90%EC%B8%A0
+- https://atoz-develop.tistory.com/entry/spring-boot-web-mvc-static-resources

@@ -34,7 +34,7 @@ gallery2:
 
  이제, **google Fonts**를 활용해 font를 변경해보자.
 
-## 1) google Fonts에서 원하는 font 선택하기
+# 1) google Fonts에서 원하는 font 선택하기
 
 추천하는 서체는 위와 동일한 **[Noto Sans KR](https://fonts.google.com/specimen/Noto+Sans+KR?sidebar.open=true&selection.family=Noto+Sans+KR:wght@100)**이다. 이외에도 다양한 font를 적용할 수 있다. **[Google Fonts 보러가기](https://fonts.google.com/?sidebar.open=true&selection.family=Noto+Sans+KR:wght@100)**
 
@@ -44,7 +44,7 @@ gallery2:
 
 
 
-## 2) font 적용하기
+# 2) font 적용하기
 
 ![image](https://user-images.githubusercontent.com/49560745/103432843-015ad700-4c2a-11eb-8688-046bf975de16.png)
 

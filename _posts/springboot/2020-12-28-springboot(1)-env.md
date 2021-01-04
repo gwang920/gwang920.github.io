@@ -9,6 +9,8 @@ tags:
 last_modified_at: 
 ---
 
+# 1. Spring boot 다운로드
+
 https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.
 
 ![image](https://user-images.githubusercontent.com/49560745/103190612-11ff0a80-4915-11eb-9d11-588bd9af497a.png)
@@ -23,7 +25,7 @@ https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.
 
 우측에는 **ADD DEPENDENCIES**로 원하는 개발환경을 구축할 수 있다. Web 개발이기 때문에 **Spring Web**과**Thymeleaf(HTML을 만들어주는 템플릿엔진)**를 추가해준다. 그리고 하단에 **GENERATE**를 클릭하면 압축파일이 다운로드된다.
 
-
+# 2. 프로젝트 Import
 
 ![image](https://user-images.githubusercontent.com/49560745/103190944-563eda80-4916-11eb-98cd-9c6502e0a8fe.png)
 
@@ -44,7 +46,7 @@ https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.
 
 이제, 프로젝트를 **run** 시켜보자. (실행 시 애먹었던 오류는 따로 아래 정리해두었다.)
 
-
+# 3. page 로드
 
 ![image](https://user-images.githubusercontent.com/49560745/103193608-4b894300-4920-11eb-80f6-d181585155b2.png)
 

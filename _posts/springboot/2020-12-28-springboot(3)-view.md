@@ -9,7 +9,7 @@ tags:
 last_modified_at: 
 ---
 
-
+# index.html 구현
 
 우선, 도메인 접속 시 기본 페이지가 되는 index.html 을 구현하자. 
 
@@ -36,7 +36,7 @@ Hello
 
 ![image](https://user-images.githubusercontent.com/49560745/103200313-58159780-4930-11eb-9e5e-613ffdd6f5f0.png)
 
-
+# 동적 페이지 구현
 
 이제, **Controller**를 활용해 동적인 페이지를 만들어보자.
 

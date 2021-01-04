@@ -33,7 +33,9 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 
 
 
-이제, **Intellij**에서  Terminal을 Gitbash로 변경해보자.
+# IntelliJ Terminal, Gitbash로 변경하기 
+
+이제, **IntelliJ**에서  Terminal을 Gitbash로 변경해보자.
 
 우선, Intellij에서 **Crtl + Alt + s** 키를 눌러 Settings 창을 열자.
 
