@@ -69,11 +69,15 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 **./gradlew build**를 실행하고, ls를 입력하면 build 폴더에 **libs** 폴더가 생성되어있음을 확인할 수 있다.
 
+(libs 폴더가 생성되지 않는 경우가 있다. 아래 오류 사항을 참고해 pc의 jdk 버전, 프로젝트의 jdk 버전을 확인하고, 설정해주자.)
+
 ![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
 
 마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 위와 같은 화면이 출력되면 성공이다!
 
-- Version Error
+# 오류
+
+**1) Version Error**
 
 ```
 Exception in thread "main" java.lang.UnsupportedClassVersionError: hello/hellospring/HelloSpringApplication has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
@@ -98,9 +102,9 @@ Exception in thread "main" java.lang.UnsupportedClassVersionError: hello/hellosp
         at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
 ```
 
-55 = Java 11 버전
+**55 = Java 11 버전**
 
-52 = Java 8 버전
+**52 = Java 8 버전**
 
 "has been compiled by a more recent version of the Java Runtime (class file version 55.0)
 
@@ -110,7 +114,66 @@ this version of the Java Runtime only recognizes class file versions up to 52.0"
 
 
 
+**해결방법**
+
+1. 환경변수 변경하기
+
+```
+Windows 10 기준 환경 변수 설정하기
+
+sysdm.cpl 입력 => 고급 => 환경 변수
+
+1) User에 대한 사용자 변수
+- Path => 편집 => 새로만들기 => "C:\Program Files\Java\jdk-11.0.9\bin" 추가
+
+2) 시스템 변수
+- 편집 => C:\Program Files\Java\jdk-11.0.9\bin 추가
+- 새로 만들기 => 변수이름 : JAVA_HOME , 변수 값 : C:\Program Files\Java\jdk-11.0.9
+
+```
+
+2. 기존 Jdk 버전 삭제 하기
+
+````
+프로그램 추가/제거 => java 기존 버전 삭제
+````
+
+3. 버전 확인하기
+
+```
+cmd(명령 프롬프트)
+1) java -version
+2) javac -version
+
+현 프로젝트 기준 아래와 같이 나오면 성공이다.
+
+C:\Users\User>java -version
+java version "11.0.9" 2020-10-20 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.9+7-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.9+7-LTS, mixed mode)
+
+C:\Users\User>javac -version
+javac 11.0.9
+```
+
+4. IntelliJ 내 환경 설정
+
+```
+1. [File] - [Project탭]
+```
+
+Project SDK에 11version으로 맞춰놓고 11version의 jdk의 경로를 설정해준다.
+
+```
+2. [File] - [Setting] - [Build, Execution, Deployment 탭] - [Gradle 탭]
+```
+
+Gralde JVM - 1.8 version으로 설정되어 있는 것을 1.11version으로 변경해준다.
+
+
+
 # Reference
 
 - https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/lecture/48553?tab=curriculum&q=107977
 - https://www.inflearn.com/questions/53693
+- https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/lecture/49574?tab=question&q=82121

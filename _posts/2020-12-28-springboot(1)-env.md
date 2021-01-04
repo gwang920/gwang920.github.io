@@ -54,7 +54,7 @@ https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.
 
 # 오류
 
-## 1) Web server failed to start. Port 8080 was already in use 에러
+**1) Web server failed to start. Port 8080 was already in use 에러**
 
 ![image](https://user-images.githubusercontent.com/49560745/103193546-1c72d180-4920-11eb-9d2e-21660425572d.png)
 
@@ -64,7 +64,7 @@ default는 **8080** 포트로 설정되어있다.
 
 
 
-## 2) Process 'command 'C:/Program Files/Java/jdk1.8.0_261/bin/java.exe'' finished with non-zero exit value 1
+**2) Process 'command 'C:/Program Files/Java/jdk1.8.0_261/bin/java.exe'' finished with non-zero exit value 1**
 
 JDK 버전이 일치하지 않아 발생하는 오류이다. 아래 링크를 따라 해결할 수 있다.
 
