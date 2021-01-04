@@ -83,7 +83,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 2 - **cd build/libs**로 이동한 후
 
-3 - 마지막으로 **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하고, 
+3 - **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행했을 때,
 
 4 - 아래와 같은 화면이 출력되면 성공이다!
 
