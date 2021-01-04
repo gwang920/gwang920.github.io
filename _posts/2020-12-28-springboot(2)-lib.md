@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web Application 개발[2] - 라이브러리 살펴보기
+title: Spring boot기반 게시판 만들기[2] - 라이브러리 살펴보기
 toc: true
 categories:	
     - Spring boot
