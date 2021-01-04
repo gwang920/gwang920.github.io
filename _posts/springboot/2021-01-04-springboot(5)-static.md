@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web 구축하기[5] - 정적 컨텐츠
+title: Spring boot기반 Web Application 개발[5] - 정적 컨텐츠
 toc: true
 categories:	
     - Spring boot
@@ -198,6 +198,67 @@ spring.resources.static-locations=classpath:/new-sattic/
 ### 정적 리소스 설정
 
 **WebMvcConfigurer**를 구현하는 클래스에서 **addResourceHandlers**를 **override**하여 정적 리소스 핸들러를 새롭게 설정할 수 있다. 위 **override** 문제를 해결하는 방법이다. 즉, 스프링 부트에서 default로 제공되는 정적 리소스 핸들러는 그대로 사용하면서 사용자 커스텀 핸들러가 추가되는 것이다.
+
+우선, `/java/hello.hellospring/config` 위치에 `WebConfig` class 와 `/resources/` 밑에 `test`폴더와 그 아래 `static.html` 을 아래와 같이 생성하자.
+
+
+
+![image](https://user-images.githubusercontent.com/49560745/103535363-e7dcb800-4ed3-11eb-9532-b40ae0262a56.png)
+
+```
+파일명 : WebConfig.java
+```
+
+```java
+package hello.hellospring.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/test/**")
+                .addResourceLocations("classpath:/test/")
+                .setCachePeriod(20)
+        ;
+    }
+}
+```
+
+**@Override** 태그에 빨간줄이 뜨면 import가 되지 않아 발생하는 것이다.[IntelliJ 자동 import](https://hjjungdev.tistory.com/102)를 참고하자.
+
+
+
+```
+파일명 : static.html
+```
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+WebMvcConfigurer로 WebConfig 설정하기
+</body>
+</html
+```
+
+설정한 경로를 요청하면 page가 load 된다.
+
+![image](https://user-images.githubusercontent.com/49560745/103535769-a8fb3200-4ed4-11eb-9a8e-6f02b9337d9d.png)
+
+기본 경로를 요청해도 page가 load 됨을 확인할 수 있다.
+
+![image](https://user-images.githubusercontent.com/49560745/103536884-a13c8d00-4ed6-11eb-90f2-c9c2726e2511.png)
+
+
 
 # Reference
 

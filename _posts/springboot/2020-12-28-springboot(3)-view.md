@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web 구축하기[3] - View 설정하기
+title: Spring boot기반 Web Application 개발[3] - View 설정하기
 toc: true
 categories:	
     - Spring boot
