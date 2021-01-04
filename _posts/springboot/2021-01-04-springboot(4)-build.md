@@ -54,11 +54,11 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 ![image](https://user-images.githubusercontent.com/49560745/103506005-10968a80-4e9f-11eb-92fe-c1ead0873b1d.png)
 
-기본 폴더구조는 아래와 같다.
+기본 폴더구조는 아래와 같다. `ls` 명령어로 확인할 수 있다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103506221-8995e200-4e9f-11eb-9bf9-366a372d7b69.png)
 
-
+<br/>
 
 이제, Build 해보자. 순서는 다음과 같다.
 
@@ -75,21 +75,25 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 ![image](https://user-images.githubusercontent.com/49560745/103510191-0d53cc80-4ea8-11eb-8682-f897bd7be985.png)
 
-**./gradlew build**를 실행하고, ls를 입력하면 build 폴더에 **libs** 폴더가 생성되어있음을 확인할 수 있다.
+**BUILD SUCCESSFUL**이라는 메시지가 뜨면, 성공적으로 build가 된것이다.
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/49560745/103506195-78e56c00-4e9f-11eb-89cb-f51aba82d958.png)
+
+현 위치에서 `ls`를 입력하면 build 폴더에 **libs** 폴더가 생성되어있음을 확인할 수 있다.
 
 (libs 폴더가 생성되지 않는 경우가 있다. 아래 오류 사항을 참고해 pc의 jdk 버전, 프로젝트의 jdk 버전을 확인하고, 설정해주자.)
 
-![image](https://user-images.githubusercontent.com/49560745/103506195-78e56c00-4e9f-11eb-89cb-f51aba82d958.png)
+<br/>
+
+![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
 
 2 - **cd build/libs**로 이동한 후
 
 3 - **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행했을 때,
 
 4 - 아래와 같은 화면이 출력되면 성공이다!
-
-![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
-
-
 
 <br/>
 
