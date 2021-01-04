@@ -1,8 +1,8 @@
 ---
-title: intellij & gitbash 연동하기
+title: Intellij & Gitbash 연동하기
 toc: true
 categories:	
-    - intelliJ
+    - IntelliJ
 tags:
 - intelliJ
 - gitbash
@@ -10,9 +10,7 @@ tags:
 last_modified_at: 
 ---
 
-Windows에서 intelliJ & Gitbash 연동하기
-
-**intellij Community**의 기본 터미널은 Windows의 기본 shell인 **cmd**이다. 따라서, bash(bash는 shell을 대체하는 소프트웨어) 명령어를 사용하기 위해 기본 shell을 변경해줘야한다. 이번 포스팅에서는 Windows의 기본 shell을 Git bash로 변경하는 방법에 대해 알아보자.
+**Intellij Community**의 기본 터미널은 Windows의 기본 shell인 **cmd**이다. 따라서, bash(bash는 shell을 대체하는 소프트웨어) 명령어를 사용하기 위해 기본 shell을 변경해줘야한다. 이번 포스팅에서는 Windows의 기본 shell을 Git bash로 변경하는 방법에 대해 알아보자.
 
 
 
@@ -35,9 +33,9 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 
 
 
-이제, **intelliJ**에서  Terminal을 Gitbash로 변경해보자.
+이제, **Intellij**에서  Terminal을 Gitbash로 변경해보자.
 
-우선, IntelliJ에서 **Crtl + Alt + s** 키를 눌러 Settings 창을 열자.
+우선, Intellij에서 **Crtl + Alt + s** 키를 눌러 Settings 창을 열자.
 
 ![image](https://user-images.githubusercontent.com/49560745/103500599-e1781d00-4e8e-11eb-8503-504fad1527fa.png)
 
@@ -49,7 +47,7 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 "C:\Program Files\Git\bin\sh.exe(shell이 설치된 경로)" -login -i
 ````
 
- shell이 설치되어있는 경로를 ""로 감싸고, 공백 **-login** 공백 **-i**를 입력하자. 그리고 apply 버튼 ok 버튼을 누르고 IDEA를 재구동하자.
+ shell이 설치되어있는 경로를 ""로 감싸고, 공백 **-login** 공백 **-i**를 입력하자. 그리고 **Apply**, **OK** 버튼을 누르고 IDEA를 재구동하자.
 
 
 
@@ -59,9 +57,7 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 
 **[변경 전]**
 
-
-
-![image](https://user-images.githubusercontent.com/49560745/103500806-898de600-4e8f-11eb-86f4-a047b531c0d8.png)
+![image](https://user-images.githubusercontent.com/49560745/103501125-a4ad2580-4e90-11eb-8e1b-0454ade69c87.png)
 
 **[변경 후]**
 
@@ -69,6 +65,6 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 
 # Reference
 
-- [IntelliJ IDEA와 Git Bash 연동하기. JetBrains 계열의 IDEA와 Git Bash를 연동하는 방법을… | by Violet Bora Lee | Medium](https://violetboralee.medium.com/intellij-idea와-git-bash-연동하기-63e8216aa7de)
+- [IntelliJ IDEA와 Git Bash 연동하기. JetBrains 계열의 IDEA와 Git Bash를 연동하는 방법을… | by Violet Bora Lee | Medium]()
 
 - https://jhnyang.tistory.com/57
