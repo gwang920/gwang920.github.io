@@ -12,7 +12,7 @@ last_modified_at:
 
 **Intellij Community**의 기본 터미널은 Windows의 기본 shell인 **cmd**이다. 따라서, bash(bash는 shell을 대체하는 소프트웨어) 명령어를 사용하기 위해 기본 shell을 변경해줘야한다. 이번 포스팅에서는 Windows의 기본 shell을 Git bash로 변경하는 방법에 대해 알아보자.
 
-
+<br/>
 
 * Shell & Bash 이란?
 
@@ -27,21 +27,25 @@ last_modified_at:
 Shell의 기능을 활용할 수 있다.
 ```
 
-
+<br/>
 
 Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash를 사용하는 이유는 [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) 명령어를 사용할 수 있기 때문이다. Git Bash 내에선 *nix계열의 OS에서 쓸 수 있는 명령어인 ssh, scp, cat, find 등을 쓸 수 있다.
 
-
+<br/>
 
 # IntelliJ Terminal, Gitbash로 변경하기 
 
 이제, **IntelliJ**에서  Terminal을 Gitbash로 변경해보자.
+
+<br/>
 
 우선, Intellij에서 **Crtl + Alt + s** 키를 눌러 Settings 창을 열자.
 
 ![image](https://user-images.githubusercontent.com/49560745/103500599-e1781d00-4e8e-11eb-8503-504fad1527fa.png)
 
 위와 같은 창에서 좌측 상단의 검색란에 **Terminal**을 입력하자. 기본 Shell path는 **cmd.exe**로 설정되어있음을 확인할 수 있다. 이제, Shell path를 Git의 **sh.exe**로 변경해주자. 
+
+<br/>
 
 ![image](https://user-images.githubusercontent.com/49560745/103500355-63b41180-4e8e-11eb-9143-c2a3dfdad189.png)
 
@@ -51,7 +55,7 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 
  shell이 설치되어있는 경로를 ""로 감싸고, 공백 **-login** 공백 **-i**를 입력하자. 그리고 **Apply**, **OK** 버튼을 누르고 IDEA를 재구동하자.
 
-
+<br/>
 
 터미널에 접속하면 이제 기본 shell이 **bash**로 변경된 것을 확인할 수 있다!
 
