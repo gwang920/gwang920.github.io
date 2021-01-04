@@ -102,6 +102,18 @@ ex) localhost:8000/hello-static.html
 
 ### mapping 패턴 변경하기
 
+* mapping 이란?
+
+```
+- 해당 하는 값이 다른 값을 가르키도록 하는 것.
+- 주소가 간결해지는 장점이 있다.
+
+기존 경로 : https://localhost:8000/main/controller/test
+매핑 경로 : https://localhost:8000/main/cTest
+```
+
+
+
 `/resources/appication.properties` 파일에서 정적 리소스 매핑 패턴을 설정한다.
 
 `srping.mvc.static-path-pattern=/` 이후에 경로를 지정할 수 있다. (default는 `srping.mvc.static-path-pattern=/**`)이다.  mappig 패턴을 `/static/**`으로 변경해보자.
@@ -118,7 +130,7 @@ spring.mvc.static-path-pattern=/static/**
 
 
 
-그리고 요청을 보내보자. `hello-static.html` 파일은 여전히 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Errop page** 가 로드된다.
+그리고 요청을 보내보자. `hello-static.html` 파일은 여전히 패턴 변경 전과 동일한 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Errop page** 가 로드된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
 
