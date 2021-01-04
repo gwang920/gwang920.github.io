@@ -104,27 +104,31 @@ ex) localhost:8000/hello-static.html
 
 `/resources/appication.properties` 파일에서 정적 리소스 매핑 패턴을 설정할 수 있다.
 
+`srping.mvc.static-path-pattern=/` 이후에 경로를 지정할 수 있다. (default는 `srping.mvc.static-path-pattern=/**`)이다.  mappig 패턴을 `/static/**`으로 변경해보자.
+
+```
+spring.mvc.static-path-pattern=/static/**
+```
+
+
+
 ![image](https://user-images.githubusercontent.com/49560745/103527310-7dbd1680-4ec5-11eb-837e-fea53e950c65.png)
 
-`srping.mvc.static-path-pattern=/` 이후에 경로를 지정할 수 있다. (default는 `srping.mvc.static-path-pattern=/**`)이다. 
-
-mappig 패턴을 `/static/**`으로 변경한 후 요청을 보내자.
-
-````
-spring.mvc.static-path-pattern=/static/**
-````
 
 
+
+
+그리고 요청을 보내보자. `hello-static.html` 파일은 여전히 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Errop page** 가 로드된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
 
-`hello-static.html` 파일은 여전히 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Errop page** 가 로드된다.
+**appication.properties**에 설정한 매핑 패턴으로 접근하면 `hello-static.html`이 로드됨을 확인할 수 있다.
 
 
 
 ![image](https://user-images.githubusercontent.com/49560745/103526597-7f3a0f00-4ec4-11eb-8d75-1f149582f135.png)
 
-**appication.properties**에 설정한 매핑 패턴으로 접근하면 `hello-static.html`이 로드됨을 확인할 수 있다.
+
 
 
 
@@ -149,23 +153,27 @@ classpath:/resources/
 
 정적 리소스의 위치를 `/new-static/` 으로 변경해보자.
 
-![image](https://user-images.githubusercontent.com/49560745/103528941-2d938380-4ec8-11eb-917a-4f59e9b20ad0.png)
-
-
-
 우선, `resources` 하위 경로에 `new-static` 폴더를 생성하자. 
 
-![image](https://user-images.githubusercontent.com/49560745/103529313-caeeb780-4ec8-11eb-8184-bd0cfcd4d7e1.png)
+![image](https://user-images.githubusercontent.com/49560745/103528941-2d938380-4ec8-11eb-917a-4f59e9b20ad0.png)
 
 그리고 새로운 `hello-static.html` 파일 을 생성하자.
 
-![image](https://user-images.githubusercontent.com/49560745/103529832-b52dc200-4ec9-11eb-9387-f3986c360963.png)
+![image](https://user-images.githubusercontent.com/49560745/103529313-caeeb780-4ec8-11eb-8184-bd0cfcd4d7e1.png)
 
 `/resources/appication.properties` 에 `new-static` 폴더를 정적 리소스의 Location으로 설정하자.`spring.resources.static-locations=classpath:` 이후에 경로를 지정할 수 있다.
 
 ```
 spring.resources.static-locations=classpath:/new-sattic/
 ```
+
+
+
+![image](https://user-images.githubusercontent.com/49560745/103529832-b52dc200-4ec9-11eb-9387-f3986c360963.png)
+
+
+
+그리고 `localhost:8000/hello-static.html`을 요청하면 정상적으로 html이 로드됨을 확인할 수 있다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103529806-a810d300-4ec9-11eb-9dd7-1d8af4a5bc1f.png)
 
