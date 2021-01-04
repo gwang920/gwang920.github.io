@@ -27,7 +27,7 @@ last_modified_at:
 Shell의 기능을 활용할 수 있다.
 ```
 
-<br/>
+
 
 Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash를 사용하는 이유는 [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) 명령어를 사용할 수 있기 때문이다. Git Bash 내에선 *nix계열의 OS에서 쓸 수 있는 명령어인 ssh, scp, cat, find 등을 쓸 수 있다.
 
@@ -37,7 +37,7 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 
 이제, **IntelliJ**에서  Terminal을 Gitbash로 변경해보자.
 
-<br/>
+
 
 우선, Intellij에서 **Crtl + Alt + s** 키를 눌러 Settings 창을 열자.
 
