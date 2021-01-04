@@ -13,7 +13,7 @@ last_modified_at:
 
 Spring boot기반 **정적 컨텐츠**에 대해 간단하게 알아보자.
 
-**정적 컨텐츠란?**
+# 정적 컨텐츠란?
 
 ```
 변화가 없는 컨텐츠를 말한다. 보통 HTML,CSS,Img,javascript 파일 등 미리
@@ -31,6 +31,8 @@ Spring boot에서는 정적 컨텐츠 기능을 제공한다.
 자세한 내용은 [Spring Boot Features](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-static-content)에서 "static content"를 검색해보자.
 
 
+
+# 정적 컨텐츠 생성
 
 정적 컨텐츠를 생성하는 방법은 정말 간단하다.
 
@@ -60,6 +62,8 @@ Spring boot에서는 정적 컨텐츠 기능을 제공한다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103514425-ee593880-4eaf-11eb-92d9-1513505d909f.png)
 
+# 정적 컨텐츠 동작 원리
+
 **정적 컨텐츠**가 사용자 요청으로부터 로드되는 과정은 다음과 같다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103514630-5c9dfb00-4eb0-11eb-8f92-98e15afdc9f0.png)
@@ -79,6 +83,8 @@ ex) localhost:8000/hello-static.html
 ```
 
 
+
+# 정적 컨텐츠 심화
 
 기본적으로 Spring boot는 정적 컨텐츠를 `/staic` or`/public` or `/resources` or `/META-INF/resources` 로 부터 불러온다. 즉,  4가지 경로는 정적 리소스의 위치를 뜻한다.
 
