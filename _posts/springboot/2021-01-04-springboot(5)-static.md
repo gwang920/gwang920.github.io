@@ -155,7 +155,7 @@ classpath:/resources/
 
 우선, `resources` 하위 경로에 `new-static` 폴더를 생성하자. 
 
-![image](https://user-images.githubusercontent.com/49560745/103528941-2d938380-4ec8-11eb-917a-4f59e9b20ad0.png)
+![image](https://user-images.githubusercontent.com/49560745/103537333-933b3c00-4ed7-11eb-997b-fd4d9d4cf1c8.png)
 
 그리고 새로운 `hello-static.html` 파일 을 생성하자.
 
@@ -197,13 +197,13 @@ spring.resources.static-locations=classpath:/new-sattic/
 
 ### 정적 리소스 설정
 
-**WebMvcConfigurer**를 구현하는 클래스에서 **addResourceHandlers**를 **override**하여 정적 리소스 핸들러를 새롭게 설정할 수 있다. 위 **override** 문제를 해결하는 방법이다. 즉, 스프링 부트에서 default로 제공되는 정적 리소스 핸들러는 그대로 사용하면서 사용자 커스텀 핸들러가 추가되는 것이다.
+**WebMvcConfigurer**를 구현하는 클래스에서 **addResourceHandlers**를 **override**하여 정적 리소스 핸들러를 새롭게 설정할 수 있다. 위 **override** 문제를 해결하는 방법이다. 즉, 스프링 부트에서 **default**로 제공되는 정적 리소스 핸들러는 그대로 사용하면서 **사용자 커스텀 핸들러가 추가**되는 것이다.
 
 우선, `/java/hello.hellospring/config` 위치에 `WebConfig` class 와 `/resources/` 밑에 `test`폴더와 그 아래 `static.html` 을 아래와 같이 생성하자.
 
 
 
-![image](https://user-images.githubusercontent.com/49560745/103535363-e7dcb800-4ed3-11eb-9532-b40ae0262a56.png)
+![image](https://user-images.githubusercontent.com/49560745/103537033-f6789e80-4ed6-11eb-8bdd-b9e557c2e00c.png)
 
 ```
 파일명 : WebConfig.java
