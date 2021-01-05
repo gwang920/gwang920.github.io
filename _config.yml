@@ -84,7 +84,7 @@ social:
   links: # An array of links to social media profiles
 
 # Analytics
-analytics:
+analytics: G-M8GL2878NN
   provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          :
