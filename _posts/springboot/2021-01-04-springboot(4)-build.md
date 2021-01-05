@@ -81,7 +81,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 ![image](https://user-images.githubusercontent.com/49560745/103506195-78e56c00-4e9f-11eb-89cb-f51aba82d958.png)
 
-현 위치에서 `ls`를 입력하면 build 폴더에 **libs** 폴더가 생성되어있음을 확인할 수 있다.
+`/build`로 이동 후 `ls`를 입력하면 build 폴더에 **libs** 폴더가 생성되어있음을 확인할 수 있다.
 
 (libs 폴더가 생성되지 않는 경우가 있다. 아래 오류 사항을 참고해 PC와 IDE의 jdk 버전을 확인하고, 설정해주자.)
 
