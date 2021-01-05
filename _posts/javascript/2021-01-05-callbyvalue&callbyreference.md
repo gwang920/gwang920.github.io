@@ -108,7 +108,7 @@ console.log(callee); // 출력 : [0,2,3,4];
 
 ![image](https://user-images.githubusercontent.com/49560745/103621441-8f132b00-4f78-11eb-877e-4127a58024ea.png)
 
-이러한 원리로 **calle**와 같은 값을 참조하고 있는 **parameter**에서 특정 값이 변경되면 **callee**의 값도 변경되는 것이다.
+이러한 원리로 **callee**와 같은 값을 참조하고 있는 **parameter**에서 특정 값이 변경되면 **callee**의 값도 변경되는 것이다.
 
 
 
