@@ -20,7 +20,7 @@ title                    : "오늘코딩"
 title_separator          : "-"
 subtitle                 : "습관처럼 성장하는 블로그"
 name                     : "광근 서"
-description              : "An amazing website."
+description              : "Tech Blog"
 url                      : "https://gwang920.github.io"
 baseurl                  : 
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -87,7 +87,7 @@ social:
 analytics: 
   provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : "G-M8GL2878NN"
+    tracking_id          : "G-NLYPNMD407"
     anonymize_ip         : false # true, false (default)
 
 # Collections
