@@ -1,5 +1,5 @@
 ---
-title: Call by Value vs Call by Reference [JAVASCRIPT]
+ title: Call by Value vs Call by Reference [JAVASCRIPT]
 toc: true
 categories:	
     - Javascript
@@ -81,7 +81,7 @@ console.log(callee); // 출력 : 피 호출자
 call by reference의 특징은 이렇다.
 
 - **argument**로 **reference**를 넘겨준다.
-  - reference는 메모리 주소를 담고있는 변수이다.
+  - reference는 메모리 주소를 담고있는 혹은 가리키는 변수이다.
 - **reference** 자체를 넘기기 때문에 **call by value와 다르게** 값을 복사해 넘기는 형태가 아니다.
 - 호출하는 곳에서 참조 값을 넘겨주기 때문에, 호출 당한 곳에서 호출자의 argument 값을 **변경**할 수 있다. 즉, 원본 **argument** 값이 **변경 될 위험이 발생한다.**
 - **Call by Reference** 타입에는 `array`, `object`, `date` 등이 있다.
@@ -98,13 +98,56 @@ TryChangeCallee(callee); // 호출자
 console.log(callee); // 출력 : [0,2,3,4];
 ```
 
-이번에는 **call by reference** 타입인 `array`를 함수의 parameter로 넘겨주고, 이 parameter의 갑을 변경해줬다. 출력 결과는 [0,2,3,4]로 원본 배열인 callee의 0번째 `index`값이 변경되었음을 확인할 수 있다.
+이번에는 **call by reference** 타입인 `array`를 함수의 parameter로 넘겨주었다. 아래 그림과 같다.
+
+![image](https://user-images.githubusercontent.com/49560745/103621105-0bf1d500-4f78-11eb-9c95-c87288950eff.png)
+
+그리고 `parameter[0]=0` 으로의 값을 변경해줬다. 출력 결과는 `[0,2,3,4]`로 원본 배열인 callee의 0번째 `index`값이 변경되었음을 확인할 수 있다.
 
 
 
+![image](https://user-images.githubusercontent.com/49560745/103621441-8f132b00-4f78-11eb-877e-4127a58024ea.png)
+
+이러한 원리로 **calle**와 같은 값을 참조하고 있는 **parameter**가 특정 값을 변경하면 **callee**의 값도 변경되는 것이다.
 
 
 
+- `0x001`,`0x002`, `0x003`은 임의로 메모리주소를 지정한 것이다.
+- **메모리주소 - 메모리 위치에 대한 식별자, 메모리가 존재하는 공간**
+
+<br/>
+
+# refernce 원본을 유지하는 방법
+
+그렇다면 **call by reference**로 값을 넘겨줄 때, 어떻게 원본 **reference** 값이 변경하지 않고 **parameter**로 넘어온 **reference**를 자유롭게 사용할 수 있을까?
+
+답은 **새로운 객체를 생성하고, 매개변수 값을 이 새로운 객체에 할당하는 것**이다.
+
+```javascript
+
+let callee=[1,2,3,4];
+function TryChangeCallee(parameter){
+    let newarr=Array.from(Array(4));
+    // 원소 하나하나를 복사해줘야 Deep copy가 된다.
+    for(let i=0;i<parameter.length;i++){
+        newarr[i]=parameter[i];
+    }
+    newarr[0]=0;
+}
+
+TryChangeCallee(callee); // 호출자
+
+console.log(callee); // 출력 : [1,2,3,4];
+```
+
+![image](https://user-images.githubusercontent.com/49560745/103623243-2f6a4f00-4f7b-11eb-8fb3-2ea40e942f70.png)
+
+자바스크립트는 항상 **call by value** 방식만 존재한다고 한다. 결국, 변수가 가리키는 메모리에 적재되어 있는 값을 복사해 전달하기 때문이다. 
+
+- call by value : 값을 복사 후 전달
+- call by refernce : refernce를 복사 후 전달
+
+<br/>
 
 # Reference
 
