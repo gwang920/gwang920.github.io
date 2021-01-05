@@ -89,7 +89,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 ![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
 
-2 - **cd build/libs**로 이동한 후
+2 - **cd libs**로 이동한 후
 
 3 - **java -jar hello-spring-0.0.1-SNAPSHOT.jar** 명령어를 실행하여 빌드해보자.
 
