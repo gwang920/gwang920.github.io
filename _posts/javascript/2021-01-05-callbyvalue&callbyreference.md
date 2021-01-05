@@ -10,7 +10,7 @@ tags:
 last_modified_at: 
 ---
 
- 사실 이 포스팅을 작성하게 된 계기는 [프로그래머스 자물쇠와 열쇠 ](https://programmers.co.kr/learn/courses/30/lessons/60059) 이 문제를 풀이하다 '맞왜틀'에 빠졌기 때문이다. 배열 **argument**를 함수의 매개변수로 넘겨주며, 기본 배열 값의 변경되어 문제가 발생했다. 개념의 중요성을 다시 한번 느끼게 된 경험이었다.
+ 사실 이 포스팅을 작성하게 된 계기는 [프로그래머스 자물쇠와 열쇠 ](https://programmers.co.kr/learn/courses/30/lessons/60059) 이 문제를 풀이하다 '맞왜틀'에 빠졌기 때문이다. 배열 **argument**를 함수의 매개변수로 넘겨주며, 기본 배열 값의 변경되어 문제가 발생했다. 개념의 중요성을 다시 한번 느끼게 된다.
 
 <br/>
 
@@ -60,11 +60,19 @@ call by value의 특징은 이렇다.
 - 호출하는 곳에서 값을 **복사**하여 넘겨주기 때문에, 호출 당한 곳에서 호출자의 argument 값을 **변경**할 수 없다. 즉, 원본 **argument** 값이 **변경 될 위험이 없다.** 
 - **Call by value 타입**에는 `number`, `string`, `boolean` 등이 있다.
 
+````javascript
+let callee="피 호출자";
+
+function TryChangeCallee(parameter){
+    parameter="호출자";
+}
+
+TryChangeCallee(callee); // 호출자
+
+console.log(callee); // 출력 : 피 호출자
 ````
 
-````
-
-
+ **Call by value** 타입인 `string` "피 호출자"를 함수의 parameter로 넘겨줬다. TryChangeCallee 함수에서 변수 callee의 값이 변경되지 않는 것을 확인할 수 있다.
 
 <br/>
 
@@ -78,11 +86,19 @@ call by reference의 특징은 이렇다.
 - 호출하는 곳에서 참조 값을 넘겨주기 때문에, 호출 당한 곳에서 호출자의 argument 값을 **변경**할 수 있다. 즉, 원본 **argument** 값이 **변경 될 위험이 발생한다.**
 - **Call by Reference** 타입에는 `array`, `object`, `date` 등이 있다.
 
+```javascript
+let callee=[1,2,3,4];
+
+function TryChangeCallee(parameter){
+    parameter[0]=0;
+}
+
+TryChangeCallee(callee); // 호출자
+
+console.log(callee); // 출력 : [0,2,3,4];
 ```
 
-```
-
-
+이번에는 **call by reference** 타입인 `array`를 함수의 parameter로 넘겨주고, 이 parameter의 갑을 변경해줬다. 출력 결과는 [0,2,3,4]로 원본 배열인 callee의 0번째 `index`값이 변경되었음을 확인할 수 있다.
 
 
 
