@@ -10,9 +10,11 @@ tags:
 last_modified_at: 
 ---
 
+ 사실 이 포스팅을 작성하게 된 계기는 [프로그래머스 자물쇠와 열쇠 ](https://programmers.co.kr/learn/courses/30/lessons/60059) 이 문제를 풀이하다 '맞왜틀'에 빠졌기 때문이다. 배열 **argument**를 함수의 매개변수로 넘겨주며, 기본 배열 값의 변경되었기 때문이었다. 개념의 중요성을 다시 한번 느끼게 된 경험이었다.
 
+<br/>
 
-**call by value**, **call by reference**의 개념과 자바스크립트 내에서는 어떻게 사용되는지 알아보자.
+그래서 **call by value**, **call by reference**의 개념과 자바스크립트 내에서는 어떻게 사용되는지 알아보려한다.
 
 # Call by value, Call by Reference란 무엇인가?
 
