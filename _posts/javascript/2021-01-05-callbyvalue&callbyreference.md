@@ -104,13 +104,13 @@ console.log(callee); // 출력 : [0,2,3,4];
 
 ![image](https://user-images.githubusercontent.com/49560745/103621105-0bf1d500-4f78-11eb-9c95-c87288950eff.png)
 
-그리고 `parameter[0]=0` 으로의 값을 변경해줬다. 출력 결과는 `[0,2,3,4]`로 원본 배열인 callee의 0번째 `index`값이 변경되었음을 확인할 수 있다.
+그리고 `parameter[0]=0` 으로 값을 변경해줬다. 출력 결과는 `[0,2,3,4]`로 원본 배열인 callee의 0번째 `index`값이 변경되었음을 확인할 수 있다.
 
 
 
 ![image](https://user-images.githubusercontent.com/49560745/103621441-8f132b00-4f78-11eb-877e-4127a58024ea.png)
 
-이러한 원리로 **calle**와 같은 값을 참조하고 있는 **parameter**가 특정 값을 변경하면 **callee**의 값도 변경되는 것이다.
+이러한 원리로 **callee**와 같은 값을 참조하고 있는 **parameter**에서 특정 값이 변경되면 **callee**의 값도 변경되는 것이다.
 
 
 
@@ -121,7 +121,7 @@ console.log(callee); // 출력 : [0,2,3,4];
 
 # Refernce 원본을 유지하는 방법
 
-그렇다면 **call by reference**로 값을 넘겨줄 때, 어떻게 원본 **reference** 값이 변경하지 않고 **parameter**로 넘어온 **reference**를 자유롭게 사용할 수 있을까?
+그렇다면 **call by reference**로 값을 넘겨줄 때, 어떻게 원본 **reference** 값이 변경되지 않고 **parameter**로 넘어온 **reference**를 사용할 수 있을까?
 
 답은 **새로운 객체를 생성하고, 매개변수 값을 이 새로운 객체에 할당하는 것**이다.
 
