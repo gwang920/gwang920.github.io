@@ -1,5 +1,5 @@
 ---
- title: Call by Value vs Call by Reference [JAVASCRIPT]
+title: Call by Value vs Call by Reference [JAVASCRIPT]
 toc: true
 categories:	
     - Javascript
