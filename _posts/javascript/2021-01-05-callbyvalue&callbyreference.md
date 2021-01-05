@@ -41,6 +41,8 @@ test(argu1,argu2);
 
 # Call by value, Call by Reference란 무엇인가?
 
+본격적으로 **argument**를 함수 혹은 메소드의 매개변수로 전달하는 **두 방식**에 대해 알아보자.
+
 ```
 Call by value - 값을 전달한다.
 Call by Refrence - 참조 값을 전달한다.
@@ -48,7 +50,7 @@ Call by Refrence - 참조 값을 전달한다.
 
 
 
-본격적으로 **argument**를 함수 혹은 메소드의 매개변수로 전달하는 **두 방식**에 대해 알아보자.
+
 
 <br/>
 
