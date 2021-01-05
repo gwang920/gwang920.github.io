@@ -10,7 +10,7 @@ tags:
 last_modified_at: 
 ---
 
- 사실 이 포스팅을 작성하게 된 계기는 [프로그래머스 자물쇠와 열쇠 ](https://programmers.co.kr/learn/courses/30/lessons/60059) 이 문제를 풀이하다 '맞왜틀'에 빠졌기 때문이다. 배열 **argument**를 함수의 매개변수로 넘겨주며, 기본 배열 값의 변경되었기 때문이었다. 개념의 중요성을 다시 한번 느끼게 된 경험이었다.
+ 사실 이 포스팅을 작성하게 된 계기는 [프로그래머스 자물쇠와 열쇠 ](https://programmers.co.kr/learn/courses/30/lessons/60059) 이 문제를 풀이하다 '맞왜틀'에 빠졌기 때문이다. 배열 **argument**를 함수의 매개변수로 넘겨주며, 기본 배열 값의 변경되어 문제가 발생했다. 개념의 중요성을 다시 한번 느끼게 된 경험이었다.
 
 <br/>
 
@@ -23,7 +23,7 @@ Call by value - 값을 전달한다.
 Call by Refrence - 참조 값을 전달한다.
 ```
 
-
+<br/>
 
 시작하기에 앞서, **parameter** 와 **argument**의 정의를 정리해봤다. **Call by value**, **Call by Reference**를 이해하기 위해 참고하면 좋을 것같다.
 
@@ -48,7 +48,7 @@ test(argu1,argu2);
 
 <br/>
 
-본격적으로 값을 전달하는 방식에 대해 알아보자.
+본격적으로 **argument**를 함수 혹은 메소드의 매개변수로 전달하는 **두 방식**에 대해 알아보자.
 
 # Call by Value
 
@@ -57,7 +57,7 @@ call by value의 특징은 이렇다.
 - **argument**가 값으로 넘어온다.
 
 - 값이 넘어올 때, 값을 **복사**하여 넘겨준다.
-- 호출하는 곳에서 값을 **복사**하여 넘겨주기 때문에, 호출 당한 곳에서 호출자의 argument 값을 **변경**할 수 없다. 즉, 원본 **argument** 값이 변경 될 위험이 없다. 
+- 호출하는 곳에서 값을 **복사**하여 넘겨주기 때문에, 호출 당한 곳에서 호출자의 argument 값을 **변경**할 수 없다. 즉, 원본 **argument** 값이 **변경 될 위험이 없다.** 
 - **Call by value 타입**에는 `number`, `string`, `boolean` 등이 있다.
 
 ````
@@ -75,7 +75,7 @@ call by reference의 특징은 이렇다.
 - **argument**로 **reference**를 넘겨준다.
   - reference는 메모리 주소를 담고있는 변수이다.
 - **reference** 자체를 넘기기 때문에 **call by value와 다르게** 값을 복사해 넘기는 형태가 아니다.
-- 호출하는 곳에서 참조 값을 넘겨주기 때문에, 호출 당한 곳에서 호출자의 argument 값을 **변경**할 수 있다. 즉, 원본 **argument** 값이 변경 될 위험이 생기는 것이다.
+- 호출하는 곳에서 참조 값을 넘겨주기 때문에, 호출 당한 곳에서 호출자의 argument 값을 **변경**할 수 있다. 즉, 원본 **argument** 값이 **변경 될 위험이 발생한다.**
 - **Call by Reference** 타입에는 `array`, `object`, `date` 등이 있다.
 
 ```
