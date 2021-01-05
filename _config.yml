@@ -84,11 +84,11 @@ social:
   links: # An array of links to social media profiles
 
 # Analytics
-analytics: G-M8GL2878NN
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+analytics: 
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "G-M8GL2878NN"
+    anonymize_ip         : false # true, false (default)
 
 # Collections
 collections:
