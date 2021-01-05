@@ -16,15 +16,6 @@ last_modified_at:
 
 그래서 **call by value**, **call by reference**의 개념과 자바스크립트 내에서는 어떻게 사용되는지 알아보려한다.
 
-# Call by value, Call by Reference란 무엇인가?
-
-```
-Call by value - 값을 전달한다.
-Call by Refrence - 참조 값을 전달한다.
-```
-
-<br/>
-
 시작하기에 앞서, **parameter** 와 **argument**의 정의를 정리해봤다. **Call by value**, **Call by Reference**를 이해하기 위해 참고하면 좋을 것같다.
 
 * [참고] parameter vs argument
@@ -47,6 +38,17 @@ test(argu1,argu2);
 ```
 
 <br/>
+
+# Call by value, Call by Reference란 무엇인가?
+
+```
+Call by value - 값을 전달한다.
+Call by Refrence - 참조 값을 전달한다.
+```
+
+<br/>
+
+
 
 본격적으로 **argument**를 함수 혹은 메소드의 매개변수로 전달하는 **두 방식**에 대해 알아보자.
 
@@ -117,7 +119,7 @@ console.log(callee); // 출력 : [0,2,3,4];
 
 <br/>
 
-# refernce 원본을 유지하는 방법
+# Refernce 원본을 유지하는 방법
 
 그렇다면 **call by reference**로 값을 넘겨줄 때, 어떻게 원본 **reference** 값이 변경하지 않고 **parameter**로 넘어온 **reference**를 자유롭게 사용할 수 있을까?
 
@@ -128,7 +130,13 @@ console.log(callee); // 출력 : [0,2,3,4];
 let callee=[1,2,3,4];
 function TryChangeCallee(parameter){
     let newarr=Array.from(Array(4));
-    // 원소 하나하나를 복사해줘야 Deep copy가 된다.
+    /*
+       원소 하나하나를 복사해줘야 Deep copy(깊은 복사)가 된다.
+       => 새로운 메모리가 할당되고, 복사된다.
+       newarr=parameter는 shallow copy(얕은 복사)가 된다.
+       =>  참조값에 할당된다.
+    */
+   
     for(let i=0;i<parameter.length;i++){
         newarr[i]=parameter[i];
     }
