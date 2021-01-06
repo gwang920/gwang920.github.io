@@ -107,7 +107,7 @@ public class HelloController {
 
 ```
 
-
+<br/>
 
 # View
 
@@ -146,7 +146,7 @@ Controller에서 return 해주는 View 파일을 만들어보자. `resources > t
 
 이제, 정상적으로 html 파일이 로드되는 것을 확인할 수 있다.
 
-
+<br/>
 
 # MVC 동작 원리
 
@@ -169,7 +169,7 @@ ex) localhost:8000/hello-mvc
 
 
 
-
+<br/>
 
 # Reference
 
