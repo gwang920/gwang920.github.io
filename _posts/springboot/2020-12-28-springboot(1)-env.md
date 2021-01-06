@@ -9,6 +9,8 @@ tags:
 last_modified_at: 
 ---
 
+ Spring boot 기반의 개발환경을 구축해보자.
+
 # 1. Spring boot 다운로드
 
 https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.

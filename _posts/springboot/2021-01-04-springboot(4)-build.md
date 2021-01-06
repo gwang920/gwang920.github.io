@@ -11,7 +11,7 @@ last_modified_at:
 
 
 
-Spring boot기반 프로젝트를 빌드하는 방법에 대해 알아보자.
+Spring boot를 활용해 프로젝트를 빌드하는 방법에 대해 알아보자.
 
 # Build란?
 

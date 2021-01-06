@@ -11,7 +11,7 @@ last_modified_at:
 
 
 
-Spring boot기반 **정적 컨텐츠**에 대해 간단하게 알아보자.
+Spring boot를 활용해 **정적 컨텐츠**에 대해 간단하게 알아보자.
 
 # 정적 컨텐츠란?
 

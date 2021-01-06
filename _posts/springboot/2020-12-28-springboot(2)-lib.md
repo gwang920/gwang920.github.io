@@ -9,7 +9,7 @@ tags:
 last_modified_at: 
 ---
 
-
+Spring boot에서 사용되는 라이브러리를 알아보자.
 
 ![image](https://user-images.githubusercontent.com/49560745/103196974-7e373980-4928-11eb-9a07-23c20745a224.png)
 

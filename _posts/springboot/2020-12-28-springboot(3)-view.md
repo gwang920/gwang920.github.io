@@ -9,6 +9,8 @@ tags:
 last_modified_at: 
 ---
 
+Spring boot를 활용해 view 를 구현해보자. 
+
 우선, 도메인 접속 시 기본 페이지가 되는 index.html 을 구현하자. 
 
 # index.html 구현
