@@ -11,9 +11,9 @@ last_modified_at:
 
 
 
-Spring boot를 활용해 **MVC**와 **템플릿 엔진**에 대한 간단한 정의와 실습을 통해 어떠한 방식으로 동작되는지 알아보자.
+Spring boot에서 말하는 **API**의 간단한 정의와 실습을 진행해보자.
 
-# MVC란?
+# API란?
 
 ```
 모델-뷰-컨트롤러(Model–View–Controller, MVC)는 
