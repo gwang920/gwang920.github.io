@@ -108,9 +108,15 @@ public class Caculator2{
 
 <br/>
 
-## 중복제거
+## 중복제거, 기능확장, 인스턴스
+
+class를 사용하면 앞서 말했던 것처럼 유지보수성이 높아진다. 기능확장에 유리하다.
+
+<br/>
 
 #### 1) Caculator1
+
+코드가 중복되고 있다.
 
 ```java
 public class Caculator1{
@@ -122,8 +128,6 @@ public class Caculator1{
 		a=20;
 		b=30;
         sum(20,30);
-        
-        // 코드가 반복된다.
 	}
 	
 	public void sum(int a,int b){
@@ -134,7 +138,7 @@ public class Caculator1{
 
 #### 2) Calculator2
 
-Calculator1의 중복코드를 제거하고, 계산기라는 객체를 만들어보자.
+Calculator1의 중복코드를 제거하고, 계산기라는 객체를 만들어보자. 그리고 평균값, 계산기의 인스턴스 변수 값을 성정할 수 있는 메소드를 추가하자.
 
 ```java
 class Calculator2{
@@ -159,6 +163,10 @@ public class CalculatorDemo {
       
     public static void main(String[] args) {
           
+        /**
+			c1은 Calculator라는 class로부터 생성된 인스턴스이다.
+        	인스턴스는 new 키워드를 통해 생성할 수 있다.
+        **/
         Calculator c1 = new Calculator();
         c1.setOprands(10, 20);
         c1.sum();       
@@ -173,15 +181,17 @@ public class CalculatorDemo {
 }
 ```
 
-## 인스턴스
+<br/>
+
+## 요약
 
 ```
 cacluclator : 설계도
 c1 : 계산기 1
 c2 : 계산기 2
 
-여기서 c1,c2가 인스턴스이다.
-즉, 클래스를 통해 만들어진 구체적인 제품이 인스턴스인 것이다.
+calculator는 클래스 즉, 설계도이고,
+c1,c2는 클래스를 통해 만들어진 구체적인 제품이 인스턴스인 것이다.
 
 객체를 만드는 것, 클래스를 만드는 것
 => 사용자 정의 데이터 타입을 만드는 것
@@ -192,7 +202,5 @@ c2 : 계산기 2
 # Reference
 
 - [Class vs Object vs Isatnce [영문]](https://alfredjava.wordpress.com/2008/07/08/class-vs-object-vs-instance/)
-
-
 - [IT 마이닝 - 자바의 변수](https://itmining.tistory.com/20)
 - [생활코딩 - 클래스와 인스턴스 그리고 객체](https://www.opentutorials.org/course/1223/5400)
