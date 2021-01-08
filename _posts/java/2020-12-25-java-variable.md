@@ -123,11 +123,11 @@ public class Caculator1{
 		
 		a=20;
 		b=30;
-        sum(a,b);
+		sum(a,b);
         
-        a=40;
-        b=60;
-        sum(a,b);
+		a=40;
+		b=60;
+		sum(a,b);
 	}
 	
 	public void sum(int a,int b){
