@@ -13,7 +13,7 @@ last_modified_at:
 
 Spring boot Web 개발에서 이야하기는 **API**방식을 알아보자.
 
-이전에 살펴봤던 [정적컨텐츠](https://gwang920.github.io/spring%20boot/springboot(5)-static/), [템플릿 엔진](https://gwang920.github.io/spring%20boot/springboot(6)-mvc/)으로 사용자에게 보여질 데이터를 반환하는 방식 중 하나를 **API** 방식이라고한다.
+이전에 살펴봤던 [정적컨텐츠](https://gwang920.github.io/spring%20boot/springboot(5)-static/), [템플릿 엔진](https://gwang920.github.io/spring%20boot/springboot(6)-mvc/)과 같이 사용자에게 보여지는 데이터를 반환하는 방식 중 하나를 **API** 방식이라고한다.
 
 ```
 정적컨텐츠 - 정적으로 HTML 파일을 그대로 Client(브라우저)에 리턴한다.
