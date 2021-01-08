@@ -24,6 +24,12 @@ last_modified_at:
 
 `Class`와 `Instance`, `Object` 를 설명할 떄, 붕어빵에 비유하곤 한다. 추상적인 붕어빵 자체는 **객체이고**,  틀은 붕어빵을 제품으로 만들기 위한 **설계도**이며, 붕어빵은 만들어진 구체적인 실체, 즉 **제품**인셈이다.
 
+Java 프로그래밍 관점에서보자면, 
+
+- **객체**는 구현해야 할 요구사항
+- **클래스**는 객체를 구현하기 위한 설계도
+- **인스턴스**는 클래스 생성자를 통해 생성되어, 실제 메모리 공간에 존재하는 객체이다.
+
 <br/>
 
 - [참고] Class 변수와 Instance 변수, local 변수
@@ -47,6 +53,12 @@ public class variable{
 
 
 
+<br/> 이제, 예제를 통해 `Class`와 `Instance`에 대해 알아보자.
+
+이번 예제에서 구현해야할 대상인 객체는 계산기다. 객체지향 프로그래밍에서 `class`를 만드는 이유는 `class`들 간의 관계를 효율적으로 설계하여, 현실의 요구사항을 해결하기 위함이라고 생각한다. 부수적으로는 코드의 중복을 줄이고, 코드의 유지보수성을 높이는 것에 있다. 그리고 이는 `메소드화`부터 시작된다. `메소드화`의 특/장점을 단계적으로 살펴보며, 학습해보자.
+
+<br/>
+
 ## 메소드화
 
 ### 메소드화 특징/장점
@@ -59,6 +71,8 @@ public class variable{
 ```
 
 #### 1) Caculator1
+
+ 덧셈을  출력하는 코드이다. 동일한 출력문이 중복되고 있다. 단순한, `println()`문을 넘어 몇십 혹은 몇백줄짜리의 코드가 중복된다면, 프로그램을 설계하고, 관리하기 쉽지 않을 것이다.
 
 ```java
 public class Caculator1{
@@ -73,7 +87,11 @@ public class Caculator1{
 }
 ```
 
+<br/>
+
 #### 2) Caculator2
+
+Calculator1을 메소드화 시킨 코드이다. 단순히 sum() 이라는 간단한 메소드이지만 만약 sum() 이라는 메소드안에 수십, 수백줄의 코드가 있다고 생각해보자. 이를 메소드화 함으로써 코드를 간결하고, 효율적으로 설계할 수 있다.
 
 ```java
 public class Caculator2{
@@ -88,7 +106,9 @@ public class Caculator2{
 }
 ```
 
-### 예제 2
+<br/>
+
+## 중복제거
 
 #### 1) Caculator1
 
@@ -103,7 +123,7 @@ public class Caculator1{
 		b=30;
         sum(20,30);
         
-        // 위 아래 코드가 반복된다.
+        // 코드가 반복된다.
 	}
 	
 	public void sum(int a,int b){
@@ -114,7 +134,7 @@ public class Caculator1{
 
 #### 2) Calculator2
 
-Calculator1의 중복코드를 제거하고, 계산기라는 객체를 만들어보자
+Calculator1의 중복코드를 제거하고, 계산기라는 객체를 만들어보자.
 
 ```java
 class Calculator2{
@@ -171,4 +191,8 @@ c2 : 계산기 2
 
 # Reference
 
-- [Class vs Object vs Isatnce](https://alfredjava.wordpress.com/2008/07/08/class-vs-object-vs-instance/)
+- [Class vs Object vs Isatnce [영문]](https://alfredjava.wordpress.com/2008/07/08/class-vs-object-vs-instance/)
+
+
+- [IT 마이닝 - 자바의 변수](https://itmining.tistory.com/20)
+- [생활코딩 - 클래스와 인스턴스 그리고 객체](https://www.opentutorials.org/course/1223/5400)
