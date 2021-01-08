@@ -1,5 +1,5 @@
 ---
-title: Java - class변수와 Instance 변수
+title: Java - class와 Instance
 toc: true
 categories:	
     - Java
@@ -12,18 +12,38 @@ last_modified_at:
 
 
 
-# Class변수와 Instance 변수
-
-JAVA에는 `Class` 변수와 `Instance` 변수가 존재한다.
-
-## 클래스와 인스턴스
+# Class와 Instance, Object
 
 ```
+객체 - 소프트웨어 세계에서 '구현할 대상'
 클래스 - '설계도'
 인스턴스 - 설계도에 따라 만들어진 '제품'
 ```
 
-`Class`는 객체를 만들기 위한 **설계도**라고 할 수 있다. 그리고 `Instance`는 설계도에 따라 만들어진 **제품**이다. 
+`Class`는 객체를 만들기 위한 **설계도**라고 할 수 있다. `Object`는 소프트웨어 세계에서 **구현해야 할 대상**이다. 그리고 `Instance`는 설계도에 따라 만들어진 **제품**이라고 할 수 있다. 
+
+`Class`와 `Instance`, `Object` 를 설명할 떄, 붕어빵에 비유하곤 한다. 추상적인 붕어빵 자체는 **객체이고**,  틀은 붕어빵을 제품으로 만들기 위한 **설계도**이며, 붕어빵은 만들어진 구체적인 실체, 즉 **제품**인셈이다.
+
+<br/>
+
+- [참고] Class 변수와 Instance 변수, local 변수
+
+```java
+public class variable{
+	int instanceVariable; // Instance 변수
+	static int classVariable; // Class 변수
+    
+    void method(){
+        int localVariable; // local 변수
+    }
+}
+```
+
+|     변수 종류      |                    선언 위치                    |       생성시기(메모리 할당)       |     소멸시기(메모리 해제)      |
+| :----------------: | :---------------------------------------------: | :-------------------------------: | :----------------------------: |
+| Class 변수(static) |                   클래스 영역                   |   클래스가 메모리에 올라 갈 때    |        프로그램 종료 시        |
+|   Instance 변수    |                   클래스 영역                   |     인스턴스가 생성되었을 때      |     해당 인스턴스 소멸 시      |
+|     local 변수     | 클래스 이외의 영역(생성자, 메서드, 초기화 블럭) | 메서드, 생성자 등이 수행되었을 때 | 메서드, 생성자 등 수행 종료 후 |
 
 
 
@@ -100,7 +120,6 @@ Calculator1의 중복코드를 제거하고, 계산기라는 객체를 만들어
 class Calculator2{
     int left, right;
       
-    
     // 인스턴스의 변수 값 설정
     public void setOprands(int left, int right){
         this.left = left;
@@ -152,4 +171,4 @@ c2 : 계산기 2
 
 # Reference
 
-- 
+- [Class vs Object vs Isatnce](https://alfredjava.wordpress.com/2008/07/08/class-vs-object-vs-instance/)
