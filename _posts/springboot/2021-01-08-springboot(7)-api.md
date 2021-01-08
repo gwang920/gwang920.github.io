@@ -224,7 +224,7 @@ ex) localhost:8000/hello-string?name=spring
 기본(default) 객체처리 : MappingJackson2HttpMessageConverter 동작
 ```
 
-
+<br/>
 
 **[참고] Accept 요청 HTTP 헤더**
 
