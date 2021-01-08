@@ -30,8 +30,6 @@ Java 프로그래밍 관점에서보자면,
 - **클래스**는 객체를 구현하기 위한 설계도
 - **인스턴스**는 클래스 생성자를 통해 생성되어, 실제 메모리 공간에 존재하는 객체이다.
 
-<br/>
-
 - [참고] Class 변수와 Instance 변수, local 변수
 
 ```java
@@ -112,8 +110,6 @@ public class Caculator2{
 
 class를 사용하면 앞서 말했던 것처럼 유지보수성이 높아진다. 기능확장에 유리하다.
 
-<br/>
-
 #### 1) Caculator1
 
  연관된 코드가 반복되고있다. 그룹핑을 통해 간결하게 코드를 설계할 수 있다.
@@ -187,11 +183,11 @@ public class CalculatorDemo {
 }
 ```
 
-<br/>
+
 
 ## 요약
 
-`class`와 `Instance`의 개념(feat. `Object`)에 대해 알아보았다. 간단하게 요약해보자.
+`class`와 `Instance`의 개념(feat. `Object`)을 간략하게 요약해보자.
 
 ```
 cacluclator : 설계도
