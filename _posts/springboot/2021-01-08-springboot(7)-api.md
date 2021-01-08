@@ -228,13 +228,7 @@ ex) localhost:8000/hello-string?name=spring
 
 **[참고] Accept 요청 HTTP 헤더**
 
-```
-Accept 요청 HTTP 헤더는 MIME 타입으로 표현되는,
-클라이언트가 이해 가능한 타입이 무엇인지 알려준다.
-
-MIME(Multiple Internet Mail Extensions)은
-바이트의 문서, 파일, 형식의 표준이다.
-```
+Accept 요청 HTTP 헤더는 MIME 타입으로 표현되는,클라이언트가 이해 가능한 타입이 무엇인지 알려준다. MIME(Multiple Internet Mail Extensions)은 바이트의 문서, 파일, 형식의 표준이다.
 
 - 문법
 
