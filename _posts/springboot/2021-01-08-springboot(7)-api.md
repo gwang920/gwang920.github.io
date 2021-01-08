@@ -205,10 +205,16 @@ ex) localhost:8000/hello-string?name=spring
   => @ResponseBody 태그 발견
   
 3) return 형태에 따라 
+	HttpMessageConverter 선택
+	
 	객체 : JsonConverter 동작
 	문자열 : StringConverter 동작
+	
+* [참고] - 클라이언트의 HTTP Accept 해더와 서버의 컨트롤러 반환 타입 정보 둘을 조합해서
+HttpMessageConverter 가 선택된다
 
 4) 객체 혹은 문자열을 브라우저에 그대로 반환
+
 ```
 
 이외에도 사용자 설정에 따라 `XML`, Google의 `Gson`형식으로 return 할 수 있다. 현업에서는 이 부분은 거의 건드리지 않고, `default`로 사용한다고 한다. `default` 설정은 아래와 같다.
