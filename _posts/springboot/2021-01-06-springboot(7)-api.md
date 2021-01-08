@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web Application 개발[6] - MVC와 템플릿엔진
+title: Spring boot기반 Web Application 개발[7] - API
 toc: true
 categories:	
     - Spring boot
@@ -11,48 +11,186 @@ last_modified_at:
 
 
 
-Spring boot에서 말하는 **API**의 간단한 정의와 실습을 진행해보자.
+Spring boot Web 개발에서 이야하기는 **API**방식을 알아보자.
 
-# API란?
+이전에 살펴봤던 [정적컨텐츠](https://gwang920.github.io/spring%20boot/springboot(5)-static/), [템플릿 엔진](https://gwang920.github.io/spring%20boot/springboot(6)-mvc/)으로 사용자에게 보여질 데이터를 반환하는 방식 중 하나를 **API** 방식이라고한다.
 
 ```
-모델-뷰-컨트롤러(Model–View–Controller, MVC)는 
-소프트웨어 공학에서 사용되는 소프트웨어 디자인 패턴이다. 
-
-이 패턴을 성공적으로 사용하면, 
-사용자 인터페이스로부터 '비즈니스 로직'을 분리하여 
-애플리케이션의 '시각적 요소'나 그 이면에서 실행되는 '비즈니스 로직'을 
-서로 영향 없이 쉽게 고칠 수 있는 애플리케이션을 만들 수 있다. 
-
-MVC에서 
-'모델'은 애플리케이션의 정보(데이터)를 나타내며, 
-'뷰'는 텍스트, 체크박스 항목 등과 같은 사용자 인터페이스 요소를 나타내고, 
-'컨트롤러'는 데이터와 비즈니스 로직 사이의 상호동작을 관리한다.
+정적컨텐츠 - 정적으로 HTML 파일을 그대로 Client(브라우저)에 리턴한다.
+템플릿엔진(MVC) - View를 랜더링 된 HTML을 Client(브라우저)에 전달해준다.
+API 방식 - 주로 객체를 JSON형태로 리턴하고자할 떄 사용하는 방식이다.
 ```
 
-[출처 - 위키백과]
+# API 방식
 
-
-
-**MVC패턴**은 Spring 혹은 JSP 등을 활용해 Web 어플리케이션을 구축해봤다면, 익숙할만한 개념이다. **MVC패턴**은 소프트웨어 디자인 패턴 중에 하나로써, 서버 뒷단의 로직을 처리하는 **비즈니스 로직**과 브라우저에서 화면을 만들어 주는 **시각적 요소**를 따로 분리해 효율적으로 Web 어플리케이션을 개발할 수 있도록 한다. 
-
-
+이제, 실습을 통해 **API**방식을 알아보자.
 
 <br/>
 
-# 템플릿엔진이란?
+## 1) String 형식반환
+
+이전에 진행했던 `HelloController.java`파일에 이어서 아래 코드를 작성하자.
+
+```java
+    @GetMapping("hello-string")
+    @ResponseBody
+    public String helloString(@RequestParam("name") String name){
+        return "hello" + name;
+    }
+```
+
+- `url` 매핑 "hello-string"
+- `@ResponseBody` 태그 : 메소의 반환 값을 그대로 브라우저에게 반환한다.
 
 ```
-html(Markup)과 데이터를 결한한 결과물을 만들어 주는 도구
+파일명 : HelloController.java
+위치 : src\main\java\hello.hellospring\controller\HelloController.java
 ```
 
- 웹 서비스를 개발하면서 JSP를 사용해본적이 있을 것이다. JSP는 HTML 코드 내에 `<% %>`태그로 JAVA코드를 삽입 해 웹 서비스를 개발할 수 있는 서버사이드 스크립트언어이다. 하지만, 이 방식은 html 코드와 JAVA 코드가 혼재되어 서비스를 관리하거나 규모 있는 웹 서비스를 구축하기에는 어려움이있다. 이를 보완해주는 도구가 **템플릿 엔진**이다. Spring boot에서는 템플릿엔진으로 `Thyme leaf`를 사용한다는 점을 기억하자.
+```java
+package hello.hellospring.controller;
 
-<br/>
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-이제, **MVC**와 **템플릿 엔진**을 활용해 [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(5)-static/)에 이어서 간단한 실습을 진행해보자.
+@Controller
+public class HelloController {
 
- 
+    @GetMapping("hello")
+    public String Hello(Model model){
+        model.addAttribute("data","hello!!");
+        return "hello";
+    }
+
+    @GetMapping("hello-mvc")
+    public String helloMVC(@RequestParam("name") String name,Model model){
+        model.addAttribute("name",name);
+        return "hello-template";
+    }
+	
+    // 추가된 코드
+    @GetMapping("hello-string")
+    @ResponseBody
+    public String helloString(@RequestParam("name") String name){
+        return "hello" + name;
+    }
+}
+```
+
+
+
+ `http://localhost:8000/hello-string?name=spring!!!!!!!!` 접속해보자.
+
+![image](https://user-images.githubusercontent.com/49560745/103976878-4d25f700-51bb-11eb-82bf-1388c6f802be.png)
+
+정상적으로 로드된다. 그렇다면 `템플릿엔진` 혹은 `정적 컨텐츠` 방식과는 어떤차이가 있을까?
+
+화면에서 우클릭을하고 **페이지 소스 보기**를 눌러보자.
+
+![image](https://user-images.githubusercontent.com/49560745/103976988-8d857500-51bb-11eb-90f4-ce1191caf9c4.png)
+
+`HTML` 코드가 보이지 않는다. 이게 바로 Spring boot에서 이야기하는 **API** 방식이다.
+
+## 2) JSON 형식 반환
+
+한 가지 예제를 더 들어보자.
+
+```java
+    @GetMapping("hello-api")
+    @ResponseBody
+    public Hello helloApi(@RequestParam("name") String name){
+        Hello hello =new Hello();
+        hello.setName(name);
+        return hello;
+    }
+
+    static class Hello{
+        private String name;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+```
+
+**Hello**라는 Class를 만들고(`static` : Class내 Class 선언 가능), 객체를 생성한 후 반환해보자.
+
+```
+파일명 : HelloController.java
+위치 : src\main\java\hello.hellospring\controller\HelloController.java
+```
+
+````java
+package hello.hellospring.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class HelloController {
+
+    @GetMapping("hello")
+    public String Hello(Model model){
+        model.addAttribute("data","hello!!");
+        return "hello";
+    }
+
+    @GetMapping("hello-mvc")
+    public String helloMVC(@RequestParam("name") String name,Model model){
+        model.addAttribute("name",name);
+        return "hello-template";
+    }
+
+    @GetMapping("hello-string")
+    @ResponseBody
+    public String helloString(@RequestParam("name") String name){
+        return "hello " + name;
+    }
+
+    @GetMapping("hello-api")
+    @ResponseBody
+    public Hello helloApi(@RequestParam("name") String name){
+        Hello hello =new Hello();
+        hello.setName(name);
+        return hello;
+    }
+
+    static class Hello{
+        private String name;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+}
+
+````
+
+서버를 재실행하고, 위 `http://localhost:8000/hello-api?name=spring!!!!!!!!`에 접속해보자.
+
+![image](https://user-images.githubusercontent.com/49560745/103977220-1b616000-51bc-11eb-9a65-e8b71a22051d.png)
+
+`{key: value}`쌍의 `JSON` 데이터 반환되는 것을 확인할 수 있다. 이처럼 **API** 방식은 객체 자체를 return 해줄 수 있고, 이를 `JSON` 형식으로 변환해준다.
+
+
+
+## @ResponseBody 원리
+
+![image](https://user-images.githubusercontent.com/49560745/103977627-00432000-51bd-11eb-9e10-4a706e76904c.png)
 
 # Controller
 
@@ -148,9 +286,9 @@ Controller에서 return 해주는 View 파일을 만들어보자. `resources > t
 
 <br/>
 
-# MVC 동작 원리
+# API 동작 원리
 
-**Controller**에 의해 **MVC**가 동작하는 과정은 다음과 같다.
+**API** 방식이 동작하는 과정은 다음과 같다.
 
 ![image](https://user-images.githubusercontent.com/49560745/103728221-b6bdce00-5020-11eb-8c72-f6011c6e84ab.png)
 
