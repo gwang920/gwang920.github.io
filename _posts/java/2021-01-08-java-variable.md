@@ -94,8 +94,8 @@ Calculator1을 메소드화 시킨 코드이다. 단순히 sum() 이라는 간�
 ```java
 public class Caculator2{
 	public static void main(String[] args){
-		sum(10,20);
-        sum(20,30);
+	sum(10,20);
+	sum(20,30);
 	}
 	
 	public void sum(int a,int b){
