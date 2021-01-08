@@ -1,5 +1,5 @@
 ---
-title: Java - class와 Instance
+title: Java - Class와 Instance
 toc: true
 categories:	
     - Java
