@@ -166,8 +166,8 @@ public class CalculatorDemo {
     public static void main(String[] args) {
           
         /**
-			c1은 Calculator라는 class로부터 생성된 인스턴스이다.
-			인스턴스는 new 키워드를 통해 생성할 수 있다.
+		c1은 Calculator라는 class로부터 생성된 인스턴스이다.
+		인스턴스는 new 키워드를 통해 생성할 수 있다.
         **/
         Calculator c1 = new Calculator();
         c1.setOprands(10, 20);
