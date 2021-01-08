@@ -179,7 +179,7 @@ public class MemoryMemberRepository implements MemberRepository{
 - sequence : 회원정보 저장 시 자동으로 카운트 +1
 - Optional : 앞서 인터페이스 구현시 `Optional`을 사용했다. `Optional`은 `Java8`에서 도입된 기능으로 `null`이나 `null`이외의 값을 담을 수 있다. 
 
-
+이제, 코드가 정상적으로 동작하는지 테스트를 해봐야한다. 테스트는 다음 포스팅에서 `Junit`을 사용해 구현해 볼 예정이다.
 
 <br/>
 
