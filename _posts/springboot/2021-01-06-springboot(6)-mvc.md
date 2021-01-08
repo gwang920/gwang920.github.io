@@ -171,6 +171,8 @@ ex) localhost:8000/hello-mvc
 
 <br/>
 
+이 포스팅은 인프런 김영한님의 `스프링 입문 - 코드로 배우는 스프링 부트 강의`를 토대로 작성되었습니다.
+
 # Reference
 
 - [위키백과 MVC패턴](https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC)

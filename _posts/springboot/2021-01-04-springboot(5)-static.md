@@ -294,7 +294,9 @@ WebMvcConfigurer로 WebConfig 설정하기
 
 ![image](https://user-images.githubusercontent.com/49560745/103536884-a13c8d00-4ed6-11eb-90f2-c9c2726e2511.png)
 
+<br/>
 
+이 포스팅은 인프런 김영한님의 `스프링 입문 - 코드로 배우는 스프링 부트 강의`를 토대로 작성되었습니다.
 
 # Reference
 
