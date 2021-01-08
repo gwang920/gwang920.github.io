@@ -82,6 +82,6 @@ author_profile은 페이지 좌측에 프로필을 표시할 것이냐의 여부
 
 ### Reference
 
-- https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories
+- [minimal-mistakes 공식 사이트](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories)
 
 

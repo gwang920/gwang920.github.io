@@ -87,6 +87,8 @@ $caption-font-family: 'Noto Sans KR', sans-serif;
 
 ### Reference
 
-- https://devinlife.com/howto%20github%20pages/set-font/
+- [폰트 변경 - 취미로 코딩하는 개발자](https://devinlife.com/howto%20github%20pages/set-font/)
+
+
 
 

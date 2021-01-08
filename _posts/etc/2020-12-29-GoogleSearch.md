@@ -73,7 +73,7 @@ Google 검색 색인은 수 십 억 개의 웹페이지를 포함하고 있으�
 
 # Reference
 
-- https://www.google.com/intl/ko/search/howsearchworks
+- [Google 검색의 원리](https://www.google.com/intl/ko/search/howsearchworks)
 
 
 

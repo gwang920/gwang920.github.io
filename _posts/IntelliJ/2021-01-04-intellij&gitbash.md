@@ -71,6 +71,6 @@ Git Bash는 Github를 사용해봤다면 굉장히 익숙할 것이다. Git Bash
 
 # Reference
 
-- [IntelliJ IDEA와 Git Bash 연동하기. JetBrains 계열의 IDEA와 Git Bash를 연동하는 방법을… | by Violet Bora Lee | Medium]()
+- [IntelliJ IDEA와 Git Bash 연동하기](https://violetboralee.medium.com/intellij-idea%EC%99%80-git-bash-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0-63e8216aa7de)
 
-- https://jhnyang.tistory.com/57
+- [셸이란? - 양햄찌가 만드는 세상](https://jhnyang.tistory.com/57)

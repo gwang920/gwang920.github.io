@@ -189,9 +189,9 @@ tags페이지 등록도 **categories 페이지 등록 과정**을 그대로 진�
 
 # Reference
 
-- https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories
+- [minimal-mistakes 공식사이트](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-categories)
 
-- https://devinlife.com/howto%20github%20pages/category-tag/
+- [카테고리 태그목록 - 취미로 코딩하는 개발자](https://devinlife.com/howto%20github%20pages/category-tag/)
 
 
 
