@@ -9,7 +9,7 @@ tags:
 last_modified_at: 
 ---
 
- Spring boot 기반의 개발환경을 구축해보자.
+ Spring boot 기반의 개발환경을 구축해보자. Java 버전은 11, IDE는 IntelliJ를 사용한다.
 
 # 1. Spring boot 다운로드
 
