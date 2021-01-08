@@ -210,8 +210,8 @@ ex) localhost:8000/hello-string?name=spring
 	객체 : JsonConverter 동작
 	문자열 : StringConverter 동작
 	
-* [참고] - 클라이언트의 HTTP Accept 해더와 서버의 컨트롤러 반환 타입 정보 둘을 조합해서
-HttpMessageConverter 가 선택된다
+* [참고] - 클라이언트의 HTTP Accept 해더와 서버의 컨트롤러 반환 타입 정보 
+둘을 조합해서 HttpMessageConverter 가 선택된다.
 
 4) 객체 혹은 문자열을 브라우저에 그대로 반환
 
@@ -226,11 +226,44 @@ HttpMessageConverter 가 선택된다
 
 
 
+**[참고] Accept 요청 HTTP 헤더**
+
+```
+Accept 요청 HTTP 헤더는 MIME 타입으로 표현되는,
+클라이언트가 이해 가능한 타입이 무엇인지 알려준다.
+
+MIME(Multiple Internet Mail Extensions)은
+바이트의 문서, 파일, 형식의 표준이다.
+```
+
+- 문법
+
+```
+Accept: <MIME_type>/<MIME_subtype>
+Accept: <MIME_type>/*
+Accept: */*
+
+// Multiple types, weighted with the quality value syntax:
+Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+```
+
+- 예제
+
+```
+Accept: text/html
+Accept: image/*
+Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+```
+
+
+
 <br/>
 
 # Reference
 
 - [김영한님의 스프링-입문-스프링부트](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/lecture/49577?tab=curriculum)
+
+- [Accept - MDN](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept)
 
   
 
