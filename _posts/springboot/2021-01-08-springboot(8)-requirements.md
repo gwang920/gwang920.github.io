@@ -156,7 +156,7 @@ public class MemoryMemberRepository implements MemberRepository{
     
     /**
  		Map을 순회하기 위해, iterator() 대신에 stream()을 사용하고,
- 		filter로 조건에 맞는지 판단한다. 
+ 		filter()로 조건에 맞는지 판단한다. 
  		findAny()는 비어 있는 스트림에서는 비어있는 Optional 객체를 반환한다.
  		
  		* iterator()
