@@ -40,7 +40,7 @@ last_modified_at:
 
 경로한 주소는 다음과 같다. `$ git clone https://github.com/본인 아이디/githubtutorial.git`
 
-`Git Bash`를 실행하기전에 `clone`해올 폴더를 원하는 경로에 하나 만들자. `cd`명령어를 통해 해당 폴더로 이동 한후 `git clone`을 입력하고 복사한 명령어를 붙여넣고, 실행하자.
+`Git Bash`를 실행하기전에 `clone`한 `repository`를 저장할 공간인 폴더를 원하는 경로에 하나 생성하자. `cd`명령어를 통해 해당 폴더로 이동 한후 `git clone`을 입력하고 복사한 명령어를 붙여넣고, 실행하자.
 
 ![image](https://user-images.githubusercontent.com/49560745/104180487-8a56e700-5450-11eb-95f0-b69c6224a1bd.png)
 
