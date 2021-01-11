@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web Application 개발[8] - 요구사항
+title: Spring boot기반 Web Application 개발[8] - 요구사항 & 회원 도메인, 리포지터리
 toc: true
 categories:	
     - Spring boot
