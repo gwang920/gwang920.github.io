@@ -13,7 +13,7 @@ last_modified_at:
 
 
 
-**Service**는 비즈니스 로직을 수행한다. 더 서비스 로직에 가까워 보이는 것들이 **Service**에 구현 된다.[회원 레포지토리 개발 포스팅](https://gwang920.github.io/spring%20boot/springboot(8)-requirements/) 에서 `repository`에 구현했던 `MemoryMemberRepository.java` 의 메소드와의 차이를 비교해보는 것도 좋을 것 같다.
+**Service**는 비즈니스 로직을 수행한다. 더 서비스 로직에 가까워 보이는 것들이 **Service**에 구현 된다. [회원 레포지토리 개발 포스팅](https://gwang920.github.io/spring%20boot/springboot(8)-requirements/) 에서 `repository`에 구현했던 `MemoryMemberRepository.java` 의 메소드와의 차이를 비교해보는 것도 좋을 것 같다.
 
 **비즈니스 로직이란?**
 
