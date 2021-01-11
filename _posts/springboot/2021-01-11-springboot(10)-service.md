@@ -39,7 +39,8 @@ import hello.hellospring.respository.MemoryMemberRepository;
 
 public class MemberService {
 
-    private final MemoryMemberRepository memberRepository=new MemoryMemberRepository();
+    private final MemoryMemberRepository memberRepository
+						=new MemoryMemberRepository();
 
     /**
      * 중복 회원 관리
@@ -67,34 +68,121 @@ public class MemberService {
 ```java
 - code 1
   memberRepository.findName(member.getName())
-                .ifPresent(m->{
-                    throw new IllegalStateException("이미 존재하는 회원입니다.");
-                });
-------------------------------------------------------------------------------               
+           .ifPresent(m->{
+               throw new IllegalStateException("이미 존재하는 회원입니다.");
+           });
+ -------------------------------------------------------------------------        
 - code 2
-        Optional<Member> result=memberRepository.findName(member.getName());
+  Optional<Member> result=memberRepository.findName(member.getName());
         result.ifPresent(m->{
-            throw new IllegalStateException("이미 존재하는 회원입니다.")
+            throw new IllegalStateException("이미 존재하는 회원입니다.");
         });
- ------------------------------------------------------------------------------  
+ -------------------------------------------------------------------------
 ```
 
  서비스 로직 수행 메소드에서 세부 기능은 따로 분리하는게 좋다. 
 
 ```java
 memberRepository.findName(member.getName())
-		.ifPresent(m->{
-			throw new IllegalStateException("이미 존재하는 회원입니다.");
-		});
+	.ifPresent(m->{
+		throw new IllegalStateException("이미 존재하는 회원입니다.");
+	});
 ```
 
-이 코드를 드래그 한 뒤 **전구** 표시를 클릭하면 코드를 `refactoring`할 수 있다. 여기서, `Extract Method`를 클릭하고 아래와 같은 화면이 나오면, **Name**을 설정해주자. 
+ 코드를 드래그 한 뒤, **전구** 표시를 클릭하면 코드를 `refactoring`할 수 있다. 여기서, `Extract Method`를 클릭하고 아래와 같은 화면이 나오면, **Name**을 설정해주자. 
 
 ![image](https://user-images.githubusercontent.com/49560745/104155020-a004e600-5429-11eb-8e49-cc893317992f.png)
 
 자동으로 **validateDuplicateMember** 메소드가 생성된 것을 확인할 수 있다.
 
 ![image](https://user-images.githubusercontent.com/49560745/104155399-77c9b700-542a-11eb-9b08-273822770492.png)
+
+
+
+### findMembers
+
+ 전체 회원을 조회하는 메서드를 추가하자.
+
+```java
+    /**
+     * 회원 전체 조회
+     */
+    public List<Member> findMembers(){
+        return memberRepository.findAll();
+    }
+```
+
+- List로 반환
+
+### findOne
+
+ 아이디로 회원 정보를 조회하자.
+
+```java
+    /**
+     * 회원 아디로 조회
+     */
+    public Optional<Member> findOne(Long memeberId){
+        return memberRepository.findID(memeberId);
+    }
+
+```
+
+- 일치하는 `id` 의 Member 객체 반환
+
+
+
+## 전체코드
+
+```java
+package hello.hellospring.service;
+
+import hello.hellospring.domain.Member;
+import hello.hellospring.respository.MemoryMemberRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+
+public class MemberService {
+
+    private final MemoryMemberRepository memberRepository=new MemoryMemberRepository();
+
+    /**
+     * 중복 회원 관리
+     */
+    public Long join(Member member){
+        validateDuplicateMember(member);
+        memberRepository.save(member);
+        return member.getId();
+    }
+
+    private void validateDuplicateMember(Member member) {
+        memberRepository.findName(member.getName())
+                .ifPresent(m->{
+                    throw new IllegalStateException("이미 존재하는 회원입니다.");
+                });
+    }
+
+    /**
+     * 회원 전체 조회
+     */
+    public List<Member> findMembers(){
+        return memberRepository.findAll();
+    }
+
+    /**
+     * 회원 아디로 조회
+     */
+    public Optional<Member> findOne(Long memeberId){
+        return memberRepository.findID(memeberId);
+    }
+
+}
+
+```
+
+ 기본적인 **service**의 비즈니스로직을 구현했다. 다음 포스팅에서 마찬가지로 `junit`을 활용해 `Test`를 진행해보자.
 
 <br/>
 
