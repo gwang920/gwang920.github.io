@@ -82,8 +82,8 @@ project를 `clone`까지 해왔다면, 이제 **"어떤 부분에 `contribute`�
 
 - `master` 브랜치는 배포를 위한 브랜치
 - `feature/develop` 개발자들이 개발하기 위한 브랜치, `master` 브랜치로 부터 `branch off` 되었다고 표현한다.
-- `feature/tutorial-1`과 같이 `branch`를 생성해 이곳에 개발을 진행하면 된다. `feature/tutorial-1`은 - 
-- `feature/develop`의 복사본이라고 생각하자. 이 복사본을 생성하는 이유는 다른 개발자들이 한참 `feature/develop`에서 개발하고 있기 때문이다. 이를 방해하지 않기 위해, 새로운 브랜치를 따와서 개발하는 것이 좋다.
+- `feature/tutorial-1`과 같이 `branch`를 생성해 이곳에 개발을 진행하면 된다. 
+- `feature/tutorial-1`은 `feature/develop`의 복사본이라고 생각하자. 이 복사본을 생성하는 이유는 다른 개발자들이 `feature/develop`에서 활발하게 개발하고 있기 때문이다. 이를 방해하지 않기 위해, 새로운 브랜치를 따와서 개발하는 것이 좋다.
 
 브랜치의 **이름**이나 **이용방법**은 프로젝트마다 다르다고 한다. 해당 프로젝트의 문서를 참고하자. 대부분의 오픈소스 프로젝트는 **컨트리뷰터**를 위한 가이드 문서를 제공한다.
 
