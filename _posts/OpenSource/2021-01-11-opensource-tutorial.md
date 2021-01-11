@@ -50,7 +50,9 @@ last_modified_at:
 
 ### 3) Issue 선택
 
-project를 `clone`까지 해왔다면, 이제 "어떤 부분에 `contribute`해야 되지?" 고민될 것이다.  "잘 짜놓은 코드 혹은 대규모 프로젝트에 과연 내가 `contritbute`할 여지가 있을까 ?" 고민될 것이다.  이럴때 확인하는 것이 `issue`이다. 대부분의 규모있는 `Open Source`프로젝트는 **이슈 트래킹 시스템**(필요에 의해 이슈 목록을 관리하고 유지보수하는 것)을 사용한다. 처음 `Open Source`에 기여한다면,  `good first issue` 태그를 확인해보자. `good first issue` 태그에 해당하는 `issue`는 몇줄 혹은 몇자만 고치면 해결되는 간단한 이슈에 해당한다.
+project를 `clone`까지 해왔다면, 이제 **"어떤 부분에 `contribute`해야 되지?"** 고민될 것이다.  **"잘 짜놓은 코드 혹은 대규모 프로젝트에 과연 내가 `contritbute`할 여지가 있을까 ?"** 고민될 것이다.  이럴때 확인하는 것이 `issue`이다. 대부분의 규모있는 `Open Source`프로젝트는 **이슈 트래킹 시스템**(필요에 의해 이슈 목록을 관리하고 유지보수하는 것)을 사용한다. 
+
+처음 `Open Source`에 기여한다면,  `good first issue` 태그를 확인해보자. `good first issue` 태그에 해당하는 `issue`는 몇줄 혹은 몇자만 고치면 해결되는 간단한 이슈에 해당한다.
 
 이번 포스팅에서는 `githubtutorial` 프로젝트 내 `issue`에서 실습해보자. 원본 `repository`에 `issues` 탭을 클릭하면 `issue`목록이 보일 것이다. 아래 처럼 보통 `issue`는  `[프로젝트이름]-[이슈번호] <이슈 제목>` 의 형식으로 구성된다. 이제 해당 `issue`를 클릭해보자.
 
