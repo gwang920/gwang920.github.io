@@ -236,27 +236,41 @@ public class MemoryMemberRepositoryTest {
 
 ```
 
-
-
-
-
-
+- `member1`, `member2` 두 개의 객체를 생성
+- list로 `selectAll()` 결과 값을 받아오고, `size()` 와 비교
 
 ![image](https://user-images.githubusercontent.com/49560745/104151293-fec56200-541f-11eb-99e1-4b24511fd65a.png)
 
 모든 회원정보조회도 완벽하게 구현되었음을 알 수 있다. 
 
-그렇다면, `테스트 프레임워크`의 장점을 활용해보자. 모든 테스트 코드를 한 번에 실행할 수 있다. 실행은 `MemoryMemberRepositoryTest` 클래스의 **테스트 실행 버튼**을 누르자.
+# 모든 테스트 케이스 실행
 
+이번에는, `테스트 프레임워크`의 장점을 활용해보자. 모든 테스트 코드를 한 번에 실행할 수 있다. 실행은 `MemoryMemberRepositoryTest` 클래스의 **테스트 실행 버튼**을 누르자.
 
+![image](https://user-images.githubusercontent.com/49560745/104151928-8bbceb00-5421-11eb-8e49-6b573bac115b.png)
 
-개별적인 테스트 코드는 모두 정상적으로 동작했는데 오류가 발생한다. 이유는 테스트코드는 순서대로 실행되지 않기 때문이다. 각 메서드가 중복되는 객체를 `repository`에 넣어주고 있고, 여기서 오류가 발생하는 것이다. 이를 해결하려면 어떻게 해야할까?
+![image](https://user-images.githubusercontent.com/49560745/104151954-9d9e8e00-5421-11eb-99f3-debb513888a3.png)
+
+개별적인 테스트 코드는 모두 정상적으로 동작했는데 오류가 발생한다. 이유는 테스트 코드 메서드는 순차적으로 실행되지 않기 때문이다. 각 메서드가 중복되는 객체를 `repository`에 넣어주고 있고, 여기서 오류가 발생하는 것이다. 이를 해결하려면 어떻게 해야할까?
 
 방법은 간단하다. 매 테스트 메서드를 실행하고, `repository`를 비워주기만하면 된다. [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(8)-requirements/)에서 `clearStore()`메서드를 구현했었다. 이를 활용해보자.
 
 ![image](https://user-images.githubusercontent.com/49560745/104151569-be1a1880-5420-11eb-8100-93cea36fff1f.png)
 
+아래 코드를 `MemoryMemberRepositoryTest.java`파일에 추가하자. `@AfterEach`는 매 테스트 케이스 실행 후에 동작하도록하는 `annotaition`이다.
 
+```java
+    @AfterEach
+    public void afterEach(){
+        memoryMemberRepository.clearStore();
+    }
+```
+
+그리고 다시 테스트를 실행해보자.
+
+![image](https://user-images.githubusercontent.com/49560745/104152183-287f8880-5422-11eb-838f-52a3fe06bcb8.png)
+
+모든 테스트 케이스가 정상적으로 실행되는 것을 확인할 수 있다.
 
 <br/>
 
