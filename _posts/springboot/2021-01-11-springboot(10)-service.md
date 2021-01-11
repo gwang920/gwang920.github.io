@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web Application 개발[8] - 회원 서비스 개발
+title: Spring boot기반 Web Application 개발[10] - 회원 서비스 개발
 toc: true
 categories:	
     - Spring boot

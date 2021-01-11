@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web Application 개발[8] - 회원 리포지터리 테스트(Junit)
+title: Spring boot기반 Web Application 개발[9] - 회원 리포지터리 테스트(Junit)
 toc: true
 categories:	
     - Spring boot
