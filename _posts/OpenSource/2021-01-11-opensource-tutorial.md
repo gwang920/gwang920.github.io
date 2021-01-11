@@ -50,7 +50,7 @@ last_modified_at:
 
 ### 3) Issue 선택
 
-project를 `clone`까지 해왔다면, 이제 **"어떤 부분에 `contribute`해야 되지?"** 고민될 것이다.  **"잘 짜놓은 코드 혹은 대규모 프로젝트에 과연 내가 `contritbute`할 여지가 있을까 ?"** 고민될 것이다.  이럴때 확인하는 것이 `issue`이다. 대부분의 규모있는 `Open Source`프로젝트는 **이슈 트래킹 시스템**(필요에 의해 이슈 목록을 관리하고 유지보수하는 것)을 사용한다. 
+project를 `clone`까지 해왔다면, 이제 **"어떤 부분에 `contribute`해야 되지?"** , **"잘 짜놓은 코드 혹은 대규모 프로젝트에 과연 내가 `contritbute`할 여지가 있을까 ?"** 고민될 것이다.  이럴때 확인하는 것이 `issue`이다. 대부분의 규모있는 `Open Source`프로젝트는 **이슈 트래킹 시스템**(필요에 의해 이슈 목록을 관리하고 유지보수하는 것)을 사용한다. 
 
 처음 `Open Source`에 기여한다면,  `good first issue` 태그를 확인해보자. `good first issue` 태그에 해당하는 `issue`는 몇줄 혹은 몇자만 고치면 해결되는 간단한 이슈에 해당한다.
 
@@ -65,6 +65,26 @@ project를 `clone`까지 해왔다면, 이제 **"어떤 부분에 `contribute`�
 
 
 ![image](https://user-images.githubusercontent.com/49560745/104182622-11f22500-5454-11eb-9cba-b7d9b8178e2c.png)
+
+### 4) Branch
+
+`contribute`를 완벽하게 이해하고, 시작하려면 `branch` 개념 이해가 필요하다. `branch`는 말그대로 **분기**이다. 가지를 쳐서 효율적으로 개발하고, 수정사항을 `commit` 하기 위함이다. 보통 `master` 브랜치는 `release` 브랜치인 경우가 대부분이다. 즉, `master` 브랜치로 **배포**하면서, 다른 `branch`에서 기능을 분류하여 **개발하고, 수정**하는 것이다. 그렇기 때문에 `master` 브랜치에 자신이 해결하던 `issue` 혹은 개발하던 것을 직접적으로 `commit`하는 경우는 흔치 않다.
+
+일단 아래를 보자. `master` 브랜치 이외의 두 개의 `branch`를 확인할 수 있다.
+
+![image](https://user-images.githubusercontent.com/49560745/104183813-e2441c80-5455-11eb-83a4-fbebd897c9a4.png)
+
+이를 그림으로 표현하면 다음과 같다.
+
+![image](https://user-images.githubusercontent.com/49560745/104185159-ed984780-5457-11eb-9efa-0d2b3bb81b97.png)
+
+[색이 있는 동그라미는 commit, 회색 동그라미은 branch off 또는 merge in을 의미]
+
+- `master` 브랜치는 배포를 위한 브랜치
+- `feature/develop` 개발자들이 개발하기 위한 브랜치
+- `feature/develop1` 과 같이 `branch`를 생성해 그곳에 개발을 진행하면 된다. 
+
+마스터 브랜치가 존재하고 그 이후에 branch off된 feature/develop브랜치가 존재한다. 브랜치의 이름은 오픈소스마다 다르고 어떻게 브랜치를 이용하는지도 오픈소스마다 다르다. 따라서 어떤 오픈소스에 참여 한다면 그 오픈소스의 문서를 반드시 읽어보기 바란다. 대부분의 오픈소스는 컨트리뷰터들을 위한 가이드가 준비되어있다.
 
 # Reference
 
