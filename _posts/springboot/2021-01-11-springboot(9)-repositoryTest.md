@@ -22,6 +22,8 @@ last_modified_at:
 - 한 번에 여러 테스트를 진행할 수 있다.
 ```
 
+이제 본격적으로 테스트 코드를 작성해보자.
+
 <br/>
 
 # Save() Test
@@ -251,13 +253,13 @@ public class MemoryMemberRepositoryTest {
 
 ![image](https://user-images.githubusercontent.com/49560745/104151954-9d9e8e00-5421-11eb-99f3-debb513888a3.png)
 
-개별적인 테스트 코드는 모두 정상적으로 동작했는데 오류가 발생한다. 이유는 테스트 코드 메서드는 순차적으로 실행되지 않기 때문이다. 각 메서드가 중복되는 객체를 `repository`에 넣어주고 있고, 여기서 오류가 발생하는 것이다. 이를 해결하려면 어떻게 해야할까?
+개별적인 테스트 코드는 모두 정상적으로 동작했는데 **오류**가 발생한다. 이유는 테스트 코드 메서드는 순차적으로 실행되지 않기 때문이다. 각 메서드가 중복되는 객체를 `repository`에 넣어주고 있고, 여기서 오류가 발생하는 것이다. 이를 해결하려면 어떻게 해야할까?
 
 방법은 간단하다. 매 테스트 메서드를 실행하고, `repository`를 비워주기만하면 된다. [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(8)-requirements/)에서 `clearStore()`메서드를 구현했었다. 이를 활용해보자.
 
 ![image](https://user-images.githubusercontent.com/49560745/104151569-be1a1880-5420-11eb-8100-93cea36fff1f.png)
 
-아래 코드를 `MemoryMemberRepositoryTest.java`파일에 추가하자. `@AfterEach`는 매 테스트 케이스 실행 후에 동작하도록하는 `annotaition`이다.
+아래 코드를 `MemoryMemberRepositoryTest.java`파일에 추가하자. `@AfterEach`는 매 테스트 케이스 실행 후에 동작하도록하는 `annotation`이다.
 
 ```java
     @AfterEach
