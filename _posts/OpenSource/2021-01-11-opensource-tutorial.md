@@ -58,7 +58,7 @@ project를 `clone`까지 해왔다면, 이제 "어떤 부분에 `contribute`해�
 
  이제, 우측의 `Assignees`를 통해 자기 자신에게 `assign`하도록 하자. 그렇게 되면 비로소 해당 `issue`가 자신의 `issue`가 되었다고 볼 수 있다.
 
-해당 포스팅에서는 아직 원본 `repository`의 `collaborator`로 등록되어있지않아 `Assignees` 탭을 사용할 수 없다. 자세한 내용은 [삐멜 소프트웨어 엔지니어 - 오픈소스](https://imasoftwareengineer.tistory.com/5#recentComments ) 이 포스팅을 참고하자.
+해당 포스팅에서는 아직 원본 `repository`의 `collaborator`로 등록되어 있지 않아 **현재(2011-01-11) **`Assignees` 탭을 사용할 수 없습니다. 자세한 내용은 [삐멜 소프트웨어 엔지니어 - 오픈소스](https://imasoftwareengineer.tistory.com/5#recentComments ) 이 포스팅을 참고하시기 바랍니다.
 
 
 
