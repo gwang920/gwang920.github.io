@@ -93,7 +93,7 @@ memberRepository.findName(member.getName())
 
 ![image](https://user-images.githubusercontent.com/49560745/104155020-a004e600-5429-11eb-8e49-cc893317992f.png)
 
-자동으로 **validateDuplicateMember** 메소드가 생성된 것을 확인할 수 있다.
+자동으로 설정한 **validateDuplicateMember**라는 이름의 메소드가 생성된 것을 확인할 수 있다.
 
 ![image](https://user-images.githubusercontent.com/49560745/104155399-77c9b700-542a-11eb-9b08-273822770492.png)
 
@@ -160,7 +160,7 @@ public class MemberService {
     private void validateDuplicateMember(Member member) {
         memberRepository.findName(member.getName())
                 .ifPresent(m->{
-                    throw new IllegalStateException("이미 존재하는 회원입니다.");
+                  throw new IllegalStateException("이미 존재하는 회원입니다.");
                 });
     }
 
