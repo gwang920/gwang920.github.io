@@ -1,5 +1,5 @@
 ---
-title: 오픈소스 기여하기(Contributor) - 튜토리얼
+title: 오픈소스 기여하기(Contributor) - 리마인드
 toc: true
 categories:	
     - Open Source
@@ -8,9 +8,9 @@ tags:
 last_modified_at: 
 ---
 
+ 오픈소스 **Contributor**가 되기 전 상기 할 내용을 간략하게 포스팅합니다.
 
-
- # 오픈소스 기여하기
+ # 오픈소스 기여하기 - 리마인드
 
 오픈소스 기여 목적은!
 
@@ -62,7 +62,7 @@ contribution 전에 꼭 읽어보자!
 기여하고자하는 부분내에 해당하는 곳만 이해해도 충분하다!
 ```
 
-
+<br/>
 
 # Reference
 
