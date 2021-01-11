@@ -1,5 +1,5 @@
 ---
-title: 오픈소스 기여하기(Contributor) - 리마인드
+title: 오픈소스 기여하기(Contributor) - 튜토리얼
 toc: true
 categories:	
     - Open Source
@@ -8,56 +8,29 @@ tags:
 last_modified_at: 
 ---
 
- 오픈소스 **Contribute** 전, 상기 할 내용을 간략하게 포스팅합니다.
+  오픈소스에 기여하는 방법을 실습해보자. 이번 포스팅은 **Test Repository**를 활용해 오픈소스 **Fork** 부터 **Pull Request** 까지의 방법을 실습을 통해 알아보려한다.
 
-# 오픈소스 기여하기 - 리마인드
+# 오픈소스 기여하기 - 튜토리얼
 
-오픈소스 기여 목적은! 나를 위해 컨트리뷰션하고 (**나의 성장**),  우리를 위해 **공유**하고, 모두를 위해 **오픈**하자!
+### 1) Fork 하기
 
-**'사용자의 가려운 부분을 얼마나 잘 긁어주는가!'** 를 위해 오픈소스에 기여하고, 서로 공유하는 문화를 만들어 
-IT 업계가 함께 발전할 수 있도록 노력하자.
+`Fork`는 "이 프로젝트에 **Contribute** 해보고 싶은데, 이거 일단 내 저장소로 복사해갈게."라고 이해하면 쉬울 것이다
 
-## 1. good first issue
+ **Contribute** 하고자 하는 프로젝트를 Fork한다. 우측 상단에 `Fork` 버튼을 눌러 본인의 `Github Repository`에 복사한다. 이때, `Fork`한 저장소는 원본(Repository)와 연결되어있다. 따라서, 원본 저장소에 변화가 발생하면 `Forked`된 , 즉 내 저장소로 복사 된 `respository`에 변경 사항을 반영할 수 있다.
 
-```
-good first issue 태그는
-몇줄 혹은 몇자만 고치면 해결되는 간단한 이슈에 해당한다.
+![image](https://user-images.githubusercontent.com/49560745/104177225-c50a5080-544b-11eb-9783-be4020d565aa.png)
 
-처음 오픈소스 기여를 시작할 때는 
-'good first issue'부터 시작해 범위를 넓혀가자!
-```
+`Fork`가 완료되면 `본인 Github아이디 / Fork한 Repository`에 새로운 저장소가 생긴 것을 확인할 수 있다. `Fork`를 통해 내 버전의 `Repository`가 생성된 것이다. 이제야 비로소 해당 `Repository`에 `Clone` 및 `Commit`할 권한이 생겼다고 할 수 있다.
 
-## 2. issue를 제기하는 방법
+![image](https://user-images.githubusercontent.com/49560745/104178326-79f13d00-544d-11eb-835c-7cde348a149d.png)
 
-```
-1) 상세와 현상을 설명하라.
-2) log첨부 / 버전정보 제공
 
-단순 '문제가 있어요'라고 올리기보다는
-log를 첨부하거나 개발환경버전을 제공하는 등
-issue에 대해 상세하게 설명하자
-```
 
-## 3. Contribution.md를 확인하자
+### 2) 
 
-```
-contribution.md는
 
-컨트리뷰션에 해가 되는 부분 / 건들이지 말아야 하는 부분 등 
-오픈소스에 대한 상세한 이해를 돕는 파일이다. 
-contribution 전에 꼭 읽어보자!
-(Pull Request 전에 꼭 읽어보기)
-```
 
-## 4. 수정한 범위 내 코드만 이해하자
 
-```
-오픈소스 contribution은 생각하는 것만큼 거창하지 않다.
-프로그램 전체 코드를 이해해야한다는 부담에서 벗어나자.
-기여하고자하는 부분내에 해당하는 곳만 이해해도 충분하다!
-```
-
-<br/>
 
 # Reference
 
