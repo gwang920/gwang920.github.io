@@ -224,7 +224,7 @@ public void afterEach(){
 
 정상동작한다.
 
-# 생성자 - 의존성 주입(DI)
+## 생성자 - 의존성 주입(DI)
 
 하지만, 위 코드도 한 가지 문제점이 있다. `new` 키워드를 통해 **Test class** 내에 `repository`를 생성하고 있다. 다시말해, `MemberService.java`에 있는 `memberRepository` 인스턴스와 `MemberServiceTest.java`에 있는 `memberRepository` 인스턴스가 서로 다르다. 다른 저장소로 작업을 하고 있는 것이다. 동일한 저장소에 접근하도록 변경해보자.
 
@@ -386,7 +386,7 @@ class MemberServiceTest {
 
 지금 이 상황은 `MemberService.java` 의 생성자가 외부 동작(Test 코드의 BeforeEach)에 의해 프로퍼티가 결정된다고 얘기할 수 있다. 이것이 바로 **의존성 주입(DI)**이다. 말그대로 외부에서 의존성을 주입해주는 것이다.
 
-**의존성 주입(DI)** 와 관련 된 자세한 내용은 다음 포스팅에서 다뤄봐야겠다.
+**의존성 주입(DI)** 과 관련 된 자세한 내용은 다음 포스팅에서 다뤄봐야겠다.
 
 <br/>
 
