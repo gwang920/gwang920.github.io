@@ -9,13 +9,9 @@ tags:
 last_modified_at: 
 ---
 
-
-
-
-
-**Service**는 비즈니스 로직을 수행한다. 더 서비스 로직에 가까워 보이는 것들이 **Service**에 구현 된다. [회원 레포지토리 개발 포스팅](https://gwang920.github.io/spring%20boot/springboot(8)-requirements/) 에서 `repository`에 구현했던 `MemoryMemberRepository.java` 의 메소드와의 차이를 비교해보는 것도 좋을 것 같다.
-
  [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(10)-service/)에서 구현했던 **service**를 테스트해보자. 마찬가지로 자바 테스트 프레임워크 `Junuit`을 활용한다. 
+
+# 테스트 클래스 자동 생성
 
  이번에는 단축키를 이용하여 **테스트** 클래스를 만들어보자. 우선, **테스트**가 필요한 **service** 클래인 `MemberService.java`로 가보자. 그리고 단축키 `ctrl` + `shift` + `t`를 클릭하고, `Create new Test` 버튼을 클릭하자.
 
@@ -32,6 +28,8 @@ last_modified_at:
 # Join Test
 
 이제 테스트코드를 작성해보자. **join** 기능부터 시작한다. 아래 코드를 `MemberSerivceTest.java`에 작성해주자. 기본적인 **join** 기능은 [회원 리포지터리 테스트](https://gwang920.github.io/spring%20boot/springboot(9)-repositoryTest/)에서 정상동작 함을 확인했을 것이다. 이번에 **비즈니스 로직** 테스트에 중점을 두고, `중복_회원_예외` 메서드를 작성해보자.
+
+### try - catch
 
 ```
 파일명 : MemberSerivceTest.java
@@ -79,12 +77,14 @@ last_modified_at:
 - 테스트코드에서는 메서드 이름을 **한글**로 작성해도 문제없다.
 - `[given - when - then]` 형식으로 코드를 작성해보자.
 - 두 객체를 생성하고, 같은 이름을 넣어보자
-  - 이때, 실패가 나와야 옳은 테스트가 된다.
+  - 이때, 실패가 나와야 옳은 결과이다.
   -  `try - catch` 문을 활용해 실패했을 때, 나오는 메시지가 일치하는지 확인해보자.
 
 ![image](https://user-images.githubusercontent.com/49560745/104274393-1b2ad280-54e4-11eb-822b-8173b6cffbe0.png)
 
 정상적인 결과가 나온다.
+
+### assertThrows
 
  `try - catch` 문을 더 간결하게 표현할 수 있다.
 
@@ -150,16 +150,9 @@ class MemberServiceTest {
         //when
         memberService.join(member1);
         assertThrows(IllegalStateException.class,()-> memberService.join(member2));
+		assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
 
-//        try {
-//            memberService.join(member2);
-//            fail();
-//        }catch (IllegalStateException e){
-//            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-//        }
-        //then
     }
-
 
     @Test
     void findMembers() {
@@ -175,7 +168,7 @@ class MemberServiceTest {
 
 정상동작한다.
 
-테스트 코드가 정상동작하는지 확인하기 위해서는 그 반대 기능도 테스트해봐야한다. 가장 만만한 `IllegalStateException` 에러 구문을`NullPointerException`으로 바꿔보자.
+테스트 코드가 정상동작하는지 확인하기 위해서는 그 반대 기능도 테스트해봐야한다. `IllegalStateException` 에러 구문을 가장 익숙한 `NullPointerException`으로 바꿔보자.
 
 ````java
 assertThrows(NullPointerException.class,()-> memberService.join(member2));
@@ -183,7 +176,33 @@ assertThrows(NullPointerException.class,()-> memberService.join(member2));
 
 ![image](https://user-images.githubusercontent.com/49560745/104275314-ea4b9d00-54e5-11eb-9778-b80642aa70fc.png)
 
-**fail**이 나온다. 테스트 코드는 정상적으로 동작한다고 할 수 있다.
+**fail**이 나온다. `MemberService.java`에서 던진 에러 `IllegalStateException`와 다르기 때문이다.따라서, 테스트 코드는 정상적으로 동작한다고 할 수 있다.
+
+### getMessage()
+
+메시지도 테스트해볼 수 있다. 코드를 살짝 변경해보자.
+
+```java
+assertThrows(IllegalStateException.class, () -> memberService.join(member2));
+```
+
+이 코드를 아래와 같이 바꿔보자.
+
+````java
+IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
+assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
+````
+
+- `throw` 에러에서 추출 된 메시지가 일치하는지 테스트
+- `alt` + `enter`를 입력하고, `split into declarations and assignment`를 클릭하면 자동으로 지역변수(위 코드에서 **IllegalStateException e**)가 생성된다.
+
+![image](https://user-images.githubusercontent.com/49560745/104276859-10267100-54e9-11eb-802f-2bfcd6807b17.png)
+
+`message` 테스트도 정상적으로 실행된다.
+
+# 통합 테스트
+
+
 
 <br/>
 
