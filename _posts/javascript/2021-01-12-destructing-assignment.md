@@ -176,11 +176,72 @@ console.log(a);  // 1
 console.log(b);  // 2
 ```
 
+### 중첩 객체
+
+복잡한 구조를 갖는 중첩 객체도 비구조화 할당이 가능하다.
+
+```javascript
+let metadata = {
+    title: "guen",
+    translations: [
+       {
+        locale: "de",
+        localization_tags: [ ],
+        last_edit: "2021-01-12T09:38:37",
+        url: "/de/docs/Tools/Scratchpad",
+        title: "JavaScript-Studying"
+       }
+    ],
+    url: "/UTF-8/docs/Tools/Scratchpad"
+};
+
+let { 
+     title: englishTitle, 
+     translations: [{ title: localeTitle }] 
+    } = metadata;
+
+console.log(englishTitle); 
+console.log(localeTitle);  
+
+[출력]
+"guen"
+"JavaScript-Studying"
+```
+
+### 중첩 객체 - for of 구문
+
+`for of` 구문을 돌며, 객체를 출력할 수 있다. 다양한 곳에 활용가능해보인다.
+
+```javascript
+let FootballTeam = [
+  {
+    captain: "황선홍",
+    member: {
+      first: "유상철",
+      second: "홍명보",
+      third: "김태영"
+    },
+    age: 35
+  },
+  {
+    captain: "박지성",
+    member: {
+      first: "이천수",
+      second: "기성용",
+      third: "손흥민"
+    },
+    age: 25
+  }
+];
+
+for (let {captain: n, member: { first: f } } of FootballTeam) {
+  console.log("Captain: " + n + ", first: " + f);
+}
+```
+
 
 
 <br/>
-
-
 
 # Reference
 
