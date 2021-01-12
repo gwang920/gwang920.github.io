@@ -217,7 +217,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
 ![image](https://user-images.githubusercontent.com/49560745/104302989-d49d9e00-550c-11eb-8d52-ce8c713d228b.png)
 
-스프링 컨테이너 내에 **memberService**와 **memberRepository** 스프링 빈이 등록되었기 때문에 위 그림처럼 접근할 수 있다.
+스프링 컨테이너 내에 **memberService**와 **memberRepository** 스프링 빈이 등록되었기 때문에 위 그림처럼 **service**, **repository**에 접근할 수 있다.
 
 ## 컴포넌트 스캔 원리
 
