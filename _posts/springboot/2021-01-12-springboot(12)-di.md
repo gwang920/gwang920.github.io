@@ -34,7 +34,12 @@ last_modified_at:
 -  코드 재활용성이 높아진다
 - 객체간의 결합도를 낮추고 코드를 유연하게 작성할 수 있다.
 
-코드를 통해 의존성 주입을 알아보자.
+### 의존성 주입 방법
+
+- 컴포넌트 스캔과 자동 의존관계 설정
+- 자바 코드로 직접 스프링 빈 등록하기
+
+의존성을 주입하는 방법이다. 이번 포스팅에서는 **컴포넌트 스캔**을 활용해 의존성을 주입해보자.
 
 ## MemberController
 
@@ -68,7 +73,15 @@ public class MemberController {
 - `@Autowired` 어노테이션은 자동으로 의존관계를 만들어, memberservice와 연결시켜준다.
 - 생성자에 `@Autowired` 어노테이션이 있으면 스프링이 연관된 객체를 스프링 컨테이너에서 찾아서 넣어준다.
 
-이제, 
+이제, main Application인 `HelloSpringApplication.java` 를 실행해보자.
+
+![image](https://user-images.githubusercontent.com/49560745/104301874-7c19d100-550b-11eb-8931-e3eaad038910.png)
+
+오류가 발생한다. **memberSerivce**가 스프링 빈으로 등록되어있지 않기때문이다.
+
+![image](https://user-images.githubusercontent.com/49560745/104302586-50e3b180-550c-11eb-8c15-fcff961932ca.png)
+
+`MemberController` 에서 `MemberService` 에 의존성을 주입하려했지만, 스프링 컨테이너에서 `MemberService` 를 찾을 수 없다. `MemberService` 에도 마찬가지로 어노테이션 설정을 통해 스프링 컨테이너에 등록해야한다.
 
 ## MemberService
 
@@ -196,9 +209,31 @@ public class MemoryMemberRepository implements MemberRepository{
 
 ```
 
+이제, 다시 실행해보자.
 
+![image](https://user-images.githubusercontent.com/49560745/104302252-ed598400-550b-11eb-8ad8-b4249dba8736.png)
 
+정상적으로 구동된다.
 
+![image](https://user-images.githubusercontent.com/49560745/104302989-d49d9e00-550c-11eb-8d52-ce8c713d228b.png)
+
+스프링 컨테이너 내에 **memberService**와 **memberRepository** 스프링 빈이 등록되었기 때문에 위 그림처럼 접근할 수 있다.
+
+## 컴포넌트 스캔 원리
+
+그렇다면 컴포넌트 스캔은 어떻게 이루어질까? 
+
+- `@Component` 애노테이션이 있으면, 스프링 빈으로 자동 등록된다.
+- `@Controller` 컨트롤러가 스프링 빈으로 자동 등록된 이유도 컴포넌트 스캔때문이다.
+
+- `@Component` 를 포함하는 다음 애노테이션도 스프링 빈으로 자동 등록된다.
+  - `@Controller`
+  - `@Service`
+  - `@Repository`
+
+`@Controller`를 `ctrl` + `click` 해보자. `@Controller`는 이미 `@Component`에 포함되어있다. 이때문에 스프링 자동설정에 따라 스프링 빈에 등록되는 것이다. `@Service` , `@Repository`도 마찬가지다.
+
+![image](https://user-images.githubusercontent.com/49560745/104303246-365e0800-550d-11eb-81f7-7584b68f9bcc.png)
 
 <br/>
 
