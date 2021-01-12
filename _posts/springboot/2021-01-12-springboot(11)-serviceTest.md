@@ -31,10 +31,15 @@ last_modified_at:
 
 # Join Test
 
-이제 테스트코드를 작성해보자. **join** 기능부터 시작한다. 아래 코드를 `MemberSerivceTest.java`에 작성해주자.
+이제 테스트코드를 작성해보자. **join** 기능부터 시작한다. 아래 코드를 `MemberSerivceTest.java`에 작성해주자. 기본적인 **join** 기능은 [회원 리포지터리 테스트](https://gwang920.github.io/spring%20boot/springboot(9)-repositoryTest/)에서 정상동작 함을 확인했을 것이다. 이번에 **비즈니스 로직** 테스트에 중점을 두고, `중복_회원_예외` 메서드를 작성해보자.
+
+```
+파일명 : MemberSerivceTest.java
+위치 : \test\java\hello.hellospring\service\MemberSerivceTest.java
+```
 
 ````java
-    MemberService memberService=new MemberService();
+   MemberService memberService=new MemberService();
 
     @Test
     void 회원가입() {
@@ -73,172 +78,102 @@ last_modified_at:
 
 - 테스트코드에서는 메서드 이름을 **한글**로 작성해도 문제없다.
 - `[given - when - then]` 형식으로 코드를 작성해보자.
-- 
+- 두 객체를 생성하고, 같은 이름을 넣어보자
+  - 이때, 실패가 나와야 옳은 테스트가 된다.
+  -  `try - catch` 문을 활용해 실패했을 때, 나오는 메시지가 일치하는지 확인해보자.
 
-### Join
+![image](https://user-images.githubusercontent.com/49560745/104274393-1b2ad280-54e4-11eb-822b-8173b6cffbe0.png)
 
- 회원과 관련 된 **Service** 로직을 구현해보자. 아래와 같이 `service` 패키지를 추가하고, `MemberService.java` 클래스 파일을 생성하자. 그리고 `join - 회원가입` 비즈니스 로직을 구현해보자.
+정상적인 결과가 나온다.
 
-![image](https://user-images.githubusercontent.com/49560745/104154498-68496e80-5428-11eb-98fc-00a8b3f1dba8.png)
+ `try - catch` 문을 더 간결하게 표현할 수 있다.
+
+```java
+try {
+	memberService.join(member2);
+	fail();
+}catch (IllegalStateException e){
+	assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
+}
+```
+
+위 `try - catch` 문을 아래와 같이 변경해보자. 두 코드는 동일하게 동작한다.
+
+````java
+assertThrows(IllegalStateException.class,()-> memberService.join(member2));
+````
+
+- `assertThrows(오류명.class(), 실행 메소드)` 형식으로 지정할 수 있다.
 
 ```
-파일명 : MemberService.java
-위치 : \src\main\java\hello.hellospring\service\MemberService.java
+파일명 : MemberSerivceTest.java
+위치 : \test\java\hello.hellospring\service\MemberSerivceTest.java
 ```
 
 ```java
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
-import hello.hellospring.respository.MemoryMemberRepository;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.failBecauseExceptionWasNotThrown;
+import static org.junit.jupiter.api.Assertions.*;
+
+class MemberServiceTest {
+
+    MemberService memberService=new MemberService();
+
+    @Test
+    void 회원가입() {
+        // given
+        Member member=new Member();
+        member.setName("spring");
+
+        //when
+        Long saveId=memberService.join(member);
+
+        //then
+        Member findmember=memberService.findOne(saveId).get();
+        assertThat(member.getName()).isEqualTo(findmember.getName());
+    }
+
+    @Test
+    public void 중복_회원_예외(){
+        //given
+        Member member1=new Member();
+        member1.setName("spring");
+
+        Member member2=new Member();
+        member2.setName("spring");
+        //when
+        memberService.join(member1);
+        assertThrows(IllegalStateException.class,()-> memberService.join(member2));
+
+//        try {
+//            memberService.join(member2);
+//            fail();
+//        }catch (IllegalStateException e){
+//            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
+//        }
+        //then
+    }
 
 
-public class MemberService {
+    @Test
+    void findMembers() {
+    }
 
-    private final MemoryMemberRepository memberRepository
-						=new MemoryMemberRepository();
-
-    /**
-     * 중복 회원 관리
-     */
-    public Long join(Member member){
-        memberRepository.findName(member.getName())
-                .ifPresent(m->{
-                    throw new IllegalStateException("이미 존재하는 회원입니다.");
-                });
-        memberRepository.save(member);
-        return member.getId();
+    @Test
+    void findOne() {
     }
 }
-
 ```
 
-- `Name`이 중복된다면 `IllegalStateException` 처리
-- `IllegalStateException` 을 통과하면 회원 정보 저장
+![image](https://user-images.githubusercontent.com/49560745/104275019-672a4700-54e5-11eb-919f-041b57be1801.png)
 
-**[참고]** 
-
-아래 두 코드는 완벽하게 **동일**하다. `Optional`은 여러 메소드를 실행할 수 있는데 그 중 하나가
- `ifPresent()`이다. 이 메소드를 활용해 이미 존재하는 정보를 판단할 수 있다.
-
-```java
-- code 1
-  memberRepository.findName(member.getName())
-           .ifPresent(m->{
-               throw new IllegalStateException("이미 존재하는 회원입니다.");
-           });
- -------------------------------------------------------------------------        
-- code 2
-  Optional<Member> result=memberRepository.findName(member.getName());
-        result.ifPresent(m->{
-            throw new IllegalStateException("이미 존재하는 회원입니다.");
-        });
- -------------------------------------------------------------------------
-```
-
- 서비스 로직 수행 메소드에서 세부 기능은 따로 분리하는게 좋다. 
-
-```java
-memberRepository.findName(member.getName())
-	.ifPresent(m->{
-		throw new IllegalStateException("이미 존재하는 회원입니다.");
-	});
-```
-
- 코드를 드래그 한 뒤, **전구** 표시를 클릭하면 코드를 `refactoring`할 수 있다. 여기서, `Extract Method`를 클릭하고 아래와 같은 화면이 나오면, **Name**을 설정해주자. 
-
-![image](https://user-images.githubusercontent.com/49560745/104155020-a004e600-5429-11eb-8e49-cc893317992f.png)
-
-자동으로 설정한 **validateDuplicateMember**라는 이름의 메소드가 생성된 것을 확인할 수 있다.
-
-![image](https://user-images.githubusercontent.com/49560745/104155399-77c9b700-542a-11eb-9b08-273822770492.png)
-
-
-
-### findMembers
-
- 전체 회원을 조회하는 메서드를 추가하자.
-
-```java
-    /**
-     * 회원 전체 조회
-     */
-    public List<Member> findMembers(){
-        return memberRepository.findAll();
-    }
-```
-
-- List로 반환
-
-### findOne
-
- 아이디로 회원 정보를 조회하자.
-
-```java
-    /**
-     * 회원 아디로 조회
-     */
-    public Optional<Member> findOne(Long memeberId){
-        return memberRepository.findID(memeberId);
-    }
-
-```
-
-- 일치하는 `id` 의 Member 객체 반환
-
-
-
-## 전체코드
-
-```java
-package hello.hellospring.service;
-
-import hello.hellospring.domain.Member;
-import hello.hellospring.respository.MemoryMemberRepository;
-
-import java.util.List;
-import java.util.Optional;
-
-
-public class MemberService {
-
-    private final MemoryMemberRepository memberRepository=new MemoryMemberRepository();
-
-    /**
-     * 중복 회원 관리
-     */
-    public Long join(Member member){
-        validateDuplicateMember(member);
-        memberRepository.save(member);
-        return member.getId();
-    }
-
-    private void validateDuplicateMember(Member member) {
-        memberRepository.findName(member.getName())
-                .ifPresent(m->{
-                  throw new IllegalStateException("이미 존재하는 회원입니다.");
-                });
-    }
-
-    /**
-     * 회원 전체 조회
-     */
-    public List<Member> findMembers(){
-        return memberRepository.findAll();
-    }
-
-    /**
-     * 회원 아디로 조회
-     */
-    public Optional<Member> findOne(Long memeberId){
-        return memberRepository.findID(memeberId);
-    }
-
-}
-
-```
-
- 기본적인 **service**의 비즈니스로직을 구현했다. 다음 포스팅에서 마찬가지로 `junit`을 활용해 `Test`를 진행해보자.
+정상동작한다.
 
 <br/>
 
