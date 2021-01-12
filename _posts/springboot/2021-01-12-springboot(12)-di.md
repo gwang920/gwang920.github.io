@@ -251,7 +251,13 @@ public class MemoryMemberRepository implements MemberRepository{
 Singleton Scope
 
 ```
-Defining a bean with singleton scope means the container "creates a single instance of that bean", and all requests for that bean name will return "the same object", which is cached. Any modifications to the object will be reflected in all references to the bean. This scope is the default value if no other scope is specified.
+Defining a bean with singleton scope means 
+the container "creates a single instance of that bean", 
+and all requests for that bean name will 
+return "the same object", which is cached. 
+Any modifications to the object will be reflected 
+in all references to the bean. 
+This scope is the default value if no other scope is specified.
 ```
 
 [스프링 빈 - 싱클톤 스코프](https://www.baeldung.com/spring-bean-scopes)
