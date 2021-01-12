@@ -175,6 +175,16 @@ class MemberServiceTest {
 
 정상동작한다.
 
+테스트 코드가 정상동작하는지 확인하기 위해서는 그 반대 기능도 테스트해봐야한다. 가장 만만한 `IllegalStateException` 에러 구문을`NullPointerException`으로 바꿔보자.
+
+````java
+assertThrows(NullPointerException.class,()-> memberService.join(member2));
+````
+
+![image](https://user-images.githubusercontent.com/49560745/104275314-ea4b9d00-54e5-11eb-9778-b80642aa70fc.png)
+
+**fail**이 나온다. 테스트 코드는 정상적으로 동작한다고 할 수 있다.
+
 <br/>
 
 이 포스팅은 인프런 김영한님의 `스프링 입문 - 코드로 배우는 스프링 부트 강의`를 토대로 작성되었습니다.
