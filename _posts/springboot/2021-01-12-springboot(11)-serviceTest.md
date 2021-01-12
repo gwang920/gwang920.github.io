@@ -25,9 +25,55 @@ last_modified_at:
 
 ![image](https://user-images.githubusercontent.com/49560745/104272400-5a572480-54e0-11eb-90af-7be3e4800a6c.png)
 
-`MemberSerivceTest.java`가 자동 생성된 것을 확인할 수 있다.
+`MemberSerivceTest.java`가 자동 생성된 것을 확인할 수 있다. 
 
-# MemberService
+![image](https://user-images.githubusercontent.com/49560745/104273935-16b1ea00-54e3-11eb-9ac5-de592a7ebf1c.png)
+
+# Join Test
+
+이제 테스트코드를 작성해보자. **join** 기능부터 시작한다. 아래 코드를 `MemberSerivceTest.java`에 작성해주자.
+
+````java
+    MemberService memberService=new MemberService();
+
+    @Test
+    void 회원가입() {
+        // given
+        Member member=new Member();
+        member.setName("spring");
+
+        //when
+        Long saveId=memberService.join(member);
+
+        //then
+        Member findmember=memberService.findOne(saveId).get();
+        assertThat(member.getName()).isEqualTo(findmember.getName());
+
+    }
+
+    @Test
+    public void 중복_회원_예외(){
+        //given
+        Member member1=new Member();
+        member1.setName("spring");
+
+        Member member2=new Member();
+        member2.setName("spring");
+        //when
+        memberService.join(member1);
+        try {
+            memberService.join(member2);
+            fail();
+        }catch (IllegalStateException e){
+            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
+        }
+        //then
+    }
+````
+
+- 테스트코드에서는 메서드 이름을 **한글**로 작성해도 문제없다.
+- `[given - when - then]` 형식으로 코드를 작성해보자.
+- 
 
 ### Join
 
