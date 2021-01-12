@@ -11,7 +11,7 @@ last_modified_at:
 
  자바스크립트 **비구조화 할당**에 대해 알아보자.
 
-**비구조화 할당(destructing assignment)** 이란 배열 또는 객체에서 데이터를 별개 변수로 추출할 수 있게하는 **javascript** 표현식이다.  말그대로, 구조화 되지 않은 형식으로 데이터를 할당하고, 추출하는 것이라고 할 수 있다. 예제를 통해 알아보자.
+**비구조화 할당(destructing assignment)** 이란 배열 또는 객체에서 데이터를 별개 변수로 추출할 수 있게하는 **javascript** 표현식이다.  말그대로, 구조화 되지 않은 형식으로 데이터를 할당하고, 추출하는 것이라고 할 수 있다. 예제를 통해 실습해보자. [온라인 테스트 site](https://jsbin.com/nuzatunoru/edit?js,console,output)를 활용해 연습할 수 있다.
 
 # 배열
 
@@ -49,7 +49,7 @@ console.log(b); // 1
 
 
 
-### ... 구문
+### ... 구문(전개 연산자)
 
 `...` 구문은 배열이나 객체 데이터를 별개로 분류하고자 할 때, 사용한다. **rest** 변수에는 a, b에 할당되지 않는 나머지 배열 원소들이 할당된다.
 
@@ -75,7 +75,6 @@ a=[[1,2,3],[4,5,6],[7,8,9]];
 console.log(...a);
 
 [출력]
-
 [1, 2, 3]
 [4, 5, 6]
 [7, 8, 9]
@@ -108,6 +107,31 @@ Math.max(...a.map(b=>{
 8
 9
 ```
+
+### ... 구문, 깊은복사(Deep Copy)
+
+`=` 은 얕은 복사된다. 즉, 같은 `reference`를 갖기 때문에 `arr`의 원소가 바뀌면 `copy`의 원소도 변경된다. 그에 반해 `...` 구문(전개 연산자)를 사용하면, **deep copy** 가 가능하다. 새롭게 배열을 생성해 할당하기 때문이다.
+
+```javascript
+let arr = [1,2,3];
+let copy = arr;
+let [...deepCopy1] = arr;
+let deepCopy2 = [...arr];
+
+arr[0] = "shallowCopy";
+console.log(arr);
+console.log(copy);
+console.log(deepCopy1);
+console.log(deepCopy2);
+
+[출력]
+["shallowCopy", 2, 3]
+["shallowCopy", 2, 3]
+[1, 2, 3]
+[1, 2, 3]
+```
+
+
 
 ### 정규식
 
