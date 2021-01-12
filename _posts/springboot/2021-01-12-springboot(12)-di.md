@@ -269,7 +269,7 @@ This scope is the default value if no other scope is specified.
 
 유일하게 하나만을 등록해 공유한다.**(Cached 됨)** 따라서, 같은 스프링 빈이면 모두 같은 인스턴스다. 예를들어, **OrderService**에서 만약 **MemberRepository** 의 객체가 필요하다면, 새롭게 생성하는 것이 아니라 이미 등록되어있는 **MemberRepository**에 접근하는 것이다. 즉, **OrderService**와 **MemberService**는 같은 **레퍼런스를** 공유한다.
 
-![image](https://user-images.githubusercontent.com/49560745/104306778-b4241280-5511-11eb-92ef-02a63d2e67ca.png)
+![image](https://user-images.githubusercontent.com/49560745/104309540-ac666d00-5515-11eb-90c2-bfc33f96f3c6.png)
 
 그렇기에 앞서 말했던 의존성 주입의 장점인 **코드의 재사용성이 높아지고, 자원 활용의 효율이 높아지는** 것이다.  참고로, 설정으로 싱글톤이 아니게 설정할 수 있지만, 현업에서 특별한 경우를 제외하면 대부분 싱글톤을 사용한다고 한다.
 
