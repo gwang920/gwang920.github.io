@@ -235,6 +235,29 @@ public class MemoryMemberRepository implements MemberRepository{
 
 ![image](https://user-images.githubusercontent.com/49560745/104303246-365e0800-550d-11eb-81f7-7584b68f9bcc.png)
 
+
+
+### 스프링 빈 - 싱글톤
+
+스프링은 스프링 컨테이너에 스프링 빈을 등록할 때, 기본으로 **싱글톤**으로 등록한다. 
+
+**싱글톤**
+
+```
+전역 변수를 사용하지 않고 객체를 "하나"만 생성 하도록 하며, 
+생성된 객체를 "어디에서든지 참조"할 수 있도록 하는 패턴
+```
+
+Singleton Scope
+
+```
+Defining a bean with singleton scope means the container "creates a single instance of that bean", and all requests for that bean name will return "the same object", which is cached. Any modifications to the object will be reflected in all references to the bean. This scope is the default value if no other scope is specified.
+```
+
+[스프링 빈 - 싱클톤 스코프](https://www.baeldung.com/spring-bean-scopes)
+
+유일하게 하나만을 등록해 공유한다.**(Cached 됨)** 따라서, 같은 스프링 빈이면 모두 같은 인스턴스다. 그렇기에 앞서 말했던 의존성 주입의 장점인 **코드의 재사용성이 높아지고, 자원 활용의 효율이 높아지는** 것이다.  참고로, 설정으로 싱글톤이 아니게 설정할 수 있지만, 현업에서 특별한 경우를 제외하면 대부분 싱글톤을 사용한다고 한다.
+
 <br/>
 
 이 포스팅은 인프런 김영한님의 `스프링 입문 - 코드로 배우는 스프링 부트 강의`를 토대로 작성되었습니다.
@@ -242,4 +265,5 @@ public class MemoryMemberRepository implements MemberRepository{
 # Reference
 
 - [김영한님의 스프링-입문-스프링부트](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/lecture/49577?tab=curriculum)
+- https://www.baeldung.com/spring-bean-scopes
 
