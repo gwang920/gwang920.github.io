@@ -224,12 +224,17 @@ public class MemoryMemberRepository implements MemberRepository{
 그렇다면 컴포넌트 스캔은 어떻게 이루어질까? 
 
 - `@Component` 애노테이션이 있으면, 스프링 빈으로 자동 등록된다.
+
 - `@Controller` 컨트롤러가 스프링 빈으로 자동 등록된 이유도 컴포넌트 스캔때문이다.
 
 - `@Component` 를 포함하는 다음 애노테이션도 스프링 빈으로 자동 등록된다.
-  - `@Controller`
-  - `@Service`
-  - `@Repository`
+  ```
+  @Controller
+  @Service
+  @Repository
+  ```
+
+  
 
 `@Controller`를 `ctrl` + `click` 해보자. `@Controller`는 이미 `@Component`에 포함되어있다. 이때문에 스프링 자동설정에 따라 스프링 빈에 등록되는 것이다. `@Service` , `@Repository`도 마찬가지다.
 
