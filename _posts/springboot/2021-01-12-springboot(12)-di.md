@@ -27,7 +27,7 @@ last_modified_at:
 
 [[출처] 의존성 주입 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9D%98%EC%A1%B4%EC%84%B1_%EC%A3%BC%EC%9E%85)
 
-의존성 주입은 쉽게 말해, 필요한 객체를 직접 생성하는 것이 아니라 외부에서 직접 설정하는 것이다. 즉, 외부로부터 필요한 객체를 받아서 사용한다. [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(11)-serviceTest/)에서 **생성자**를 통해 간단하게 의존성 주입 을 알아보았다. 
+의존성 주입은 쉽게 말해, 필요한 객체를 직접 생성하는 것이 아니라 외부에서 직접 설정하는 것이다. 즉, 외부로부터 필요한 객체를 받아서 사용한다. [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(11)-serviceTest/)에서 **생성자**를 통해 간단하게 의존성 주입을 훑어봤다. 
 
 ### 의존성 주입 장점
 
