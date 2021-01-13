@@ -81,7 +81,7 @@ public class MemberController {
 
 오류가 발생한다. **memberSerivce**가 스프링 빈으로 등록되어있지 않기때문이다.
 
-![image](https://user-images.githubusercontent.com/49560745/104302586-50e3b180-550c-11eb-8c15-fcff961932ca.png)
+![image alt="스프링 컨테이너"](https://user-images.githubusercontent.com/49560745/104302586-50e3b180-550c-11eb-8c15-fcff961932ca.png)
 
 `MemberController` 에서 `MemberService` 에 의존성을 주입하려했지만, 스프링 컨테이너에서 `MemberService` 를 찾을 수 없다. `MemberService` 에도 마찬가지로 어노테이션 설정을 통해 스프링 컨테이너에 등록해야한다.
 
