@@ -77,11 +77,11 @@ public class MemberController {
 
 이제, main Application인 `HelloSpringApplication.java` 를 실행해보자.
 
-![image](https://user-images.githubusercontent.com/49560745/104301874-7c19d100-550b-11eb-8931-e3eaad038910.png)
+![스프링부트 실행 오류 : non-zero exit value 1](https://user-images.githubusercontent.com/49560745/104301874-7c19d100-550b-11eb-8931-e3eaad038910.png)
 
 오류가 발생한다. **memberSerivce**가 스프링 빈으로 등록되어있지 않기때문이다.
 
-![image alt="스프링 컨테이너"](https://user-images.githubusercontent.com/49560745/104302586-50e3b180-550c-11eb-8c15-fcff961932ca.png)
+![스프링 컨테이너](https://user-images.githubusercontent.com/49560745/104302586-50e3b180-550c-11eb-8c15-fcff961932ca.png)
 
 `MemberController` 에서 `MemberService` 에 의존성을 주입하려했지만, 스프링 컨테이너에서 `MemberService` 를 찾을 수 없다. `MemberService` 에도 마찬가지로 어노테이션 설정을 통해 스프링 컨테이너에 등록해야한다.
 
@@ -213,11 +213,11 @@ public class MemoryMemberRepository implements MemberRepository{
 
 이제, 다시 실행해보자.
 
-![image](https://user-images.githubusercontent.com/49560745/104302252-ed598400-550b-11eb-8ad8-b4249dba8736.png)
+![스프링부트 실행완료](https://user-images.githubusercontent.com/49560745/104302252-ed598400-550b-11eb-8ad8-b4249dba8736.png)
 
 정상적으로 구동된다.
 
-![image](https://user-images.githubusercontent.com/49560745/104302989-d49d9e00-550c-11eb-8d52-ce8c713d228b.png)
+![스프링 컨테이너 controller service repository](https://user-images.githubusercontent.com/49560745/104302989-d49d9e00-550c-11eb-8d52-ce8c713d228b.png)
 
 스프링 컨테이너 내에 **memberService**와 **memberRepository** 스프링 빈이 등록되었기 때문에 위 그림처럼 **service**, **repository**에 접근할 수 있다.
 
@@ -240,7 +240,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
 `@Controller`를 `ctrl` + `click` 해보자. `@Controller`는 이미 `@Component`에 포함되어있다. 이때문에 스프링 자동설정에 따라 스프링 빈에 등록되는 것이다. `@Service` , `@Repository`도 마찬가지다.
 
-![image](https://user-images.githubusercontent.com/49560745/104303246-365e0800-550d-11eb-81f7-7584b68f9bcc.png)
+![@Component @Controller](https://user-images.githubusercontent.com/49560745/104303246-365e0800-550d-11eb-81f7-7584b68f9bcc.png)
 
 
 
@@ -271,7 +271,7 @@ This scope is the default value if no other scope is specified.
 
 유일하게 하나만을 등록해 공유한다.**(Cached 됨)** 따라서, 같은 스프링 빈이면 모두 같은 인스턴스다. 예를들어, **OrderService**에서 만약 **MemberRepository** 의 객체가 필요하다면, 새롭게 생성하는 것이 아니라 이미 등록되어있는 **MemberRepository**에 접근하는 것이다. 즉, **OrderService**와 **MemberService**는 같은 **레퍼런스를** 공유한다.
 
-![image](https://user-images.githubusercontent.com/49560745/104309540-ac666d00-5515-11eb-90c2-bfc33f96f3c6.png)
+![스프링 부트 - 싱글톤](https://user-images.githubusercontent.com/49560745/104309540-ac666d00-5515-11eb-90c2-bfc33f96f3c6.png)
 
 그렇기에 앞서 말했던 의존성 주입의 장점인 **코드의 재사용성이 높아지고, 자원 활용의 효율이 높아지는** 것이다.  참고로, 설정으로 싱글톤이 아니게 설정할 수 있지만, 현업에서 특별한 경우를 제외하면 대부분 싱글톤을 사용한다고 한다.
 

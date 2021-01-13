@@ -15,7 +15,7 @@ last_modified_at:
 
  이번에는 단축키를 이용하여 **테스트** 클래스를 만들어보자. 우선, **테스트**가 필요한 **service** 클래인 `MemberService.java`로 가보자. 그리고 단축키 `ctrl` + `shift` + `t`를 클릭하고, `Create new Test` 버튼을 클릭하자.
 
-![image](https://user-images.githubusercontent.com/49560745/104272273-1fed8780-54e0-11eb-83b4-e1713166ac9f.png) 
+![스프링부트 태스트 클래스 생성](https://user-images.githubusercontent.com/49560745/104272273-1fed8780-54e0-11eb-83b4-e1713166ac9f.png) 
 
 보는 것처럼 **class name**을 자동으로 설정해준다. 아래 `Member` 태그아래 **테스트**하고자 하는 메소드 **check box**를 클릭하자.
 
@@ -23,7 +23,7 @@ last_modified_at:
 
 `MemberSerivceTest.java`가 자동 생성된 것을 확인할 수 있다. 
 
-![image](https://user-images.githubusercontent.com/49560745/104273935-16b1ea00-54e3-11eb-9ac5-de592a7ebf1c.png)
+![junit test](https://user-images.githubusercontent.com/49560745/104273935-16b1ea00-54e3-11eb-9ac5-de592a7ebf1c.png)
 
 # Join Test
 
@@ -80,7 +80,7 @@ last_modified_at:
   - 이때, 실패가 나와야 옳은 결과이다.
   -  `try - catch` 문을 활용해 실패했을 때, 나오는 메시지가 일치하는지 확인해보자.
 
-![image](https://user-images.githubusercontent.com/49560745/104274393-1b2ad280-54e4-11eb-822b-8173b6cffbe0.png)
+![junit 테스트 성공](https://user-images.githubusercontent.com/49560745/104274393-1b2ad280-54e4-11eb-822b-8173b6cffbe0.png)
 
 정상적인 결과가 나온다.
 
@@ -164,7 +164,7 @@ class MemberServiceTest {
 }
 ```
 
-![image](https://user-images.githubusercontent.com/49560745/104275019-672a4700-54e5-11eb-919f-041b57be1801.png)
+![junit 테스트 성공](https://user-images.githubusercontent.com/49560745/104275019-672a4700-54e5-11eb-919f-041b57be1801.png)
 
 정상동작한다.
 
@@ -174,7 +174,7 @@ class MemberServiceTest {
 assertThrows(NullPointerException.class,()-> memberService.join(member2));
 ````
 
-![image](https://user-images.githubusercontent.com/49560745/104275314-ea4b9d00-54e5-11eb-9778-b80642aa70fc.png)
+![junit 테스트 실패](https://user-images.githubusercontent.com/49560745/104275314-ea4b9d00-54e5-11eb-9778-b80642aa70fc.png)
 
 **fail**이 나온다. `MemberService.java`에서 던진 에러 `IllegalStateException`와 다르기 때문이다.따라서, 테스트 코드는 정상적으로 동작한다고 할 수 있다.
 
@@ -197,7 +197,7 @@ assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
 - `throw` 에러에서 추출 된 메시지가 일치하는지 테스트
 - `alt` + `enter`를 입력하고, `split into declarations and assignment`를 클릭하면 자동으로 지역변수(위 코드에서 **IllegalStateException e**)가 생성된다.
 
-![image](https://user-images.githubusercontent.com/49560745/104276859-10267100-54e9-11eb-802f-2bfcd6807b17.png)
+![junit 테스트 성공](https://user-images.githubusercontent.com/49560745/104276859-10267100-54e9-11eb-802f-2bfcd6807b17.png)
 
 `message` 테스트도 정상적으로 실행된다.
 
@@ -220,7 +220,7 @@ public void afterEach(){
 - `@AfterEach` 어노테이션을 추가하면, 매 테스트 코드가 실행된 후에 `afterEach()` 메소드가 실행된다.
   - `db`를 비워주는 작업과 동일하다고 생각하면 좋다.
 
-![image](https://user-images.githubusercontent.com/49560745/104277933-22a1aa00-54eb-11eb-8307-18fa7ae99de2.png)
+![junit 전체 테스트 성공](https://user-images.githubusercontent.com/49560745/104277933-22a1aa00-54eb-11eb-8307-18fa7ae99de2.png)
 
 정상동작한다.
 

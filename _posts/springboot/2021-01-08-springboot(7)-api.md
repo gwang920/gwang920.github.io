@@ -90,7 +90,7 @@ public class HelloController {
 
 화면에서 우클릭을하고 **페이지 소스 보기**를 눌러보자.
 
-![image](https://user-images.githubusercontent.com/49560745/103976988-8d857500-51bb-11eb-90f4-ce1191caf9c4.png)
+![스프링부트 API 방식 페이지 로드](https://user-images.githubusercontent.com/49560745/103976988-8d857500-51bb-11eb-90f4-ce1191caf9c4.png)
 
 `HTML` 코드가 보이지 않는다. 이게 바로 Spring boot에서 이야기하는 **API** 방식이다.
 
@@ -192,7 +192,7 @@ public class HelloController {
 
 `@ResponseBody`는 HTTP의 BODY에 문자 내용을 직접 반환한다. `@ResponseBody`가 동작하는 원리는 다음과 같다.
 
-![image](https://user-images.githubusercontent.com/49560745/103977627-00432000-51bd-11eb-9e10-4a706e76904c.png)
+![@ResponseBody 원리](https://user-images.githubusercontent.com/49560745/103977627-00432000-51bd-11eb-9e10-4a706e76904c.png)
 
 ```
 1) 웹 브라우저 요청

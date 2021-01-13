@@ -66,7 +66,7 @@ Spring boot에서는 정적 컨텐츠 기능을 제공한다.
 
 **정적 컨텐츠**가 사용자 요청으로부터 로드되는 과정은 다음과 같다.
 
-![image](https://user-images.githubusercontent.com/49560745/103514630-5c9dfb00-4eb0-11eb-8f92-98e15afdc9f0.png)
+![스프링부트 정적컨텐츠 동작원리](https://user-images.githubusercontent.com/49560745/103514630-5c9dfb00-4eb0-11eb-8f92-98e15afdc9f0.png)
 
 ```
 1) 웹 브라우저 요청
@@ -136,7 +136,7 @@ spring.mvc.static-path-pattern=/static/**
 
 그리고 요청을 보내보자. `hello-static.html` 파일은 여전히 패턴 변경 전과 동일한 `/static` 에 위치하고 있지만, `localhost:8000/hello-static.html` 을 요청하면 **Error page** 가 로드된다.
 
-![image](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
+![Whitelabel Error Page](https://user-images.githubusercontent.com/49560745/103527665-0b990180-4ec6-11eb-8037-c0a3cdbdb48d.png)
 
 <br/>
 
@@ -286,13 +286,13 @@ WebMvcConfigurer로 WebConfig 설정하기
 
 설정한 경로를 요청하면 page가 load 된다.
 
-![image](https://user-images.githubusercontent.com/49560745/103535769-a8fb3200-4ed4-11eb-9a8e-6f02b9337d9d.png)
+![스프링부트 정적컨텐츠 로드](https://user-images.githubusercontent.com/49560745/103535769-a8fb3200-4ed4-11eb-9a8e-6f02b9337d9d.png)
 
 <br/>
 
 기본 경로를 요청해도 page가 load 됨을 확인할 수 있다.
 
-![image](https://user-images.githubusercontent.com/49560745/103536884-a13c8d00-4ed6-11eb-90f2-c9c2726e2511.png)
+![스프링부트 정적 컨텐츠 로드](https://user-images.githubusercontent.com/49560745/103536884-a13c8d00-4ed6-11eb-90f2-c9c2726e2511.png)
 
 <br/>
 

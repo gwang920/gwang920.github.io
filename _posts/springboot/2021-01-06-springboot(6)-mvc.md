@@ -134,7 +134,7 @@ Controller에서 return 해주는 View 파일을 만들어보자. `resources > t
 
 우선, https://http://localhost:8000/hello-mvc에 접속해보자. 
 
-![image](https://user-images.githubusercontent.com/49560745/103727961-f20bcd00-501f-11eb-8f65-469a51d196e2.png)
+![Whitelabel Error Page](https://user-images.githubusercontent.com/49560745/103727961-f20bcd00-501f-11eb-8f65-469a51d196e2.png)
 
 **Error Page**가 로드될 것이다. 매핑된 "hello-mvc"에 접근했지만, `@RequestParam`에서 설정한 name값이  `url`에존재하지 않기 때문이다.
 
@@ -152,7 +152,7 @@ Controller에서 return 해주는 View 파일을 만들어보자. `resources > t
 
 **Controller**에 의해 **MVC**가 동작하는 과정은 다음과 같다.
 
-![image](https://user-images.githubusercontent.com/49560745/103728221-b6bdce00-5020-11eb-8c72-f6011c6e84ab.png)
+![스프링부트 MVC 동작원리](https://user-images.githubusercontent.com/49560745/103728221-b6bdce00-5020-11eb-8c72-f6011c6e84ab.png)
 
 ```
 1) 웹 브라우저 요청

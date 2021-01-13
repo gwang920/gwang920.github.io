@@ -54,7 +54,7 @@ Hello
 
 
 
-![image](https://user-images.githubusercontent.com/49560745/103200051-bbeb9080-492f-11eb-96b4-3df56e587d63.png)
+![스프링부트 동적페이지 동작원리](https://user-images.githubusercontent.com/49560745/103200051-bbeb9080-492f-11eb-96b4-3df56e587d63.png)
 
 이를 코드로 구현해보자.
 
@@ -103,7 +103,7 @@ public class HelloController {
 
 이제, locallhost:8000/hello에 접속하면 해당 화면이 반환 됨을 확인할 수 있다. ${data}는 컨트롤러에서 반환 된 **hello!!**를 받는다.
 
-![image](https://user-images.githubusercontent.com/49560745/103200469-bfcbe280-4930-11eb-8865-baf5e1c2a571.png)
+![스피링부트 view 페이지 로드](https://user-images.githubusercontent.com/49560745/103200469-bfcbe280-4930-11eb-8865-baf5e1c2a571.png)
 
 ## 참고
 

@@ -15,13 +15,13 @@ last_modified_at:
 
 https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.
 
-![image](https://user-images.githubusercontent.com/49560745/103190612-11ff0a80-4915-11eb-9d11-588bd9af497a.png)
+![spring initializr](https://user-images.githubusercontent.com/49560745/103190612-11ff0a80-4915-11eb-9d11-588bd9af497a.png)
 
 **SNAPSHOT**이나 **M1**은 아직 정식버전이 아니라고한다. 버전은 **2.3.6**을 설치했다. Group명과 Artifact명은 자유롭게 설정하자. 나머지 Default로 두면된다.
 
 
 
-![image](https://user-images.githubusercontent.com/49560745/103190703-75893800-4915-11eb-9388-4564f6a9aee5.png)
+![Dependencies](https://user-images.githubusercontent.com/49560745/103190703-75893800-4915-11eb-9388-4564f6a9aee5.png)
 
 
 
@@ -29,7 +29,7 @@ https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.
 
 # 2. 프로젝트 Import
 
-![image](https://user-images.githubusercontent.com/49560745/103190944-563eda80-4916-11eb-98cd-9c6502e0a8fe.png)
+![IntelliJ ](https://user-images.githubusercontent.com/49560745/103190944-563eda80-4916-11eb-98cd-9c6502e0a8fe.png)
 
 **1) Open or Import**<br/>
 **2) hello-spring**<br/>
@@ -60,7 +60,7 @@ https://start.spring.io/ 에 접속해 Spring boot를 다운로드하자.
 
 **1) Web server failed to start. Port 8080 was already in use 에러**
 
-![image](https://user-images.githubusercontent.com/49560745/103193546-1c72d180-4920-11eb-9d2e-21660425572d.png)
+![Port 8080 was already in use error](https://user-images.githubusercontent.com/49560745/103193546-1c72d180-4920-11eb-9d2e-21660425572d.png)
 
 default는 **8080** 포트로 설정되어있다.
 

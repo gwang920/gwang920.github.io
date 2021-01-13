@@ -87,7 +87,7 @@ bash를 실행할 수 있는 환경을 만들어주는 방법은
 
 <br/>
 
-![image](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
+![스프링부트 github에서 빌드하기 성공](https://user-images.githubusercontent.com/49560745/103508194-f7dca380-4ea3-11eb-86a0-6d4878469824.png)
 
 2 - **cd libs**로 이동한 후
 

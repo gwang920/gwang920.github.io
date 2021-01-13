@@ -25,7 +25,7 @@ last_modified_at:
 
 **일반적인 웹 애플리케이션의 계층 구조**
 
-![image](https://user-images.githubusercontent.com/49560745/103983127-1d312080-51c8-11eb-8e3c-94fa415c942e.png)
+![스프링부트 웹 애플리케이션 계층구조](https://user-images.githubusercontent.com/49560745/103983127-1d312080-51c8-11eb-8e3c-94fa415c942e.png)
 
 - 컨트롤러: 웹 MVC의 컨트롤러 역할 
 - 서비스: 핵심 비즈니스 로직 구현 
@@ -36,7 +36,7 @@ last_modified_at:
 
 **클래스 의존관계**
 
-![image](https://user-images.githubusercontent.com/49560745/103983531-bceeae80-51c8-11eb-8cef-68317644cd9a.png)
+![스프링 부트 클래스 의존관계](https://user-images.githubusercontent.com/49560745/103983531-bceeae80-51c8-11eb-8cef-68317644cd9a.png)
 
 - 범용성을 고려해, 인터페이스로 구현 클래스를 변경할 수 있도록 설계
   - 참고로 인터페이스는 껍데기만을 구현해 놓은 것으로 개발 시 요구사항에 알맞게 내용물을 구현하라고 강제해놓는 것이다.
