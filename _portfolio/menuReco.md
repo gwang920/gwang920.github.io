@@ -34,7 +34,6 @@ gallery:
   
 layout: archive
 classes: layout--home
-toc: true
 ---
 
 

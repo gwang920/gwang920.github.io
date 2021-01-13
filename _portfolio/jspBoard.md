@@ -30,7 +30,6 @@ gallery:
     alt: "placeholder image 6"
 layout: archive
 classes: layout--home
-toc: true
 ---
 
 
