@@ -2,7 +2,7 @@
 title: JSP 게시판 제작[3] - 회원가입
 toc: true
 categories:	
-    - JSP 게시판 제작
+    - JSP Board
 tags: 
 - Java
 - JSP

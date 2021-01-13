@@ -2,7 +2,7 @@
 title: JSP 게시판 제작[5] - 게시판 구조
 toc: true
 categories:	
-    - JSP 게시판 제작
+    - JSP Board
 tags: 
 - Java
 - JSP

@@ -2,7 +2,7 @@
 title: JSP 게시판 제작[8] - 글 조회/삭제/댓글/수정
 toc: true
 categories:	
-    - JSP 게시판 제작
+    - JSP Board
 tags: 
 - Java
 - JSP

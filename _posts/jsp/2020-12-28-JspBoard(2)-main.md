@@ -2,7 +2,7 @@
 title: JSP 게시판 제작[2] - 메인 페이지 구현
 toc: true
 categories:	
-    - JSP 게시판 제작
+    - JSP Board
 tags: 
 - Java
 - JSP
