@@ -11,7 +11,7 @@ last_modified_at:
 
  자바스크립트 **비구조화 할당**에 대해 알아보자.
 
-**비구조화 할당(destructing assignment)** 이란 배열 또는 객체에서 데이터를 별개 변수로 추출할 수 있게하는 **javascript** 표현식이다.  말그대로, 구조화 되지 않은 형식으로 데이터를 할당하고, 추출하는 것이라고 할 수 있다. 예제를 통해 실습해보자. [온라인 테스트 site](https://jsbin.com/nuzatunoru/edit?js,console,output)에서 **Test** 할 수 있다.
+**비구조화 할당(Destructing Assignment)** 이란 배열 또는 객체에서 데이터를 별개 변수로 추출할 수 있게하는 **Javascript** 표현식이다.  말그대로, 구조화 되지 않은 형식으로 데이터를 할당하고, 추출하는 것이라고 할 수 있다. 예제를 통해 실습해보자. [온라인 테스트 site](https://jsbin.com/nuzatunoru/edit?js,console,output)에서 **Test** 할 수 있다.
 
 # 배열
 
