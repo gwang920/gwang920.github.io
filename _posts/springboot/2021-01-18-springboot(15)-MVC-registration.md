@@ -49,7 +49,6 @@ public class MemberController {
         return "members/createMemberForm";
     }
 }
-
 ```
 
 - `members/new` 라는 `url` 요청이 들어오면 `members/createMemberForm` 화면을 렌더링하도록하자.
@@ -82,7 +81,6 @@ public class MemberController {
 </div> <!-- /container -->
 </body>
 </html>
-
 ```
 
 ## 웹 등록 화면에서 데이터를 전달 받을 폼 객체
@@ -152,13 +150,11 @@ public class MemberController {
     public String create(MemberForm form){
         Member member=new Member();
         member.setName(form.getName());
-
         memberService.join(member);
 
         return "redirect:/";
     }
 }
-
 ```
 
 - `@GetMapping`과 `@PostMapping`의 **mapping**이 겹친다.
