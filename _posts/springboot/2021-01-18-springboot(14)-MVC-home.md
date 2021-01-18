@@ -106,7 +106,7 @@ Taskkill /F /IM 7020
 
 ![TaskKill](https://user-images.githubusercontent.com/49560745/104885953-3e55f600-59ac-11eb-8823-762003b5ab9e.png)
 
-이제 다시 스프링 애플리케이션을 구동하면 정상동작한다.
+이제 다시 스프링 애플리케이션을 구동하면 정상동작한다. 다음 포스팅에서는 **Form**을 이용해 회원을 등록해보자.
 
 <br/>
 
