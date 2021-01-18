@@ -128,6 +128,8 @@ str: 2001112025
 
 # Reference
 
-- [길은 가면 뒤에 있다 - String, StringBuilder,StringBuffer]( https://12bme.tistory.com/42)
+- [[길은 가면 뒤에 있다] String, StringBuilder,StringBuffer]( https://12bme.tistory.com/42)
 
 - [Java8 API, docs](https://docs.oracle.com/javase/8/docs/api/)
+
+- [[KH BYUN] StrinbBuilder,StringBuffer](https://novemberde.github.io/2017/04/15/String_0.html)
