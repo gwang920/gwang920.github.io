@@ -94,6 +94,36 @@ str: 2001112025
 
 ![StringBuffer](https://user-images.githubusercontent.com/49560745/104869230-da6e0600-5988-11eb-94de-1f2aa1a18602.png)
 
+ 지금까지 내용을 요약해보면 다음과 같다.
+
+- String : **immutable(불변)**, **새로운 메모리 공간에 할당**
+- StringBuilder, StringBuffer : **mutable(가변)**, **기존 메모리 공간에 추가**
+
+
+
+# StringBuilder vs StringBuffer
+
+그렇다면 **StringBuilder** 와 **StringBuffer** 간의 차이는 없는 것일까? 그렇지 않다. **StringBuilder**는 **ansynchronization(비동기화)** 클래스로서 동기화를 보장하지 않고, **StringBuffer**는 **synchronization(동기화)** 를 보장한다.
+
+![StringBuilder](https://user-images.githubusercontent.com/49560745/104870367-b2cc6d00-598b-11eb-9c39-39907ba9f7d4.png)
+
+**StringBuilder** 는 동기화를 보장하지 않기 때문에 단일 쓰레드 환경에서 사용하는게 안전하다.
+
+![StringBuffer](https://user-images.githubusercontent.com/49560745/104870927-15723880-598d-11eb-93d2-f969b4c1ddda.png)
+
+**StringBuffer** 는 동기화를 보장하기 때문에 멀티 쓰레드 환경에서 사용해도 안전하다.
+
+# 결론
+
+- **StringBuilder** 와 **StringBuffer** 는 `+` 나 `concat` 이 새로운 메모리 공간을 할당해 새로운 **String** 객체를 생성하는 것과 달리 기존 **String** 객체에 연산을 하기 때문에, 연산 속도가 보다 빠르다.
+
+- **StringBuilder** 는 동기화를 보장하지 않고, **StringBuffer** 는 동기화를 보장한다. 따라서, 멀티 쓰레드 환경에서는 **StringBuffer**를 사용하는게 보다 안전하다.
+
+| String          | StringBuilder               | StringBuffer            |
+| --------------- | --------------------------- | ----------------------- |
+| immutable(불변) | mutable(가변)               | mutable(가변)           |
+|                 | asynchronization(비동기 화) | synchronization(동기화) |
+
 <br/>
 
 # Reference
