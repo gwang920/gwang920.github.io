@@ -115,14 +115,14 @@ str: 2001112025
 
 # 결론
 
-- **StringBuilder** 와 **StringBuffer** 는 `+` 나 `concat` 이 새로운 메모리 공간을 할당해 새로운 **String** 객체를 생성하는 것과 달리 기존 **String** 객체에 연산을 하기 때문에, 연산 속도가 보다 빠르다.
-
-- **StringBuilder** 는 동기화를 보장하지 않고, **StringBuffer** 는 동기화를 보장한다. 따라서, 멀티 쓰레드 환경에서는 **StringBuffer**를 사용하는게 보다 안전하다.
-
 | String          | StringBuilder               | StringBuffer            |
 | --------------- | --------------------------- | ----------------------- |
 | immutable(불변) | mutable(가변)               | mutable(가변)           |
 |                 | asynchronization(비동기 화) | synchronization(동기화) |
+
+- **StringBuilder** 와 **StringBuffer** 는 `+` 나 `concat` 이 새로운 메모리 공간을 할당해 새로운 **String** 객체를 생성하는 것과 달리 기존 **String** 객체에 연산을 하기 때문에, 연산 속도가 보다 빠르다.
+
+- **StringBuilder** 는 동기화를 보장하지 않고, **StringBuffer** 는 동기화를 보장한다. 따라서, 멀티 쓰레드 환경에서는 **StringBuffer**를 사용하는게 보다 안전하다.
 
 <br/>
 
