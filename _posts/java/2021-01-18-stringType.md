@@ -40,7 +40,7 @@ newStr: 62061635
 
  `+` 연산이나 `conact` 을 사용한 경우, 기존의 **String** 객체의 공간이 아닌 새로운 공간에 새로운 문자열을 할당한다. 
 
-![String concat +](https://user-images.githubusercontent.com/49560745/104866857-e8208d00-5982-11eb-9d7d-db20d315ffa6.png)
+![stringconcat+](https://user-images.githubusercontent.com/49560745/104872024-09d44100-5990-11eb-8d91-072a2c5554db.png)
 
 
 
@@ -68,7 +68,7 @@ str: 2001112025
 
 **hashcode**가 동일하다. 즉, 동일한 메모리 공간의 버퍼 크기를 키워 할당한 것을 알 수 있다.
 
-![StringBuilder](https://user-images.githubusercontent.com/49560745/104869139-9ed33c00-5988-11eb-9669-cbcd5417c9ab.png)
+![StringBuilder](https://user-images.githubusercontent.com/49560745/104871805-6b47e000-598f-11eb-9e70-f9d8c8cb91ba.png)
 
 # StringBuffer
 
@@ -92,7 +92,7 @@ str: 2001112025
 
 **StringBuilder** 와 마찬가지로 **hashcode**가 동일하다. 즉, 동일한 메모리 공간의 버퍼 크기를 키워 할당한 것을 알 수 있다.
 
-![StringBuffer](https://user-images.githubusercontent.com/49560745/104869230-da6e0600-5988-11eb-94de-1f2aa1a18602.png)
+![StringBuffer](https://user-images.githubusercontent.com/49560745/104871762-4489a980-598f-11eb-925e-4bc2a892b8e6.png)
 
  지금까지 내용을 요약해보면 다음과 같다.
 
