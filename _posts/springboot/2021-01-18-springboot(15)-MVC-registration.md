@@ -157,20 +157,29 @@ public class MemberController {
 }
 ```
 
-- `@GetMapping`과 `@PostMapping`의 **mapping**이 겹치지만, **mapping**의 형식이 다르기 때문에 가능하다.
+- `@GetMapping`과 `@PostMapping`의 **mapping**이 겹치지만, **mapping** 애노테이션의 타입이 다르기 때문에 가능하다.
 - 주로 `@GetMapping`은 요청할 떄, `@PostMapping`은 데이터를 전달할 때 사용한다.
+- `createMemberForm.html` 파일에서 `<form action="/members/new" method="post">` form 데이터 전송 형식이 `post` 이기 때문에 `@PostMapping`이 요청을 가로챈다.
+
+<br/>
 
 # 동작 과정
 
-1) 홈 화면
+**1) 홈 화면**
+
+`localhost:8000` 에 접속하면 홈 화면이 렌더링된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/104908789-4e7cce00-59ca-11eb-99b7-8c40e7ee7c98.png)
 
-2) 등록 폼 화면
+**2) 등록 폼 화면**
+
+`회원가입` 버튼을 클릭하면, 등록 폼 화면으로 이동한다. `@GetMapping`애노테이션이 요청을 가로챈다. 
 
 ![image](https://user-images.githubusercontent.com/49560745/104909351-11650b80-59cb-11eb-9b81-203328b28921.png)
 
-3) print()
+**3) form.getName()**
+
+등록 버튼을 누른 후 console 창에 name을 `print()` 해보자. from에 입력한 이름과 일치하는 것을 확인할 수 있다. 이때, 브라우저는 홈 화면으로 `redirect` 된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/104909422-2d68ad00-59cb-11eb-969e-8b3462019607.png)
 
