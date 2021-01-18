@@ -51,7 +51,7 @@ public class MemberController {
 }
 ```
 
-- `members/new` 라는 `url` 요청이 들어오면 `members/createMemberForm` 화면을 렌더링하도록하자.
+- `members/new` 라는 `url` 요청이 들어오면 `members/createMemberForm` 화면을 렌더링 한다.
 - `url` 요청은 `@GetMapping` 인 **Get** 방식으로 이루어진다는 점을 기억하자.
 
 ## 회원 등록 폼 HTML 
