@@ -9,13 +9,13 @@ tags:
 last_modified_at:
 ---
 
- **String**, **StringBuilder**, **StringBuffer** 는 PS(Problem Solving)에서 **Stirng **객체를 컨트롤 할때 한 번씩 들어봤을 것이다. 막연하게 속도의 차이가 있다는 점만 알고 있었다. 이번 포스팅에서는 **String**, **StringBuilder**, **StringBuffer** 특징을 간략하게 알아보려한다.
+ **String**, **StringBuilder**, **StringBuffer** 는 PS(Problem Solving)에서 **Stirng** 객체를 컨트롤 할때 한 번씩 들어봤을 것이다. 막연하게 속도의 차이가 있다는 점만 알고 있었다. 이번 포스팅에서는 **String**, **StringBuilder**, **StringBuffer** 특징을 간략하게 알아보려한다.
 
 먼저 요약하자면, **Stirng** 은 **immutable(불변)**, **StringBuilder**, **StringBuffer**는 **mutable(가변)** 이라는 점을 기억하자.
 
 # String
 
-**String** 객체는 한번 생성되면 할당 된 메모리 공간이 변하지 않는다. `+` 연산자나 `concat` 메소드를 통해 기존 **Stirng** 객체 문자열에 새로운 문자열을 붙일 수 있다. 이때, **String** 객체는 기존 문자열에 새로운 문자열을 붙이는 것이 아니라 **새로운 Stirng이 다른 메모리 공간에 적재되는 것이다.** 즉, 기존 **String** 객체는 **immutable(불변)** 한다.
+**String** 객체는 한번 생성되면 할당 된 메모리 공간이 변하지 않는다. `+` 연산자나 `concat` 메소드를 이용해 기존 **Stirng** 객체 문자열에 새로운 문자열을 붙일 수 있다. 이때, **String** 객체는 기존 문자열에 새로운 문자열을 붙이는 것이 아니라 **새로운 Stirng 객체가 다른 메모리 공간에 적재되는 것이다.** 즉, 기존 **String** 객체는 **immutable(불변)** 한다.
 
 예제로 살펴보자. 자바의 **hashCode()** 메소드는 각 객체의 주소값을 변환하여 생성한 객체의 고유한 정수값이다. 즉, 두 객체가 동일한지 파악할 때, 사용한다.
 
@@ -72,7 +72,7 @@ str: 2001112025
 
 # StringBuffer
 
-**StringBuffer **도 마찬가지로 **String** 객체와는 다르게 기존 버퍼의 크기(메모리 공간)를 늘리며 유연하게 작동한다. 
+**StringBuffer**도 마찬가지로 **String** 객체와는 다르게 기존 버퍼의 크기(메모리 공간)를 늘리며 유연하게 작동한다. 
 
 아래의 예제를 보자.
 
