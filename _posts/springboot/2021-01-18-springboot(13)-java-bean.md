@@ -24,7 +24,7 @@ last_modified_at:
 
 # 의존성 주입(DI) - 자바 빈 
 
- 자바 코드로 스프링 빈을 등록하는 방법은 간단하다. `@Configuration`, `@Bean` 애노테이션을 사용하면 설정할 수 있다. 우선, 스프링 빈을 직접 등록하기 위해 이전에 작업했던 자동 애노테이션을 제거해주자. `MemberService.java` 와 `MemoryMemberRepository.java` 파일에서 `@Service`, `@Respository`, `@Autowired` 애노테이션을 삭제하자.
+ 자바 코드로 스프링 빈을 등록하는 방법은 간단하다. `@Configuration`, `@Bean` 애노테이션을 사용하면 설정할 수 있다. 우선, 스프링 빈을 직접 등록하기 위해 이전에 작업했던 애노테이션을 제거해주자. `MemberService.java` 와 `MemoryMemberRepository.java` 파일에서 `@Service`, `@Respository`, `@Autowired` 애노테이션을 삭제하자.
 
 ### Repository
 
@@ -192,12 +192,112 @@ public class SpringConfig {
 
 ![스프링 컨테이너 controller service repository](https://user-images.githubusercontent.com/49560745/104302989-d49d9e00-550c-11eb-8d52-ce8c713d228b.png)
 
-몇 가지 참고할 사항이다.
+몇 가지 **참고할 사항**이다.
 
 - XML로 설정하는 방식도 있지만 최근에는 잘 사용하지 않는다.
 - DI에는 필드 주입, setter 주입, 생성자 주입 이렇게 3가지 방법이 있다. 의존관계가 실행중에 동적으로 변하는 경우는 거의 없으므로 생성자 주입을 권장한다. 
+
+**필드 주입**
+
+필드 주입을 하면 코드의 양이 줄어드는 장점이있다. 아래 코드처럼 객체 선언에 앞서 `@Autowired` 애노테이션을 설정하면 된다.
+
+```java
+package hello.hellospring.service;
+import hello.hellospring.respository.MemberRepository;
+import hello.hellospring.respository.MemoryMemberRepository;
+
+@Service
+public class MemberService {
+    /*
+    	필드 주입방식은 final 키워드를 사용할 수 없다.
+    	그렇기에 코드가 변경될 위험이 있다.
+    */
+	 @Autowired private  MemberRepository memberRepository;
+}
+
+```
+
+
+
+**setter 주입**
+
+호출해야되지 않을 메서드가 호출되면 곤란하다. **setter 주입** 방식의 문제점이다. 조립시점에 한 번만 생성하고 변경하지 못하도록 해야하지만, **setter**를 통해 변경이 가능하다.(public으로 노출된다.)
+
+```java
+package hello.hellospring.service;
+import hello.hellospring.respository.MemberRepository;
+import hello.hellospring.respository.MemoryMemberRepository;
+
+@Service
+public class MemberService {
+
+    private MemberRepository memberRepository;
+    
+	@Autowired
+    public setMemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+}
+
+```
+
+
+
+**생성자 주입**
+
+생성자 주입은 조립 시점에 최초로 한번 설정되면 동적으로 변경되지 않는다. 가장 권장되는 방식이다. 불변 필드(final)은 생성자 주입을 통해서만 가능하다.
+
+```java
+package hello.hellospring.service;
+import hello.hellospring.respository.MemberRepository;
+import hello.hellospring.respository.MemoryMemberRepository;
+
+@Service
+public class MemberService {
+
+    private final MemberRepository memberRepository;
+	
+    @Autowired
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+}
+
+```
+
+
+
 - 실무에서는 주로 정형화된 컨트롤러, 서비스, 리포지토리 같은 코드는 컴포넌트 스캔을 사용한다. 그리고 정형화 되지 않거나, 상황에 따라 구현 클래스를 변경해야 하면 설정을 통해 스프링 빈으로 등록한다. 
 - @Autowired 를 통한 DI는 helloConroller , memberService 등과 같이 스프링이 관리하는 객체에서만 동작한다. 스프링 빈으로 등록하지 않고 내가 직접 생성한 객체에서는 동작하지 않는다.
+
+```java
+package hello.hellospring.service;
+
+import hello.hellospring.domain.Member;
+import hello.hellospring.respository.MemberRepository;
+import hello.hellospring.respository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+
+public class MemberService {
+
+    private final MemberRepository memberRepository;
+	
+    // class인 MemberService 객체를 스프링 컨테이너에 등록하지 않았기에 오류가 발생한다.
+	@Autowired
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+}
+
+```
+
+
 
 <br/>
 
