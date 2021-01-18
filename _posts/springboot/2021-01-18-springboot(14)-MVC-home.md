@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web Application 개발[13] - 의존성 주입(DI)
+title: Spring boot기반 Web Application 개발[14] - 홈 화면 추가
 toc: true
 categories:	
     - Spring boot
