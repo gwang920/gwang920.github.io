@@ -190,5 +190,4 @@ public class MemberController {
 # Reference
 
 - [김영한님의 스프링-입문-스프링부트](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/lecture/49577?tab=curriculum)
-- [non-zero 에러](https://dreamday.tistory.com/entry/string-boot-finished-with-nonzero-exit-value-1-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95)
 
