@@ -19,7 +19,7 @@ last_modified_at:
 
 ![image](https://user-images.githubusercontent.com/49560745/104889462-9e02d000-59b1-11eb-8dc5-0d98b8c7319f.png)
 
-````
+```
 파일명 : MemberController.java
 위치 : \main\hello.hellospring\controller\MemberController.java
 ```
@@ -157,9 +157,22 @@ public class MemberController {
 }
 ```
 
-- `@GetMapping`과 `@PostMapping`의 **mapping**이 겹친다.
+- `@GetMapping`과 `@PostMapping`의 **mapping**이 겹치지만, **mapping**의 형식이 다르기 때문에 가능하다.
+- 주로 `@GetMapping`은 요청할 떄, `@PostMapping`은 데이터를 전달할 때 사용한다.
 
 # 동작 과정
+
+1) 홈 화면
+
+![image](https://user-images.githubusercontent.com/49560745/104908789-4e7cce00-59ca-11eb-99b7-8c40e7ee7c98.png)
+
+2) 등록 폼 화면
+
+![image](https://user-images.githubusercontent.com/49560745/104909351-11650b80-59cb-11eb-9b81-203328b28921.png)
+
+3) print()
+
+![image](https://user-images.githubusercontent.com/49560745/104909422-2d68ad00-59cb-11eb-969e-8b3462019607.png)
 
 <br/>
 
