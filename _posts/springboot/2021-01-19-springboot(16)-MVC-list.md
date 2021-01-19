@@ -1,5 +1,5 @@
 ---
-title: Spring boot기반 Web Application 개발[15] - 회원 목록 조회
+title: Spring boot기반 Web Application 개발[16] - 회원 목록 조회
 toc: true
 categories:	
     - Spring boot
@@ -26,7 +26,8 @@ public String list(Model model){
 }
 ```
 
-
+- `addAttribute`로 렌더링할 객체를 담아준다.
+- `memeberList.html`에서 회원 목록을 렌더링 할 수 있도록 `url`을 지정해 return 해준다.
 
 ![image](https://user-images.githubusercontent.com/49560745/104889462-9e02d000-59b1-11eb-8dc5-0d98b8c7319f.png)
 
@@ -82,8 +83,7 @@ public class MemberController {
 
 ```
 
-- `addAttribute`로 렌더링할 객체를 담아준다.
-- `memeberList.html`에 회원 목록을 렌더링 하도록 `url`을 리턴해준다.
+
 
 ## 회원 목록 조회 HTML 
 
