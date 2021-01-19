@@ -69,8 +69,28 @@ create table member
 
 - 이미 테이블이 존재한다면, 삭제하고 생성한다.
 - id 값은 `primary key` 값이고, 시퀀스적으로 증가하게 된다. 
+  - `HashMap`으로 저장소를 구현했을 때와 동일하다.
 
-테이블이 생성되었으면, 데이터를 `insert`해보자.
+```
+파일명 : MemoryMemberRepository.java
+위치 : \hello.hellospring\controller\MemoryMemberRepository.java
+```
+
+```java
+    private static Map<Long,Member> store= new HashMap<>();
+    private static long sequence =0L;
+
+    @Override
+    public Member save(Member member) {
+        member.setId(++sequence);
+        store.put(member.getId(),member);
+        return member;
+    }
+```
+
+
+
+이제, 테이블이 생성되었으면, 데이터를 `insert`해보자.
 
 ```
 insert into member(name) values('spring1')
@@ -85,7 +105,7 @@ select * from member
 
 ![테이블 조회](https://user-images.githubusercontent.com/49560745/104997566-23978600-5a6d-11eb-96b8-77239d4884a3.png)
 
-정상적으로 처리되었음을 확인할 수 있다.
+정상적으로 처리되었음을 알 수 있다.
 
 <br/>
 
