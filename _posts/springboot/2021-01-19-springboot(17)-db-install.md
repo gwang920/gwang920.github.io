@@ -33,9 +33,9 @@ last_modified_at:
 
 **[참고]**
 
-`command`에서는 `chmod 755 h2.sh` 권한을 설정하고, `./h2.sh` 실행할 수 있다.
+`command`에서는 `chmod 755 h2.sh` 권한을 설정하고, `./h2.sh` 명령어로 실행할 수 있다.
 
-(`chmod` : 권한 변경, `755` :  user  7 / group 5 / others 5/ , `read` `write` `execute` 권한 - 자세한 내용은 리눅스 권한 명령어를 찾아보자.)
+(`chmod` : 권한 변경, `755` :  user  7 / group 5 / others 5/ , `read` `write` `execute` 권한)
 
 ### 데이터베이스 파일 생성
 
@@ -49,7 +49,7 @@ last_modified_at:
 
 
 
-이후에는 `jdbc:h2:tcp://localhost/~/test` 로 접속한다. JDBC URL을 변경하고 접속하는 이유는 다중 접속 시에 예기치못한 충돌을 막기 위함이다. 따라서, 소켓으로 접근하는 것이다.
+이후에는 `jdbc:h2:tcp://localhost/~/test` 로 접속한다. JDBC URL을 변경하고 접속하는 이유는 다중 접속 시에 예기치 못한 충돌을 막기 위함이다. 따라서, 소켓으로 접근하는 것이다.
 
 ![image-20210119153740726](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20210119153740726.png)
 
