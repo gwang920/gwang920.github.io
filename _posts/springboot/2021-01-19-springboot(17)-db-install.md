@@ -21,7 +21,7 @@ last_modified_at:
 
 ![h2database](https://user-images.githubusercontent.com/49560745/104994949-d0233900-5a68-11eb-8b4e-daebf70ba381.png)
 
-`Windows Installer`, `All Platforms` 둘 중에 아무거나 선택해도 무관하다고 한다. 간단하게 `Windows Installer`로 설치를 진행해 볼 예정이다.
+`Windows Installer`, `All Platforms` 둘 중에 아무거나 선택해도 무관하다. 간단한 `Windows Installer`로 설치를 진행해보자.
 
 ## 설치하고, 실습하기
 
