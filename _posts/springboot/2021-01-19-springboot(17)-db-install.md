@@ -9,7 +9,7 @@ tags:
 last_modified_at: 
 ---
 
- 지금까지 회원 등록, 관리를 위한 기본적인 `MVC` 로직을 구현했다. 이제 데이터베이스를 연동해 데이터를 관리해보자. 이번 포스팅에서는 데이터베이스를 설치해보자.
+ 지금까지 회원 등록, 관리를 위한 기본적인 `MVC` 로직을 구현했다. 이제 데이터베이스를 연동해 데이터를 관리해보자. 이번 포스팅에서는 데이터베이스를 설치하고, 간단한 실습을 진행한다.
 
 # 데이터베이스 - H2
 
@@ -21,7 +21,7 @@ last_modified_at:
 
 ![h2database](https://user-images.githubusercontent.com/49560745/104994949-d0233900-5a68-11eb-8b4e-daebf70ba381.png)
 
-`Windows Installer`, `All Platforms` 둘 중에 하나를 다운로드해도 무관하다고 한다. 간단하게 `Windows Installer`로 설치를 진행해 볼 예정이다.
+`Windows Installer`, `All Platforms` 둘 중에 아무거나 선택해도 무관하다고 한다. 간단하게 `Windows Installer`로 설치를 진행해 볼 예정이다.
 
 ## 설치하고, 실습하기
 
