@@ -1,5 +1,5 @@
 ---
-ㅈtitle: Spring boot기반 Web Application 개발[17] - H2 데이터베이스 설치
+title: Spring boot기반 Web Application 개발[17] - H2 데이터베이스 설치
 toc: true
 categories:	
     - Spring boot
