@@ -43,13 +43,13 @@ last_modified_at:
 
 ![image](https://user-images.githubusercontent.com/49560745/104996937-175ef900-5a6c-11eb-9ac3-ed4025415617.png)
 
-정상적으로 접속되었다.
+정상적으로 접속된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/104997106-60af4880-5a6c-11eb-84c0-1bf7eda60be6.png)
 
 
 
-이후에는 `jdbc:h2:tcp://localhost/~/test` 로 접속한다. JDBC URL을 변경하고 접속하는 이유는 다중 접속 시에 예기치 못한 충돌을 막기 위함이다. 따라서, 소켓으로 접근하는 것이다.
+이후에는 `jdbc:h2:tcp://localhost/~/test` 로 접속한다. JDBC URL을 변경하고 접속하는 이유는 다중 접속 시에 예기치 못한 충돌을 막기 위함이다. 따라서, 이제 부터 항상 소켓으로 `DB`에 접근하자.
 
 ![image](https://user-images.githubusercontent.com/49560745/104998624-e59b6180-5a6e-11eb-8768-8fe247b1560e.png)
 
