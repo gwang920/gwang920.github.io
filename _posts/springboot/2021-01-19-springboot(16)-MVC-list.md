@@ -9,7 +9,7 @@ tags:
 last_modified_at: 
 ---
 
- [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(14)-MVC-home/)에서 간단한 회원 등록 기능을 구현했다. 이어서 등록된 회원을 조회할 수 있는 페이지를 만들어보자. 
+ [이전 포스팅](https://gwang920.github.io/spring%20boot/springboot(15)-MVC-registration/)에서 간단한 회원 등록 기능을 구현했다. 이어서 등록된 회원을 조회할 수 있는 페이지를 만들어보자. 
 
 # 회원 웹 기능 - 조회
 
