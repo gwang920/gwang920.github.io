@@ -51,7 +51,7 @@ last_modified_at:
 
 이후에는 `jdbc:h2:tcp://localhost/~/test` 로 접속한다. JDBC URL을 변경하고 접속하는 이유는 다중 접속 시에 예기치 못한 충돌을 막기 위함이다. 따라서, 소켓으로 접근하는 것이다.
 
-![image-20210119153740726](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20210119153740726.png)
+![image](https://user-images.githubusercontent.com/49560745/104998624-e59b6180-5a6e-11eb-8768-8fe247b1560e.png)
 
 ### 테이블 생성, Insert
 
@@ -105,7 +105,7 @@ select * from member
 
 ![테이블 조회](https://user-images.githubusercontent.com/49560745/104997566-23978600-5a6d-11eb-96b8-77239d4884a3.png)
 
-정상적으로 처리되었음을 알 수 있다.
+정상적으로 처리되었음을 알 수 있다. 순수 `JDBC`를 이용해 데이터베이스를 연동하는 작업은 10년전에나 활발하게 사용되었던 방식이라고한다. 우선, 다음 포스팅에서 `JDBC`로 데이터베이스와 스프링부트를 연동하는 작업을 진행해보자. 이후에 `JdbcTemplate`, `JPA` 방식으로 연동해보며, 차이점을 파악해보는게 좋을 것같다.
 
 <br/>
 
