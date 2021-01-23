@@ -15,7 +15,7 @@ last_modified_at:
 
 ## 다운로드
 
- Web 애플리케이션을 구축해봤다면, `oracle` , `MongoDB`, `Mysql` 등의 데이터베이스가 익숙할 것이다. 이번 프로젝트에서는 H2 데이터베이스로 저장소를 구축한다.  사실 이번 인프런 강의를 수강하며 H2 데이터베이스를 처음 알게되었다. **개발이나 테스트 용도로 가볍고 편리한 DB, 웹 화면 제공**하기 때문에 이번 실습에 적용한다고 한다. 간단하게 설치를 진행해보자.
+ Web 애플리케이션을 구축해봤다면, `oracle` , `MongoDB`, `Mysql` 등의 데이터베이스가 익숙할 것이다. 이번 프로젝트에서는 H2 데이터베이스로 저장소를 구축한다.  사실 이번 인프런 강의를 수강하며 H2 데이터베이스를 처음 알게되었다. **개발이나 테스트 용도로 가볍고 편리한 DB, 웹 화면을 제공**하기 때문에 이번 실습에 적용한다고 한다. 간단하게 설치를 진행해보자.
 
 우선, `https://www.h2database.com/html/main.html` url에 접속해보자.
 
@@ -49,7 +49,7 @@ last_modified_at:
 
 
 
-이후에는 `jdbc:h2:tcp://localhost/~/test` 로 접속한다. JDBC URL을 변경하고 접속하는 이유는 다중 접속 시에 예기치 못한 충돌을 막기 위함이다. 따라서, 이제 부터 항상 소켓으로 `DB`에 접근하자.
+이후에는 소켓 접속 방식인 `jdbc:h2:tcp://localhost/~/test` 로 접속한다. JDBC URL을 변경하고 접속하는 이유는 다중 접속 시에 예기치 못한 충돌을 막기 위함이다. 따라서, 이제 부터 항상 소켓으로 `DB`에 접근하자.
 
 ![image](https://user-images.githubusercontent.com/49560745/104998624-e59b6180-5a6e-11eb-8768-8fe247b1560e.png)
 
@@ -77,15 +77,15 @@ create table member
 ```
 
 ```java
-    private static Map<Long,Member> store= new HashMap<>();
-    private static long sequence =0L;
+private static Map<Long,Member> store= new HashMap<>();
+private static long sequence =0L;
 
-    @Override
-    public Member save(Member member) {
-        member.setId(++sequence);
-        store.put(member.getId(),member);
-        return member;
-    }
+@Override
+public Member save(Member member) {
+	member.setId(++sequence);
+	store.put(member.getId(),member);
+	return member;
+}
 ```
 
 
@@ -107,7 +107,7 @@ select * from member
 
 정상적으로 처리된 것을 확인할 수 있다!
 
- 순수 `JDBC`를 이용해 데이터베이스를 연동하는 작업은 10년전에나 활발하게 사용하던 방식이라고한다. 우선, 다음 포스팅에서 `JDBC`로 데이터베이스와 스프링부트를 연동하는 작업을 진행해보자. 이후에 `JdbcTemplate`, `JPA` 방식으로 연동해보며, 차이점을 파악해 볼 예정이다.
+ 순수 `JDBC`를 이용해 데이터베이스를 연동하는 작업은 10~20년전에나 활발하게 사용하던 방식이라고한다. 우선, 다음 포스팅에서 `JDBC`로 데이터베이스와 스프링부트를 연동하는 작업을 진행해보자. 이후에 `JdbcTemplate`, `JPA` 방식으로 연동해보며, 차이점을 파악해 볼 예정이다.
 
 <br/>
 
