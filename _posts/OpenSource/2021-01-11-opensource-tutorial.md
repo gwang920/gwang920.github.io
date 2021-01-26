@@ -8,7 +8,7 @@ tags:
 last_modified_at: 
 ---
 
-  오픈소스에 기여하는 방법을 실습해보자. 이번 포스팅은 **Test Repository**를 활용해 오픈소스 **Fork** 부터 **Pull Request** 까지의 방법을 실습을 통해 알아보려한다.
+  오픈소스에 기여하는 방법을 실습해보자. 이번 포스팅은 **Test Repository**를 활용해 오픈소스 **Fork** 부터 **Pull Request** 까지의 방법을 실습을 목표로한다!
 
 # 오픈소스 기여하기 - 튜토리얼
 
