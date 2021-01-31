@@ -1398,4 +1398,4 @@ body {
 
 # Reference
 
-- [woohyeonjo 님 과제관 리뷰](https://github.com/woohyeonjo/ilovecat-javascript)
+- [woohyeonjo 님 프로그래머스 과제관 리뷰](https://github.com/woohyeonjo/ilovecat-javascript)
