@@ -15,7 +15,7 @@ last_modified_at:
 
 #### ArrayList
 
-- `ArrayList`를 깊은복사하고 싶다면, `복사되는배열.addAll(복사할배열)` 메서드를 사용하면된다.
+- `ArrayList`를 깊은 복사하고 싶다면, `복사되는배열.addAll(복사할배열)` 메서드를 사용하면된다.
 
 - `ArrayList` **w**를 `ArrayList` **copy_w**에 깊은복사
 
