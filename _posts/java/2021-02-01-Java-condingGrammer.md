@@ -203,6 +203,19 @@ str.substring(3); // "4567"
 str.substring(2,5) // "345"
 ```
 
+### 문자열 뒤집기(Reverse)
+
+- `String` 문자열을 뒤집기 할 때, `StringBuilder(문자열).reverse().toString()` 메소드를 사용한다.
+
+```java
+String str = "Reverse";
+String str = new StringBuilder(words).reverse().toString();
+System.out.println(str); 
+
+[출력]
+esreveR
+```
+
 
 
 <br/>
