@@ -34,6 +34,15 @@ ArrayList<Integer> ArrList=new ArrayList<Integer>();
 ArrList.sort(null);
 ```
 
+### Size
+
+- `ArrayList` 의 크기는 `리스트명.size()` 메소드를 사용한다.
+
+```java
+ArrayList<Integer> ArrList=new ArrayList<Integer>();
+ArrList.size();
+```
+
 
 
 <br/>
@@ -81,6 +90,17 @@ ArrayList<Integer> list = new ArrayList<Integer>();
 list.remove(list.size()-1); // list의 마지막 값이 리스트에서 제거된다.
 ```
 
+### Size
+
+- `List` 의 크기는 `리스트명.size()` 메소드를 사용한다.
+
+```java
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.size();
+```
+
+
+
 <br/>
 
 ## Array
@@ -93,6 +113,17 @@ list.remove(list.size()-1); // list의 마지막 값이 리스트에서 제거�
 int [] Arr=new int[5];
 Arrays.sort(Arr);
 ```
+
+### length
+
+- `Array` 의 길이는 `배열명.length` 를 사용한다.
+
+```java
+int [] Arr=new int[5];
+Arr.length;
+```
+
+
 
 <br/>
 
@@ -143,6 +174,19 @@ while(it.hasNext()){
 3
 ```
 
+### size
+
+- `set` 의 크기는 `set명.size()` 메소드를 사용한다.
+
+```java
+Set<String> set= new HashSet<String>();
+set.size();
+```
+
+
+
+
+
 <br/>
 
 ## Map
@@ -152,7 +196,7 @@ while(it.hasNext()){
 - `Map`에 `{key : value}` 값을 설정할 때, `map명.put(key,value)` 메소드를 사용한다.
 
 ```java
-static Map<String,Integer> map=new HashMap<>();
+Map<String,Integer> map=new HashMap<>();
 map.put("str",1);
 ```
 
@@ -161,7 +205,7 @@ map.put("str",1);
 - `Map`의 `{key:value}`쌍의 value` 값을 가져올 때`,  `map명.get(key값)` 메소드를 사용한다.
 
 ```java
-static Map<String,Integer> map=new HashMap<>();
+Map<String,Integer> map=new HashMap<>();
 map.get("str");
 ```
 
@@ -173,9 +217,20 @@ map.get("str");
 - `Key` 값이 존재하면 `true`, 존재하지 않으면 `false`를 반환한다.
 
 ```java
-static Map<String,Integer> map=new HashMap<>();
+Map<String,Integer> map=new HashMap<>();
 map.containsKey("str",1);
 ```
+
+### size
+
+- `Map`의 크기는 `map명.size()` 를 사용한다.
+
+```java
+Map<String,Integer> map=new HashMap<>();
+map.size();
+```
+
+
 
 <br/>
 
@@ -214,6 +269,15 @@ System.out.println(str);
 
 [출력]
 esreveR
+```
+
+### length
+
+- `String` 의 길이는 `문자열명.length()` 를 사용한다.
+
+```java
+String str="123";
+str.length();
 ```
 
 
