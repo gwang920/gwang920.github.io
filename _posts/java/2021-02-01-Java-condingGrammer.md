@@ -280,7 +280,182 @@ String str="123";
 str.length();
 ```
 
+<br/>
+
+## StringBuilder
+
+- `StringBuilder` 클래스로 문자열에 문자를 추가하거나, 삭제할 수 있다.
+- **추가**할 때는, `빌더명.append(넣을문자)` 메소드를 사용한다.
+- **삭제**할 때는, `빌더명.deletCharAt(삭제할문자의 인덱스)` 메소드를 사용한다.
+
+```java
+StringBuilder sb=new StringBuilder();
+
+sb.append('a');
+sb.append('b');
+sb.append('c');
+
+System.out.println(sb);
+
+sb.deleteCharAt(1);
+
+System.out.println(sb);
+
+[출력]
+abc
+ac
+```
+
 
 
 <br/>
+
+## 입/출력
+
+### BufferdReader
+
+- `BurredReader` 클래스는 `Enter`를 경계로 입력값을 인식한다.
+- `readLine()` 메소드는  개행문자(`Enter`)를 포함해 `String` 형식으로 입력을 받아온다.
+  - 따라서, `int`형으로 `readLine()` 을 받아오려면 `Integer.pareseInt()` 로 형변환이 필요하다.
+
+```
+[입력]
+100
+```
+
+```java
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+public class InputOuputTest {
+    public static void main(String args[])throws IOException{
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        int N=Integer.parseInt(br.readLine()); 
+        System.out.prin(N);
+    }
+}
+
+[출력]
+100
+```
+
+
+
+### StringTokenizer
+
+- `StringTokenizer` 클래스는 지정한 형식에 따라 문자열을 쪼개주는 클래스이다.
+- `new StringTokenizer(문자열,기준)` 형식으로 `StringTokenizer` 객체를 생성할 수 있다.
+
+```
+[입력]
+123 456
+```
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class InputOuputTest {
+    public static void main(String args[])throws IOException{
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st= new StringTokenizer(br.readLine());
+
+        int N= Integer.parseInt(st.nextToken());
+        int M= Integer.parseInt(st.nextToken());
+
+        System.out.print(N+" "+M);
+    }
+}
+
+[출력]
+123 456
+```
+
+
+
+### 예시 
+
+#### 1)
+
+```
+[입력]
+3 3
+111
+222
+333
+```
+
+```java
+import java.util.*;
+import java.io.*;
+
+public class InputOuputTest {
+    public static void main(String args[])throws IOException{
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st= new StringTokenizer(br.readLine());
+
+        int N= Integer.parseInt(st.nextToken());
+        int M= Integer.parseInt(st.nextToken());
+
+        int [][]arr= new int[N][M];
+        for(int i=0;i<N;i++){
+            String str=br.readLine();
+            for(int j=0;j<M;j++){
+                arr[i][j]=Integer.parseInt(String.valueOf(str.charAt(j)));
+            }
+        }
+        System.out.print(N+" "+M);
+        for(int i=0;i<N;i++){
+            for(int j=0;j<M;j++){
+                System.out.print(arr[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
+
+    
+[출력]
+3 3
+111
+222
+333
+```
+
+#### 2)
+
+```
+[입력]
+5
+1
+2
+3
+4
+5
+```
+
+```java
+import java.util.*;
+import java.io.*;
+
+public class InputOuputTest {
+    public static void main(String args[])throws IOException{
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        int N=Integer.parseInt(br.readLine());
+        for(int i=0;i<N;i++){
+			int M=Integer.parseInt(br.readLine());
+            System.out.println(M);
+        }
+    }
+}
+
+[출력]
+1
+2
+3
+4
+5
+```
 
