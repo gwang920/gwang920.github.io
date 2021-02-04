@@ -496,7 +496,7 @@ Queue<String> queue= new LinkedList<>();
 
 - `Queue`에 원소를 추가할 때는, `큐명.add(원소)` 메소드를 사용한다.
 
-```
+```java
 Queue<Integer> queue=new LinkedList<>();
 queue.add(1);
 queue.add(2);
