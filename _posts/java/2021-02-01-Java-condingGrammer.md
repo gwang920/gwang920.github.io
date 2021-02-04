@@ -512,7 +512,7 @@ queue.add(1);
 int que=queue.poll();
 ```
 
-### pair 연산자
+### pair
 
 - `JAVA`에서는 `Pair` 연산자는 간단해서 보통 구현하여 사용한다.
 - 아래 코드에서 입맞에 맞게  `Node` 클래스를 변경하고, 사용하면된다.
@@ -604,5 +604,60 @@ pq.add(2);
 pq.add(13); 
 
 System.out.println(pq.peek()); // 13
+```
+
+### pair
+
+- `PriorityQueue` 에서 `pair`를 사용방법은 아래와 같다.
+- `compare` 메소드를 만들고, 생성자에 포함시키면 된다.
+
+```java
+import java.io.IOException;
+import java.util.PriorityQueue;
+public class PQ {
+
+    static class Node{
+        int y;
+        int x;
+
+        Node(int y,int x){
+            this.y=y;
+            this.x=x;
+        }
+
+        public int compareTo(Node p) {
+            if(this.y < p.x) {
+                return -1; // 오름차순
+            }
+            else if(this.y == p.y) {
+                if(this.x < p.x) {
+                    return -1;
+                }
+            }
+            return 1;
+        }
+    }
+
+    public static void main(String[] args) throws IOException{
+
+        PriorityQueue<Node> pq1=new PriorityQueue<>(Node::compareTo);
+        pq1.add(new Node(1,2));
+        pq1.add(new Node(1,1));
+        pq1.add(new Node(2,3));
+        pq1.add(new Node(2,1));
+
+        while(!pq1.isEmpty()){
+            Node node=pq1.peek();
+            System.out.println(node.y+" "+node.x);
+            pq1.remove();
+        }
+    }
+}
+
+[출력]
+1 1
+1 2
+2 1
+2 3
 ```
 
