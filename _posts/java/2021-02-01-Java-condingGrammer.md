@@ -129,7 +129,7 @@ Arr.length;
 
 ## Set
 
-### 값 넣기(Add)
+### 값 넣기(add)
 
 - `Set` 에 값을 넣을 때는, `set명.add(넣을 값)` 메소드를 사용한다.
 
@@ -138,7 +138,7 @@ Set<String> set = new HashSet<String>();
 set.add("combMenu");
 ```
 
-### 값 삭제(Remove)
+### 값 삭제(remove)
 
 - `Set` 에서 값을 삭제할 때는, `set명.remove(삭제할 값)` 메소드를 사용한다.
 
@@ -191,7 +191,7 @@ set.size();
 
 ## Map
 
-### 값 넣기(Put)
+### 값 넣기(put)
 
 - `Map`에 `{key : value}` 값을 설정할 때, `map명.put(key,value)` 메소드를 사용한다.
 
@@ -200,7 +200,7 @@ Map<String,Integer> map=new HashMap<>();
 map.put("str",1);
 ```
 
-### 값 가져오기(Get)
+### 값 가져오기(get)
 
 - `Map`의 `{key:value}`쌍의 value` 값을 가져올 때`,  `map명.get(key값)` 메소드를 사용한다.
 
@@ -211,7 +211,7 @@ map.get("str");
 
 
 
-### Key 값 존재 확인(ContainsKey)
+### Key 값 존재 확인(containsKey)
 
 - `Map` 에 해당하는 `key` 값이 존재하는지 확인할 때, `map명.containsKey(key값)` 메소드를 사용한다.
 - `Key` 값이 존재하면 `true`, 존재하지 않으면 `false`를 반환한다.
@@ -246,7 +246,7 @@ String[] Arr = str.split("");
 //[1,2,3,4,5]
 ```
 
-### 문자열 자르기(SubString)
+### 문자열 자르기(substring)
 
 - `String` 문자열 일부를 추출할 때, `스트링명.substring()` 메소드를 사용한다.
 - `스트링명.substring(idx)` : `idx`를 포함한 위치부터 문자열 끝까지 추출한다.
@@ -285,7 +285,28 @@ str.length();
 ## StringBuilder
 
 - `StringBuilder` 클래스로 문자열에 문자를 추가하거나, 삭제할 수 있다.
+
+### 추가(append)
+
 - **추가**할 때는, `빌더명.append(넣을문자)` 메소드를 사용한다.
+
+```java
+StringBuilder sb=new StringBuilder();
+
+sb.append('a');
+sb.append('b');
+sb.append('c');
+
+System.out.println(sb);
+
+[출력]
+abc
+```
+
+
+
+### 삭제(deleteChartAt)
+
 - **삭제**할 때는, `빌더명.deletCharAt(삭제할문자의 인덱스)` 메소드를 사용한다.
 
 ```java
