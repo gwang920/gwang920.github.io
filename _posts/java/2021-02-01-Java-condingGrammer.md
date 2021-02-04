@@ -534,3 +534,75 @@ queue.add(new Node(1,2,3));
 Node node= queue.poll();
 ```
 
+## PriorityQueue
+
+### 생성
+
+- `JAVA`에서 자료구조 `PriorityQueue` 를 생성하는 방법은 아래와같다.
+- 생성자에 `Collections` 를 사용해 `오름차순`, `내림차순`을 설정할 수 있다.(`default` : `오름차순`)
+
+```java
+import java.util.PriorityQueue;
+/*
+	오름차순
+*/
+PriorityQueue<Integer> pq=PriorityQueue<Integer>();
+PriorityQueue<String> pq=PriorityQueue<String>();
+
+/*
+	내림차순
+*/
+PriorityQeueu<Integer> pq=PriorityQueue<Integer>(Collections.reverseOrder());
+```
+
+### 삽입
+
+- `PriorityQueue` 에 원소를 삽입할 때, `pq명.add(원소)` 메소드를 사용한다.
+
+```java
+PriorityQueue<Integer> pq=PriorityQueue<Integer>();
+pq.add(1); 
+pq.add(2);
+```
+
+### 제거(remove)
+
+- `PriorityQueue`의 가장 앞의 원소를 제거할 때, `pq명.remove()` 메소드를 사용한다.
+
+```java
+PriorityQueue<Integer> pq=new PriorityQueue<>(Collections.reverseOrder());
+pq.add(2);pq.add(12);pq.add(13);
+
+System.out.println(pq);
+pq.remove();
+System.out.println(pq);
+
+[출력]
+[13, 2, 12]
+[12, 2]
+```
+
+
+
+### minHeap & maxHeap
+
+- `PriorityQueue`의 `minHeap`, `maxHeap` 에 접근할 때, `pq명.peek()` 메소드를 사용한다.
+
+```java
+PriorityQueue<Integer> pq=PriorityQueue<Integer>();
+pq.add(1); 
+pq.add(2);
+pq.add(13); 
+
+System.out.println(pq.peek()); // 1
+```
+
+```java
+PriorityQueue<Integer> pq=PriorityQueue<Integer>(Collections.reverseOrder());
+pq.add(1); 
+pq.add(2);
+pq.add(13); 
+
+System.out.println(pq.peek()); // 13
+```
+
