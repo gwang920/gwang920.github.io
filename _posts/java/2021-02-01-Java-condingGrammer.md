@@ -480,3 +480,57 @@ public class InputOuputTest {
 5
 ```
 
+## Queue
+
+### 생성
+
+- `JAVA`에서 자료구조 `Queue` 를 생성하는 방법은 아래와같다.
+
+```java
+import java.util.Queue;
+Queue<Integer> queue=new LinkedList<>();
+Queue<String> queue= new LinkedList<>();
+```
+
+### 삽입(add)
+
+- `Queue`에 원소를 추가할 때는, `큐명.add(원소)` 메소드를 사용한다.
+
+```
+Queue<Integer> queue=new LinkedList<>();
+queue.add(1);
+queue.add(2);
+```
+
+### 꺼내기(poll)
+
+- `Queue`의 가장 앞의 원소를 꺼낼때는, `큐명.poll()` 메소드를 사용한다.
+
+```java
+Queue<Integer> queue=new LinkedList<>();
+queue.add(1);
+int que=queue.poll();
+```
+
+### pair 연산자
+
+- `JAVA`에서는 `Pair` 연산자는 간단해서 보통 구현하여 사용한다.
+- 아래 코드에서 입맞에 맞게  `Node` 클래스를 변경하고, 사용하면된다.
+
+```java
+static class Node{
+        int y;
+        int x;
+        int dist;
+        Node(int y,int x,int dist){
+            this.y=y;
+            this.x=x;
+            this.dist=dist;
+       }
+   }
+
+Queue<Node> queue=new LinkedList<>();
+queue.add(new Node(1,2,3));
+Node node= queue.poll();
+```
+
