@@ -6,6 +6,7 @@ categories:
 tags: 
 - Java
 - 문법
+- 자바 코딩테스트
 last_modified_at:
 ---
 
