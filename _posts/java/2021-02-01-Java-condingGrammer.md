@@ -124,6 +124,17 @@ int [] Arr=new int[5];
 Arr.length;
 ```
 
+### String to Char Array
+
+- `String`을 `char` 배열로 변환할 때, `toCharArray()` 메소드를 사용한다.
+
+```java
+char[][] board=new char[5][5];
+for(int i=0;i<5;i++){
+	board[i]=br.readLine().toCharArray();
+}
+```
+
 
 
 <br/>
