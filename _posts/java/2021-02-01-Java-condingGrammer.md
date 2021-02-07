@@ -230,7 +230,7 @@ map.get("str");
 
 ```java
 Map<String,Integer> map=new HashMap<>();
-map.containsKey("str",1);
+map.containsKey("str");
 ```
 
 ### size
@@ -671,5 +671,30 @@ public class PQ {
 1 2
 2 1
 2 3
+```
+
+## 인접리스트 구현
+
+ `Java`에서 인접리스트를 구현하는 방법이다.
+
+![인접리스트](https://user-images.githubusercontent.com/49560745/107134469-b5403800-6935-11eb-90e4-d01e40b8c287.png)
+
+```java
+// 단 방향 [출발노드,도착노드] 가 주어졌을 때
+int[][] arr=[[1,3],[1,5],[3,2],[3,4],[5,4],[5,6],[2,4],[4,6]];
+
+ArrayList<ArrayList<Integer>> list=new ArrayList<>();
+
+// 인접리스트 초기화
+for(int i=0;i<=arr.length;i++){
+	list.add(new ArrayList<>());
+}
+
+// 양방향 인접리스트
+for(int i=0;i<arr.length;i++){
+    int start=arr[i][0],end=arr[i][1];
+	list.get(start).add(end);
+    list.get(end).add(start);
+}
 ```
 
