@@ -58,6 +58,14 @@ Clustered Index : 군집화 된 인덱스
 
 이처럼 `index`는 검색 속도를 향상시킨다는 장점이 있지만, 새로운 데이터를 삽입할 때는 많은 비용이 소모되는 단점 또한 존재한다.
 
+### Clustured 인덱스의 구조
+
+![clustered Index Structure](https://user-images.githubusercontent.com/49560745/107186321-6246ad80-6a27-11eb-9025-9714c451189e.png)
+
+**Clustured** 인덱스의 구조이다. **Data Page** 의 데이터들이 순차적으로 정렬되어있다. 그리고 Leaf level 과 DataPage가 동일한 구조를 갖는다.
+
+<br/>
+
 ### 어떤 경우에 생성해야할까?
 
 - 테이블 데이터가 자주 업데이트 되지 않는 경우
@@ -97,7 +105,11 @@ NonClustered Index: 군집화되어 있지 않은 인덱스
 
 ### Non-Clustered 인덱스의 구조
 
+![Nonclustered Index Structure](https://user-images.githubusercontent.com/49560745/107187245-0bda6e80-6a29-11eb-8053-9f7e8de7a9c9.png)
 
+**Non-Clustered** 인덱스의 구조이다. **Clustured** 구조와는 다르게 **Leaf Level**과 **Data Page**가 구분된다. 그리고 **Data Page**의 데이터는 정렬이 되어있지 않다.
+
+<br/>
 
 ### 어떤 경우에 생성해야할까?
 
@@ -129,3 +141,5 @@ NonClustered Index: 군집화되어 있지 않은 인덱스
 -  [10분 테코톡 - INDEX](https://www.youtube.com/watch?v=NkZ6r6z2pBg)
 
 - [인덱스(INDEX)의 모든 것](http://blog.naver.com/PostView.nhn?blogId=webwizard83&logNo=60171496664)
+
+- [꽁담 - INDEX](https://mozi.tistory.com/320)
