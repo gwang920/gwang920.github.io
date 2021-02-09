@@ -244,6 +244,24 @@ Map<String,Integer> map=new HashMap<>();
 map.containsKey("str");
 ```
 
+### Iterator
+
+- `map` 의 값을 조회할 떄, `map명.keySet().iterator()`를 사용해 반복자를 생성한다.
+- `반복자.hasNext()` 메소드로 다음 값이 존재하는지 확인한다.
+- `반복자.next()` 메소드로 참조값을 가져온다.
+
+```java
+Map<String,Integer> map=new HashMap<>();
+Iterator<String> it= map.keySet().iterator();
+
+while(it.hasNext()){
+	String key=it.next();
+	int value=map.get(key);
+}
+```
+
+
+
 ### size
 
 - `Map`의 크기는 `map명.size()` 를 사용한다.
