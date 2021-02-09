@@ -35,7 +35,7 @@ last_modified_at:
 
 ![쿼리프로세스-table](https://user-images.githubusercontent.com/49560745/107364626-08291380-6b1f-11eb-97c3-8a1549ac47f3.png)
 
-<br/>
+
 
 **Empyolee** 테이블에는 직원의 **성**과 직무의 **ID 번호**가 하나의 행으로 데이터가 저장되어있다. 그리고 **JOB** 테이블에는 직무의 **ID 번호**와 이에 해당하는 **직무 이름**으로 데이터가 구성되어있다. 
 
