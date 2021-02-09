@@ -130,9 +130,20 @@ Arr.length;
 
 ```java
 char[][] board=new char[5][5];
+
+// String 입력을 char형 Array로 변환
 for(int i=0;i<5;i++){
 	board[i]=br.readLine().toCharArray();
 }
+
+// String to char Array
+String str="12345";
+board[0]=str.toCharArray();
+        
+System.out.println(board[0]);
+
+[출력]
+12345
 ```
 
 
@@ -164,15 +175,16 @@ set.remove("combMenu");
 ### Iterator
 
 - `set` 의 값을 조회할 떄, `set명.iterator()`를 사용해 반복자를 생성한다.
+- `Iterator<자료형>` 에서 자료형은 `value` 값의 자료형과 일치시킨다.
 - `반복자.hasNext()` 메소드로 다음 값이 존재하는지 확인한다.
 - `반복자.next()` 메소드로 참조값을 가져온다.
 
 ```java
 Set<String> set= new HashSet<String>();
 
-set.add(1);
-set.add(2);
-set.add(3);
+set.add("1");
+set.add("2");
+set.add("3");
 
 Iterator<String> it= set.iterator();
 while(it.hasNext()){

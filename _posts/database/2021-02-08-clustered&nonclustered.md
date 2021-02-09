@@ -107,7 +107,7 @@ NonClustered Index: 군집화되어 있지 않은 인덱스
 
 ![Nonclustered Index Structure](https://user-images.githubusercontent.com/49560745/107187245-0bda6e80-6a29-11eb-8053-9f7e8de7a9c9.png)
 
-**Non-Clustered** 인덱스의 구조이다. **Clustured** 구조와는 다르게 **Leaf Level**과 **Data Page**가 구분된다. 그리고 **Data Page**의 데이터는 정렬이 되어있지 않다.
+**Non-Clustered** 인덱스의 구조이다. **Clustured** 구조와는 다르게 **Leaf Level**과 **Data Page**가 구분된다. 그리고 **Data Page**의 데이터는 정렬 되어있지 않다.
 
 <br/>
 
@@ -127,6 +127,8 @@ NonClustered Index: 군집화되어 있지 않은 인덱스
 |      | 한 테이블당 하나만 존재한다 (테이블 인덱스) | 한 테이블에 여러개 생성할 수 있다         |
 |      | 범위 검색에 유리하다 (군집화!)              | index를 저장할 추가적인 공간이 필요하다   |
 |      | 데이터가 많아 질수록 Insert 성능이 나빠진다 | Insert시 추가 작업 (인덱스 생성) 필요하다 |
+
+
 
 - **Clustered** 인덱스는 테이블당 오직 한개만 존재한다. 반면에 **Non-Clustered** 형은 테이블 당 여러개의 인덱스를 생성할 수 있다.
 - **Clustered** 인덱스는 오직 테이블을 정렬한다. 그러므로 별도의 공간을 필요로하지 않는다. **Non-Clustered** 인덱스는  저장되는 별도의 공간(약 10%)이 필요하다.
