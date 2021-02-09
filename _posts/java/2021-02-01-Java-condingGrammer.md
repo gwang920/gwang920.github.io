@@ -271,6 +271,27 @@ Map<String,Integer> map=new HashMap<>();
 map.size();
 ```
 
+### Map에 value 값으로 java Collection 넣어주기
+
+- `Map`에 `value` 값으로 `collection`을 넣는 방법이다.
+- 2차원 배열을 사용하고는 싶은데, 배열의 `index`를 `Int`형이 아닌 `String` 혹은 `Char` 형으로 지정하고 싶을 때 사용하면 된다.
+- ex) map["abc"]={1,2,3,4,5}
+
+```java
+Map<String,List<Integer>> map=new HashMap<>();
+
+// map이 비어있다면 list를 만들어 넣어준다.
+if(map.containsKey(str)==false){
+	List<Integer> list=new ArrayList<>();
+	list.add(Integer.parseInt(info[4]));
+	map.put(str,list);
+}else{
+    
+// map이 비어있지 않다면 list에 값을 넣어준다
+	map.get(str).add(Integer.parseInt(info[4]));
+}
+```
+
 
 
 <br/>
