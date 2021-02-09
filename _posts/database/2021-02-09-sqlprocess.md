@@ -47,7 +47,7 @@ last_modified_at:
 
 **Name** 오름차순으로 정렬하는 쿼리문을 실행해보자.
 
-```sql
+```javascript
 SELECT Emplyoee.Name
 FROM Emplyoee
 JOIN job
