@@ -1,5 +1,5 @@
 ---
-title: SQL 쿼리 실행 과정
+title: SQL 쿼리 실행 과정 (6 STEP)
 toc: true
 categories:	
     - Database
@@ -31,11 +31,11 @@ last_modified_at:
 
 기본적인 흐름을 눈대중으로 파악했다면, 예제를 통해 실제로 어떻게 동작되는지 확인해보자. 예제 테이블은 아래와 같다.
 
+<br/>
 
+![쿼리프로세스-table](https://user-images.githubusercontent.com/49560745/107364626-08291380-6b1f-11eb-97c3-8a1549ac47f3.png)
 
-![쿼리프로세스-table](https://user-images.githubusercontent.com/49560745/107363591-b469fa80-6b1d-11eb-8034-95cb16fd9f2e.png)
-
-
+<br/>
 
 **Empyolee** 테이블에는 직원의 **성**과 직무의 **ID 번호**가 하나의 행으로 데이터가 저장되어있다. 그리고 **JOB** 테이블에는 직무의 **ID 번호**와 이에 해당하는 **직무 이름**으로 데이터가 구성되어있다. 
 
