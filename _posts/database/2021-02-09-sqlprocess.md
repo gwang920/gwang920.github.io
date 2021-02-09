@@ -43,19 +43,19 @@ last_modified_at:
 
 1) 직무가 **Front-End** 이거나 **Back-End** 이면서,
 
-2) 같은 **Name**을 가진 사람이 두 명 이상인 **Name** 데이터를 
+2) 같은 직무 동료가 두 명 이상인 데이터를 
 
-3) **Name** 기준으로 오름차순 정렬하는 쿼리문을 실행해보자.
+3) **직무 이름** 기준으로 오름차순 정렬하는 쿼리문을 실행해보자.
 
 ```javascript
-SELECT Emplyoee.Name
+SELECT job.jobName
 FROM Emplyoee
 JOIN job
 ON Emplyoee.jobid= job.jobid 
 WHERE job.jobName != 'AI'
-GROUP BY Emplyoee.Name 
+GROUP BY job.jobName 
 HAVING COUNT(*) >= 2
-ORDER BY Emplyoee.Name ASC
+ORDER BY job.jobName ASC
 ```
 
  
@@ -88,10 +88,10 @@ WHERE job.jobName != 'AI'
 ## 3. 그룹핑 (Group by)
 
 ```
-GROUP BY Emplyoee.Name
+GROUP BY job.jobName 
 ```
 
-조건문으로 필터링 과정이 이루어졌으면, 이젠 그룹핑 작업이 진행된다. 
+조건문으로 필터링 과정이 이루어졌으면, 이젠 그룹핑 작업이 진행된다.  
 
 ![image](https://user-images.githubusercontent.com/49560745/107369170-c69b6700-6b24-11eb-9afd-6f7d51d88fee.png)
 
@@ -101,23 +101,31 @@ GROUP BY Emplyoee.Name
 HAVING COUNT(*) >= 2
 ```
 
+`GROUP BY` 결과 이후 `Having` 절이 실행된다. `Having` 절은 이제 개별적인 행에 접근할 수 없으며, `Group` 단위로만 조건이 적용된다.
 
+<br/>
 
 ## 5. 결과 return (Select)
 
 ```
-SELECT Emplyoee.Name
+SELECT job.jobName
 ```
+
+이제 `ON`, `WHERE` 조건문으로 필터링되고, `GROUP BY` 절로 그룹핑 된 후 `HAVING` 절에 의해 그룹핑된 결과도 필터링된 결과값이 도출된다.
+
+![image](https://user-images.githubusercontent.com/49560745/107371263-6d810280-6b27-11eb-8b3f-b028a4e96850.png)
 
 
 
 ## 6. 결과 정렬 (Order by & Limit)
 
 ```
-ORDER BY Emplyoee.Name ASC
+ORDER BY job.jobName ASC
 ```
 
+모든 `SQL` 쿼리문이 실행된 이후에 가장 마지막으로 데이터의 최종 정렬이 이루어진다. 이 과정에서 `ORDER BY` , `LIMIT` 절이 실행된다. 최종 결과값은 다음과 같다.
 
+![image](https://user-images.githubusercontent.com/49560745/107371714-f26c1c00-6b27-11eb-9980-5dc2825f2a90.png)
 
 <br/>
 
