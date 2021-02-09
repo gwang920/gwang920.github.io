@@ -31,6 +31,8 @@ last_modified_at:
 
 기본적인 흐름을 눈대중으로 파악했다면, 예제를 통해 실제로 어떻게 동작되는지 확인해보자. 예제 테이블은 아래와 같다.
 
+### 
+
 <br/>
 
 ![쿼리프로세스-table](https://user-images.githubusercontent.com/49560745/107364626-08291380-6b1f-11eb-97c3-8a1549ac47f3.png)
@@ -41,11 +43,11 @@ last_modified_at:
 
 이제, 두 테이블에서 
 
-직무가 **Front-End** 이거나 **Back-End** 이면서,
+1) 직무가 **Front-End** 이거나 **Back-End** 이면서,
 
-같은 **Name**을 가진 사람이 두명 이상인 **Name** 데이터를 
+2) 같은 **Name**을 가진 사람이 두 명 이상인 **Name** 데이터를 
 
-**Name** 오름차순으로 정렬하는 쿼리문을 실행해보자.
+3) **Name** 기준으로 오름차순 정렬하는 쿼리문을 실행해보자.
 
 ```javascript
 SELECT Emplyoee.Name
@@ -60,13 +62,60 @@ ORDER BY Emplyoee.Name ASC
 
  
 
-## 1. 데이터 가져오기
+## 1. 데이터 가져오기 (From, Join)
+
+```
+FROM Emplyoee
+JOIN job
+```
+
+쿼리문이 실행되면 우선 베이스 데이터를 가져온다. 우선, `From` 절을 실행하고, `Join` 절을 실행한다. 위 쿼리의 연산결과는 [데카르트 곱](https://ko.wikipedia.org/wiki/%EA%B3%B1%EC%A7%91%ED%95%A9) 형태로 나타나게 된다.
+
+![쿼리프로세스-데카르트곱](https://user-images.githubusercontent.com/49560745/107367011-22182580-6b22-11eb-9267-9685b0ddc977.png)
+
+이후에 **ON** 조건문이 실행되어 적합한 결과값이 나오게된다.
+
+![image](https://user-images.githubusercontent.com/49560745/107368305-b931ad00-6b23-11eb-86fb-fdd03d29929e.png)
+
+## 2. 조건문 필터링 (Where)
+
+```
+WHERE job.jobName != 'AI'
+```
+
+그 다음으로 `WHERE` 조건문이 실행된다. 해당 조건에 알맞지 않은 데이터는 필터링으로 걸러진다.
+
+![image](https://user-images.githubusercontent.com/49560745/107367810-15480180-6b23-11eb-83ef-97bd66c81603.png)
+
+## 3. 그룹핑 (Group by)
+
+```
+GROUP BY Emplyoee.Name
+```
 
 
 
+## 4. 그룹핑 필터링 (Having)
+
+```
+HAVING COUNT(*) >= 2
+```
 
 
 
+## 5. 결과 return (Select)
+
+```
+SELECT Emplyoee.Name
+```
+
+
+
+## 6. 결과 정렬 (Order by & Limit)
+
+```
+ORDER BY Emplyoee.Name ASC
+```
 
 
 
