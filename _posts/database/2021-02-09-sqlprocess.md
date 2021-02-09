@@ -31,8 +31,6 @@ last_modified_at:
 
 기본적인 흐름을 눈대중으로 파악했다면, 예제를 통해 실제로 어떻게 동작되는지 확인해보자. 예제 테이블은 아래와 같다.
 
-### 
-
 <br/>
 
 ![쿼리프로세스-table](https://user-images.githubusercontent.com/49560745/107364626-08291380-6b1f-11eb-97c3-8a1549ac47f3.png)
@@ -71,11 +69,11 @@ JOIN job
 
 쿼리문이 실행되면 우선 베이스 데이터를 가져온다. 우선, `From` 절을 실행하고, `Join` 절을 실행한다. 위 쿼리의 연산결과는 [데카르트 곱](https://ko.wikipedia.org/wiki/%EA%B3%B1%EC%A7%91%ED%95%A9) 형태로 나타나게 된다.
 
-![쿼리프로세스-데카르트곱](https://user-images.githubusercontent.com/49560745/107367011-22182580-6b22-11eb-9267-9685b0ddc977.png)
+![image](https://user-images.githubusercontent.com/49560745/107368558-09a90a80-6b24-11eb-9ce3-d5674462eb94.png)
 
-이후에 **ON** 조건문이 실행되어 적합한 결과값이 나오게된다.
+이후에 **ON** 조건문이 실행되어 [데카르트 곱](https://ko.wikipedia.org/wiki/%EA%B3%B1%EC%A7%91%ED%95%A9) 결과로부터 필터링 된 결과값이 나오게된다.
 
-![image](https://user-images.githubusercontent.com/49560745/107368305-b931ad00-6b23-11eb-86fb-fdd03d29929e.png)
+![image](https://user-images.githubusercontent.com/49560745/107368849-63a9d000-6b24-11eb-8962-a872adf5f0da.png)
 
 ## 2. 조건문 필터링 (Where)
 
@@ -85,7 +83,7 @@ WHERE job.jobName != 'AI'
 
 그 다음으로 `WHERE` 조건문이 실행된다. 해당 조건에 알맞지 않은 데이터는 필터링으로 걸러진다.
 
-![image](https://user-images.githubusercontent.com/49560745/107367810-15480180-6b23-11eb-83ef-97bd66c81603.png)
+![image](https://user-images.githubusercontent.com/49560745/107368890-70c6bf00-6b24-11eb-8210-9d499c796c70.png)
 
 ## 3. 그룹핑 (Group by)
 
@@ -93,7 +91,9 @@ WHERE job.jobName != 'AI'
 GROUP BY Emplyoee.Name
 ```
 
+조건문으로 필터링 과정이 이루어졌으면, 이젠 그룹핑 작업이 진행된다. 
 
+![image](https://user-images.githubusercontent.com/49560745/107369170-c69b6700-6b24-11eb-9afd-6f7d51d88fee.png)
 
 ## 4. 그룹핑 필터링 (Having)
 
