@@ -13,7 +13,7 @@ last_modified_at:
 
 # 순수 JDBC
 
-## 환경설정
+## 1. 환경설정
 
 ### build.gradle 설정
 
@@ -90,7 +90,7 @@ spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.username=sa
 ```
 
-## JDBC 회원 리포지터리
+## 2.  JDBC 회원 리포지터리
 
  `JDBC`를 사용하기 위한 기본 설정을 마쳤다. 이제, 기존의 저장소로 활용하던 `HashMap` 리포지터리를 `JDBC` 리포지터리로 변경하는 작업을 진행해보자.
 
@@ -261,7 +261,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
 - `ResultSet rs` : `SQL` 실행 결과를 받아오는 객체이다.
 -  `pstmt.executeQuery()` : `SQL` 쿼리를 실행한다.
 
-## 스프링 설정 변경
+## 3. 스프링 설정 변경
 
 `JDBC` 회원 리포지터리 구현이 완료되었으면, 스프링의 설정을 변경해줘야한다.
 
@@ -300,6 +300,7 @@ public class SpringConfig {
     }
     @Bean
     public MemberRepository memberRepository() {
+        // return new MemoryMemberRepository();
         return new JdbcTemplateMemberRepository(dataSource);
     }
 }
@@ -307,8 +308,10 @@ public class SpringConfig {
 
 - `DataSource`는 데이터베이스 커넥션을 얻기 위해 사용하는 객체다. 
 - 스프링 부트에서는 데이터베이스 커넥션 정보를 바탕으로 `DataSource`를 생성하고, 스프링 빈으로 만들어둔다. 그래서 `DI`를 받을 수 있다.
+- `memberRepository` 메소드의 주석문을 확인해보면, 저장소를 단순히 `MemoryMemberRepository()` 에서 `JdbcTemplateMemberRepository()` 로 변경해줬다.
+  - 이게바로 객체지향의 장점이라고 할 수 있다. 기존의 코드 변경없이 부품만 갈아끼워주면 수정이 완료된다.
 
-## 테스트
+## 4. 테스트
 
 이제, `JDBC`를 저장소로 애플리케이션에 연동이 끝났다.  `localhost:8000` 에 접속해서, 정상적으로 동작하는지 확인해보자. 
 
@@ -318,7 +321,9 @@ public class SpringConfig {
 
 ![image](https://user-images.githubusercontent.com/49560745/107457498-80cab700-6b95-11eb-862b-5474f56d9f93.png)
 
- 
+ ## 5. 동작원리
+
+
 
 <br/>
 
