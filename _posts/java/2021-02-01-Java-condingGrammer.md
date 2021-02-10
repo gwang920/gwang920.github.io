@@ -146,6 +146,19 @@ System.out.println(board[0]);
 12345
 ```
 
+### 배열 특정 범위 자르기
+
+- 배열에서 특정 범위를 자르고, 다른 배열에 저장할 때 `Arrays.copyOfRange(배열명,시작점,[끝점])` 메소드를 사용한다.
+
+```java
+int[] array={1,2,3,4,5};
+int[] temp=Arrays.copyOfRange(array,1,3);
+System.out.println(temp);
+
+[출력]
+[2,3]
+```
+
 
 
 <br/>
