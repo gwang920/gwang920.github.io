@@ -94,11 +94,11 @@ spring.datasource.username=sa
 
  `JDBC`를 사용하기 위한 기본 설정을 마쳤다. 이제, 기존의 저장소로 활용하던 `HashMap` 리포지터리를 `JDBC` 리포지터리로 변경하는 작업을 진행해보자.
 
-![image](https://user-images.githubusercontent.com/49560745/107456740-1402ed00-6b94-11eb-9d5f-fca979412ac6.png)
+![image](https://user-images.githubusercontent.com/49560745/107458934-6d6d1b00-6b98-11eb-9bcc-b0bb5652e8f4.png)
 
 ```
-파일명 : JdbcTemplateMemberRepository.java
-위치 : /hello.hellospring/repository/JdbcTemplateMemberRepository.java
+파일명 : JdbcMemberRepository.java
+위치 : /hello.hellospring/repository/JdbcMemberRepository.java
 ```
 
 ```java
@@ -115,7 +115,7 @@ import javax.sql.DataSource;
 import java.sql.*;
 import java.util.*;
 
-public class JdbcTemplateMemberRepository implements MemberRepository {
+public class JdbcMemberRepository implements MemberRepository {
 
     private final DataSource dataSource;
     public JdbcTemplateMemberRepository(DataSource dataSource) {
@@ -265,7 +265,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
 
 `JDBC` 회원 리포지터리 구현이 완료되었으면, 스프링의 설정을 변경해줘야한다.
 
-![image](https://user-images.githubusercontent.com/49560745/107456928-75c35700-6b94-11eb-9a3c-4441d777ab61.png)
+![image](https://user-images.githubusercontent.com/49560745/107458892-5af2e180-6b98-11eb-9e5b-8a9492b07047.png)
 
 ```
 파일명 : SpringConfig.java
@@ -275,7 +275,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
 ```java
 package hello.hellospring;
 
-import hello.hellospring.repository.JdbcTemplateMemberRepository;
+import hello.hellospring.repository.JdbcMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -301,14 +301,14 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
         // return new MemoryMemberRepository();
-        return new JdbcTemplateMemberRepository(dataSource);
+        return new JdbcMemberRepository(dataSource);
     }
 }
 ```
 
 - `DataSource`는 데이터베이스 커넥션을 얻기 위해 사용하는 객체다. 
 - 스프링 부트에서는 데이터베이스 커넥션 정보를 바탕으로 `DataSource`를 생성하고, 스프링 빈으로 만들어둔다. 그래서 `DI`를 받을 수 있다.
-- `memberRepository` 메소드의 주석문을 확인해보면, 저장소를 단순히 `MemoryMemberRepository()` 에서 `JdbcTemplateMemberRepository()` 로 변경해줬다.
+- `memberRepository` 메소드의 주석문을 확인해보면, 저장소를 단순히 `MemoryMemberRepository()` 에서 `JdbcMemberRepository()` 로 변경해줬다.
   - 이게바로 객체지향의 장점이라고 할 수 있다. 기존의 코드 변경없이 부품만 갈아끼워주면 수정이 완료된다.
 
 ## 4. 테스트
@@ -321,9 +321,28 @@ public class SpringConfig {
 
 ![image](https://user-images.githubusercontent.com/49560745/107457498-80cab700-6b95-11eb-862b-5474f56d9f93.png)
 
- ## 5. 동작원리
+## 5. 구현 원리
 
+### 구조
 
+![image](https://user-images.githubusercontent.com/49560745/107457984-85dc3600-6b96-11eb-9180-68e5a641ccf0.png)
+
+- `MeberService`는 `MemberRepository`를 참조하고 있다.
+
+- `MemoryMemberRepository` 와 `JdbcMemberRepository`는 인터페이스 `MemberRepository`의 구현체이다.
+
+  
+
+![image](https://user-images.githubusercontent.com/49560745/107458273-19ae0200-6b97-11eb-9092-0ddd260ac9d5.png)
+
+- `Jdbc` 를 통해 `DB`를 연동한 스프링컨테이너의 상태는 위와 같다.
+- `<memory>` 리파지토리를 단순히 `<jdbc>` 용 리파지토리로 변경해줬다.
+  - 앞서 말했듯이 `SpringConfig`에서 설정만 변경해주면 자유롭게 객체를 갈아끼울 수 있다.
+  - 즉, 스프링의 `DI (Dependencies Injection)`을 사용하면 기존 코드를 전혀 손대지 않고, 설정만으로 구현 클래스를 변경할 수 있다.
+
+<br/>
+
+ 순수 `JDBC`를 활용해 `H2-Database`와 애플리케이션을 연동해보았다. 현 시점에서  `jdbc` 를 이용하는 것이 얼마나 비효율적인지 과거 개발자 선배들이 순수 `jdbc`로 개발할 때, 얼마나 고생했을지 정도만 생각하고, 넘어가도 충분할 것 같다. 다음 포스팅부터는 `DB` 까지 연동한 애플리케이션 통합테스팅을 진행하고, `JDBC Template` , `JPA` 를 연동해보자.
 
 <br/>
 
