@@ -100,7 +100,7 @@ classes: layout--home
 
 **사진 Click!**
 
-[![ERD설계](https://user-images.githubusercontent.com/49560745/107608626-db404200-6c7f-11eb-830a-c102c82c5ba6.png)](![ERD설계](https://user-images.githubusercontent.com/49560745/107608626-db404200-6c7f-11eb-830a-c102c82c5ba6.png))
+[![ERD설계](https://user-images.githubusercontent.com/49560745/107609052-1e4ee500-6c81-11eb-8107-e2c32fff417e.png)](https://user-images.githubusercontent.com/49560745/107609052-1e4ee500-6c81-11eb-8107-e2c32fff417e.png)
 
 [![image](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)
 
