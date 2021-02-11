@@ -102,7 +102,7 @@ classes: layout--home
 
 [![ERD설계](https://user-images.githubusercontent.com/49560745/107609052-1e4ee500-6c81-11eb-8107-e2c32fff417e.png)](https://user-images.githubusercontent.com/49560745/107609052-1e4ee500-6c81-11eb-8107-e2c32fff417e.png)
 
-[![image](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)](https://user-images.githubusercontent.com/49560745/101631109-2dd66580-3a67-11eb-8ee2-5a6c955b6d58.png)
+
 
 ## 화면 구성                                                                                                                                                                                        
 
