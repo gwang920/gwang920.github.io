@@ -356,6 +356,20 @@ String str="123";
 str.length();
 ```
 
+### String 값 변경하기
+
+- `Java`에서 `String`은 `immutable`하다. 즉, 한번 할당되면 변경이 불가능하다.
+- 따라서, 특정 문자열을 변경하려면 `substring` 메소드를 활용해 변경된 새로운 문자열을 생성해야한다.
+
+```java
+String name="starfucks";
+String newname=name.substring(0,4)+'b'+name.substring(5);
+
+System.out.pirntln(newname); // starbucks
+```
+
+
+
 <br/>
 
 ## StringBuilder
@@ -401,6 +415,17 @@ System.out.println(sb);
 [출력]
 abc
 ac
+```
+
+### StringBuilder 값 변경하기
+
+- `StringBuilder` 객체의 특정 값을 변경할 때, `빌더명.setChartAt(인덱스,문자)` 메소드를 활용한다.
+
+```java
+StringBuilder name = new StringBuilder("starfucks");
+name.setCharAt(4, 'b');
+
+System.out.println(name); // starbucks
 ```
 
 
