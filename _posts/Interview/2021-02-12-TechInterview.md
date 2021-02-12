@@ -101,7 +101,7 @@ System.out.println(s1.equals(s3)); // true
 
 ![string pool](https://user-images.githubusercontent.com/49560745/107731916-6da51c00-6d3a-11eb-8189-e6b459e9c0f8.png)
 
-#### Ref
+#### Ref.
 
 [String vs StringBuilder vs StringBuffer](https://gwang920.github.io/java/stringType/)
 
@@ -113,7 +113,21 @@ https://richong.tistory.com/122
 
 - `pimitive type`이 아닌 것에 대해서는 `call by reference`와 유사한 효과를 취하게 될 뿐이다.
 
+[Call by value vs Call by reference](https://gwang920.github.io/java/CallbyValue-CallbyReference/)
 
+### Collection
+
+```
+컬렉션이란 객체의 그룹을 조작하고 저장할 수 있는 자료구조이다.  
+Java Collection 같은 경우 같은 타입의 자료를 관리할 수 있는 
+유용한 하위 인터페이스들의 집합이다. 
+```
+
+### 메모리 구조
+
+#### Ref.
+
+[자바 JVM 메모리구조](https://m.blog.naver.com/PostView.nhn?blogId=kywpcm&logNo=30170981872&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
 ## Spring
 
@@ -128,9 +142,9 @@ https://richong.tistory.com/122
 
 필요한 객체를 직접 클래스에 생성하지 않고, 생성자를 통해 외부에서 주입해준다.
 
-#### Ref
+#### Ref.
 
-https://velog.io/@wlsdud2194/what-is-di
+[의존성 주입](https://velog.io/@wlsdud2194/what-is-di)
 
 ### Primitive Type vs Reference Type
 
@@ -179,9 +193,26 @@ Void
 
 
 
-#### Ref
+#### Ref.
 
-https://java119.tistory.com/41
+[java119 - primitive vs reference](https://java119.tistory.com/41)
+
+### MVC1 vs MVC2 vs SPRING MVC
+
+**MVC1**
+
+- `html` 코드내에 자바코드가 공존하는 방식
+- 간단한 프로그램을 설계하는데 적합
+- `view`와 `controller`를 한 곳에서 처리하는 것
+
+**MVC2**
+
+- `view`, `controller`, `model`을 분리해서 처리하는 것
+- 보여지는 화면을 구성하는 `view(JSP)` 페이지, 요청을 처리하는 `model(빈, 클래스)`, 제어하는 `controller(서블릿)`으로 확실하게 나뉜다.
+- 구조가 복잡하여 학습하기 어렵고, 설정 및 작업 분량이 많다.
+- `back-end`와 `front-end`가 나누어져 분업이 편리하다.
+
+**SPRING MVC**
 
 
 
@@ -200,9 +231,9 @@ https://java119.tistory.com/41
   - 사용자가 인내할 수 없는 `MaxWait` 값은 쓸모 없다.
   - 그렇다고 `MaxWait`를 너무 작게 설정하면 과부하 시 커넥션 풀에 여분의 객체가 없을 때 너무 자주 오류 메시지를 보게된다.
 
-#### Ref
+#### Ref.
 
-https://d2.naver.com/helloworld/5102792
+[naver D2 - DBCP](https://d2.naver.com/helloworld/5102792)
 
 
 
