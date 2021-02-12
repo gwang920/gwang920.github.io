@@ -107,6 +107,14 @@ System.out.println(s1.equals(s3)); // true
 
 https://richong.tistory.com/122
 
+### Call by Value vs Call by Reference
+
+- `Java`는 기본적으로 `Call by Value` 이다.
+
+- `pimitive type`이 아닌 것에 대해서는 `call by reference`와 유사한 효과를 취하게 될 뿐이다.
+
+
+
 ## Spring
 
 ### 의존성 주입(DI)
