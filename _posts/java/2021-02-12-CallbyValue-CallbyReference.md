@@ -32,9 +32,9 @@ last_modified_at:
 
 **[참고] - 자바 인어넛셀 개정3판(오라일리 2000)**
 
- `JAVA` 언어로 코딩테스트를 진행할 때, **배열**이나 **객체**를 함수의 `argument`로 전달 했을 때 `call by reference`로 동작한다고 알고 있었다. `argument`를 전달받은 메소드에서 **배열**이나 **객체**의 값을 변경하면 실제로 값이 변경되었기 때문이다.
+ `JAVA` 언어로 코딩테스트를 진행할 때, **배열**이나 **객체**를 함수의 `argument`로 전달 했을 때 `call by reference`로 동작하는 것처럼 보였다. `argument`를 전달받은 메소드에서 **배열**이나 **객체**의 값을 변경하면 실제로 값이 변경되었기 때문이다.
 
-그렇지만, 사실 자바는 항상 `call by value`로 동작한다. `reference type`에 한해서 `call by reference`로 동작하듯 보일 뿐이다.
+하지만, 자바는 항상 `call by value`로 동작한다. `reference type`에 한해서 `call by reference`로 동작하듯 **보일** 뿐이다.
 
 **예제를 통해 자세히 알아보자.**
 
