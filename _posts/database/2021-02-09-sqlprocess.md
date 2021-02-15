@@ -71,7 +71,7 @@ JOIN job
 
 ![image](https://user-images.githubusercontent.com/49560745/107368558-09a90a80-6b24-11eb-9ce3-d5674462eb94.png)
 
-이후에 **ON** 조건문이 실행되어 [데카르트 곱](https://ko.wikipedia.org/wiki/%EA%B3%B1%EC%A7%91%ED%95%A9) 결과로부터 필터링 된 결과값이 나오게된다.
+이후에 **ON** 조건문이 실행되어 [데카르트 곱](https://ko.wikipedia.org/wiki/%EA%B3%B1%EC%A7%91%ED%95%A9) 결과로부터 `Emplyoee.jobid= job.jobid ` 조건문이 필터링 된 결과값이 나오게된다.
 
 ![image](https://user-images.githubusercontent.com/49560745/107368849-63a9d000-6b24-11eb-8962-a872adf5f0da.png)
 
