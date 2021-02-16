@@ -129,6 +129,47 @@ Java Collection 같은 경우 같은 타입의 자료를 관리할 수 있는
 
 [자바 JVM 메모리구조](https://m.blog.naver.com/PostView.nhn?blogId=kywpcm&logNo=30170981872&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
+## javascript
+
+### undefined vs null
+
+- `undefined` : 어떠한 값으로도 할당되지 않아 자료형이 정해지지 않은(undefined) 상태
+- `null` : null로 값이 할당된 상태. 즉 null은 자료형이 정해진(defined) 상태
+
+### var vs let vs const
+
+- `var` : function-scoped, 재선언 가능, 재할당 가능
+- `let` : block-scoped, 재선언 불가능, 재할당 가능
+- `const` : block-scoped, immutable , 재선언 불가능, 재할당 불가능
+
+### scope
+
+- `scope` : 허용범위
+
+- `global-scope` : 전역변수 scope
+- `local-scope` : 지역변수 scope
+
+### hoisting
+
+- 함수의 선언부가 해당하는 `scope`영역의 최상단으로 끌어올려지는 것
+- `var` 은 **function-scoped** 이므로 함수의 최상단으로 선언부(var value)가 **호이스팅**된다.
+
+```javascript
+fucntion hoistingEx(){
+    // 이 위치로 hoisting 된다.
+	console.log("value="+value);
+	var value = 10;
+	console.log("value="+value);
+}
+hoistingEx();
+
+[실행결과]
+value=undefined
+value=10
+```
+
+
+
 ## Spring
 
 ### 의존성 주입(DI)
@@ -234,6 +275,18 @@ Void
 #### Ref.
 
 [naver D2 - DBCP](https://d2.naver.com/helloworld/5102792)
+
+### 인덱스에는 왜 Hashtable 보다 B Tree 인가?
+
+`Hashtable`의 `search` 시간복잡도는 `O(1)`이다. 그 어떤 자료구조보다 검색을 할 때 빠르다. 그럼에도 불구하고 `Database`의 `index`의 구조로 왜 `B Tree`를 선택했을까?
+
+그 이유는 바로 데이터베이스의 데이터 구조 특성때문이다. 
+
+데이터베이스에서 자료를 **조회**할 떄 특정 데이터만을 추출하기도 하지만, 범위 설정이 필요한 경우가 많다.
+
+예를들어, 키가 180이상인 사람의 데이터를 추출하고 싶다면 조건문에 부등호 `>=`  기호를 사용해야한다. 이 부등호는 `Hashtable`에서는 사용할 수 없다. `Hashtable`은 `{key : vlaue}` 쌍의 구조로 특정 데이터를 가리키는 `key` 값만 가지고 있을 뿐 부등호 연산을 할 수 없는 것이다. 그렇기 때문에 부등호 연산에 적합한 `B Tree`를 사용한다. 조회 시간복잡도도 `log(n)`으로 준수하다.
+
+
 
 
 
