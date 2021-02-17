@@ -26,13 +26,15 @@ last_modified_at:
 
 `[3,7,2,5,1,4]` 리스트를 **InsetionSort**로 정렬해보자.
 
-- `2번째` index부터 `key`값을 설정하면서 **Sorting** 한다.
+- `2번째` index부터 `key`값을 설정하고, 역순으로 정렬 된 배열을 탐색하며 `key` 자신보다 큰 값을 뒤로 밀어준다. 
+- `key` 자신보다 작거나 첫 index에 도달했을 때 `key` 값을 그 위치에 삽입한다.
+- 항상 `1번째` index는 정렬이되어있다고 가정한다.
 
 ![InsertionSort](https://user-images.githubusercontent.com/49560745/108151465-14623180-711a-11eb-904b-c3b2613895cb.png)
 
 ![InsertionSort](https://user-images.githubusercontent.com/49560745/108151518-3cea2b80-711a-11eb-813b-58608460541e.png)
 
-![InsertionSort](https://user-images.githubusercontent.com/49560745/108151541-4a071a80-711a-11eb-8cad-df7bd666390f.png)
+![InsertionSort](https://user-images.githubusercontent.com/49560745/108152127-b33b5d80-711b-11eb-8b66-e326971ae4b7.png)
 
 ![InsertionSort](https://user-images.githubusercontent.com/49560745/108151559-57bca000-711a-11eb-8739-4ec9d38045ea.png)
 
