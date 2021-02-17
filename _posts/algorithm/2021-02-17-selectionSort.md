@@ -1,5 +1,5 @@
 ---
-title: Selection Sort(선택정렬) - JAVA
+title: SelectionSort(선택정렬) - JAVA
 toc: true
 categories:	
     - Algorithm non PS
@@ -11,7 +11,7 @@ last_modified_at:
 
  **SelectionSort**의 개념을 간단하게 알아보고, `java`로 구현해보자.
 
-## 선택정렬란?
+## 선택 정렬이란?
 
 - 제자리 정렬 알고리즘
 - 가장 단순한 정렬 알고리즘이며, 메모리가 제한적인 경우 성능 이점
@@ -60,6 +60,8 @@ last_modified_at:
 
 
 
+
+
 ## 시간복잡도(Time Complexity)
 
 - `O(N^2)`
@@ -71,9 +73,8 @@ last_modified_at:
 ## 구현
 
 ```java
-
 public class selectionSort{
-    void selectionSort(int[] list) {
+    static void selectionSort(int[] list) {
     int indexMin, temp;
 
     for (int i = 0; i < list.length - 1; i++) {
