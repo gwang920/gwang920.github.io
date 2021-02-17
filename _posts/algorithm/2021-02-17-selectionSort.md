@@ -85,7 +85,6 @@ public class selectionSort{
                 indexMin = j;
             }
         }
-        x
         // 최솟값이 자기 자신이면 자료 이동을 하지 않는다.
         if(i!=indexMin){
             temp = list[indexMin];
