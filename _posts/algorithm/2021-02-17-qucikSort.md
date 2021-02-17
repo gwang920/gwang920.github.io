@@ -6,7 +6,6 @@ categories:
 tags:
 - 알고리즘
 - 퀵소트
-Contest
 last_modified_at: 
 ---
 
