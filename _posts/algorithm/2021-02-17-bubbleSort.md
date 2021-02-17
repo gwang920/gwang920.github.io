@@ -1,5 +1,5 @@
 ---
-title: BubblSort(버블정렬) - JAVA
+title: BubbleSort(버블정렬) - JAVA
 toc: true
 categories:	
     - Algorithm non PS
