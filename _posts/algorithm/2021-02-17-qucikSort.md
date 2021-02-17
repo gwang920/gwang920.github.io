@@ -17,7 +17,7 @@ last_modified_at:
 - 분할 정복 알고리즘 중 하나
 - 매우 빠른 수행속도를 자랑하는 정렬 알고리즘
 
-## 퀵 소트 정렬 과정
+## 퀵 소트 과정
 
 ```
 1) 임의의 피벗 값(기준 값)을 설정한다.
@@ -89,8 +89,6 @@ last_modified_at:
 
 
 
-
-
 <br/>
 
 ## 구현
@@ -126,7 +124,7 @@ public class qucikSort {
 
 
     public static void main(String[] args) {
-        int[] arr= {0,3,4,1,9,5,8,6,7,2};
+        int[] arr= {7,4,2,8,3,5,1,6,10,9};
         quickSort(arr,0,arr.length-1);
         for(int i=0;i<arr.length;i++) {
             System.out.print(arr[i]+",");
