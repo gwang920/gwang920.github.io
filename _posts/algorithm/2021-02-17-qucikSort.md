@@ -73,6 +73,22 @@ last_modified_at:
 
 ![quickSort](https://user-images.githubusercontent.com/49560745/108142929-10c6ae80-710a-11eb-8833-88e45821d01f.png)
 
+## 시간복잡도(Time Complexity)
+
+- 평균 : `nlog(n)`
+
+파티션을 나누는 횟수는 총 `n`회이다.
+
+데이터 탐색횟수는 매번 절반 씩 줄어든다. `log(n)`
+
+따라서, 평균 `nlog(n)`의 시간 복잡도를 갖는다.
+
+- 최악 : `O(n^2)`
+
+리스트가 이미 정렬되어있을 때, 최악의 시간복잡도를 갖는다.
+
+
+
 
 
 <br/>
