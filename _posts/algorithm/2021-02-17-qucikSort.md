@@ -22,7 +22,8 @@ last_modified_at:
 ```
 1) 임의의 피벗 값(기준 값)을 설정한다.
 
-2) 리스트의 시작점 = 0(최초) , 도착점 = n-1(최초)을 설정한다. 
+2) 리스트의 길이를 n이라고 가정하자.
+이때, 리스트의 시작점 = 0(최초) , 도착점 = n-1(최초)을 설정한다. 
 시작점, 도착점에서 출발하며,
 피벗 값을 기준으로 
 피벗보다 작은 원소는 '왼쪽'으로
@@ -42,7 +43,7 @@ last_modified_at:
 
 - 피벗 값과 시작점, 끝점을 설정한다.
 
-![quickSort](https://user-images.githubusercontent.com/49560745/108142269-cabd1b00-7108-11eb-81d6-4a67540ec251.png)
+![quickSort](https://user-images.githubusercontent.com/49560745/108143605-6bacd580-710b-11eb-9ea4-b47643c80d61.png)
 
 - 좌측에서는 `pivot`보다 큰 값을 우측에서는 `pivot` 보다 작은 값을 찾는다.
 
@@ -64,11 +65,11 @@ last_modified_at:
 
 ![quickSort](https://user-images.githubusercontent.com/49560745/108142762-c0e7e780-7109-11eb-9417-2dbc2c9f44bb.png)
 
-- `SWAP` 이후에는 `point`를 각각 좌, 우측으로 한 칸씩 이동해준다. 이때, End > Start가 되어 해당 파티션의 `sort`를 멈춰준다.
+- `SWAP` 이후에는 `point`를 각각 좌, 우측으로 한 칸씩 이동해준다. 이때, End > Start가 되어 해당 파티션의 `sorting`이 종료된다.
 
 ![quickSort](https://user-images.githubusercontent.com/49560745/108142810-d5c47b00-7109-11eb-9f79-baee8d90abac.png)
 
-- 이제, 새로운 start, end 값을 설정하고, 파티션에 대해 `sort`를 재귀적으로 반복한다. 이때, 파티션이 더이상 쪼개지지 않을 때까지 위 과정을 반복한다.
+- 이제, 새로운 start, end 값을 설정하고, 파티션에 대해 `sorting`를 재귀적으로 반복한다. 이때, 파티션이 더이상 쪼개지지 않을 때까지 위 과정을 반복한다.
 
 ![quickSort](https://user-images.githubusercontent.com/49560745/108142929-10c6ae80-710a-11eb-8833-88e45821d01f.png)
 
