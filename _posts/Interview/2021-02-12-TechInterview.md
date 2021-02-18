@@ -51,6 +51,8 @@ last_modified_at:
 불필요한 정보들은 숨기고 **공통의 속성이나 기능**을 묶어놓은 것 (EX. 카트라이더 - 기본 카트)
 다시말하면, 객체지향 관점에서 클래스를 정의하는 것
 
+동일한 메소드를 가진 서브 클래스 여러개를 만들기위해서 사용한다.
+
 - 캡슐화
 
 캡슐화의 주요 목적은 중요한 데이터를 **보존, 보호**이다.
@@ -129,6 +131,13 @@ Java Collection 같은 경우 같은 타입의 자료를 관리할 수 있는
 
 [자바 JVM 메모리구조](https://m.blog.naver.com/PostView.nhn?blogId=kywpcm&logNo=30170981872&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
+### super
+
+- 자식 클래스가 부모 클래스로부터 상속받은 멤버들을 참조할 때 사용하는 참조변수이다.
+- 부모 클래스와 자식 클래스의 멤버 이름이 같을 때 `super`를 사용해 접근할 수 있다.
+
+
+
 ## javascript
 
 ### undefined vs null
@@ -171,6 +180,21 @@ value=10
 <br/>
 
 ## Spring
+
+### 구조
+
+![springcontainer](https://user-images.githubusercontent.com/49560745/108300423-a41fe280-71e3-11eb-9a6d-6025138a8103.png)
+
+- `Core` : DI 기능을 제공
+- `Context` : 컨텍스트라는 정보를 제공하는 설정을 관리한다.
+- `DAO` : DB와 관련된 JDBC 코딩 부분을 처리해 주기 위한 JDBC 추상화 레이어를 제공
+- `ORM` : JDO, Hibernate, iBATIS 등 O-R Mapping API를 위한 레이어를 제공
+- `AOP` : 관점지향 프로그래밍을 제공
+- `Web` : 웹 기반의 여러 기능 제공
+
+#### Ref.
+
+[springio](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/overview.html)
 
 ### 의존성 주입(DI)
 
@@ -238,6 +262,10 @@ Void
 
 [java119 - primitive vs reference](https://java119.tistory.com/41)
 
+### Context Parameter
+
+- **Context parameter는 같은 웹 어플리케이션의 서블릿들이 같이 공유할 수 있는 매개변수이다.**
+
 ### MVC1 vs MVC2 vs SPRING MVC
 
 **MVC1**
@@ -259,6 +287,10 @@ Void
 
 ## Database
 
+### JDBC
+
+- 자바에서 DB의 종류에 상관없이 데이터베이스에 쉽게 접근할 수 있도록 하는 API
+
 ### DBCP
 
 - `DataBase Connection Pool`의 약자
@@ -275,6 +307,77 @@ Void
 #### Ref.
 
 [naver D2 - DBCP](https://d2.naver.com/helloworld/5102792)
+
+### statement preparation
+
+- `RDBMS` 실행에 있어 비용이 많이 드는 작업이며, 복잡한 `SQL`일 수록 더욱 높은 비용 소모
+
+```
+문법 오류 검증
+컬럼 참조의 유효성 검증
+최적화 된 접근경로
+execution plan의 식별
+```
+
+
+
+### prepared statement pool
+
+- 자주 사용되는 `statement` 를 사전에 `prepare` 하여 `pool`에 저장해놓는 것
+- `pool`에서 `Prepare`된 statement을 갖고 오는 방법을 Prepared Statement Pooling
+- statement preparation에 소모되는 비용을 최소화 할 수 있음
+
+#### 생성 방법
+
+- `connection pool` 이 있다면 `pool`에서 connection을 얻어 온다.
+- `preparedstatement pool` 생성하기
+
+![image](https://user-images.githubusercontent.com/49560745/108307551-501bfa80-71f1-11eb-8c6d-fda40c5f6bf7.png)
+
+
+
+#### 사용하는 이유
+
+- `RDBMS`가 `statement`를 준비하는 시간을 줄여주기때문에 애플리케이션이 `RDBMS`로부터 데이터를 로딩하는 시간이 향상됨
+- `Statement caching`이 자동으로 수행됨
+- `Statement pooling`과 `Connection pooling`을 함께 사용하면 `Connection pooling`을 단독으로 사용하는 것보다 큰 성능향상을 가져옴
+
+#### connection pool과 preparedstatement pool을 같이 사용했을 때 장점
+
+- 커넥션 풀을 사용하지 않으면 애플리케이션이 `disconnect` 되었을 때 `prepared statement pool`이 사라진다.
+- 하지만, 커넥션 풀을 사용한다면 `prepared statement pool`이 사라지지 않고,`disconnect` 될 때 `connection pool`과 `prepared statement pool`이 함께 return 된다.
+- 이후에 애플리케이션이 `connect` 했을 때 `Statement prepare`를 하지않고, `prepared statement pool`에 있는 `prepared statement`를 재사용할 수 있다.
+
+#### Ref.
+
+[prepared statement pool](https://zzikjh.tistory.com/entry/DBCP-%EC%82%AC%EC%9A%A9%EC%8B%9C-poolPreparedStatements-%EC%86%8D%EC%84%B1%EC%9D%B4-%EC%84%B1%EB%8A%A5%EC%97%90-%EB%AF%B8%EC%B9%98%EB%8A%94-%EC%98%81%ED%96%A5)
+
+### statement
+
+- `SQL` 구문을 실행하는 역할
+- 구문 실행 후 결과를 반환하는 역할
+
+
+
+### perpared statement vs statement
+
+**[참고]**  `SQL` 실행과정
+
+```
+1) 쿼리 문장 분석
+2) 컴파일
+3) 실행
+```
+
+- 둘의 가장 큰 차이점은 `캐싱` 사용 여부이다.
+
+- `statement`는 쿼리를 실행할 때 마다 1) ~ 3)의 과정을 거친다
+- `prepared statement`는 컴파일을 미리 준비해두기 때문에 `statement`보다 성능상 이점이있다.
+- 동일한 쿼리에서는 `prepared statement` 유리
+  - select * from a    => 10만건이상의 데이터 가져오기
+- 조건절이 매번 바뀌는 쿼리는 `statement` 유리
+
+
 
 ### 인덱스에는 왜 Hashtable 보다 B Tree 인가?
 
@@ -318,6 +421,13 @@ Void
 #### Ref.
 
 https://brownbears.tistory.com/181
+
+### Primary key , Foreign key
+
+- `Primary key` : 테이블에서 각 행(row)를 유일하게 구분하는 key
+- `Foreign key` : 하나의 테이블에 있는 열(column)으로는 그 의미를 표현할 수 없는 경우, 다른 테이블의 `Primary key` 열(column)을 반드시 참조해야하는 key
+
+
 
 <br/>
 
