@@ -262,9 +262,49 @@ Void
 
 [java119 - primitive vs reference](https://java119.tistory.com/41)
 
+### 서블릿 & 서블릿 컨테이너
+
+- 자바를 사용하여 웹을 구현하기 위한 기술
+- 클라이언트의 요청을 처리해 결과를 반환해주는 역할
+- **서블릿 컨테이너**는 웹서버와 통신하기 위해 웹 소켓을 생성하고, 특정 포트에 리스팅하고, 스트림을 생성하는 등의 복잡한일들을 할 필요 없게 만들어준다.
+- **서블릿 컨테이너**의 대표적인 예는 `Tomcat`이다. 컨테이너는 요청이 들어올 때마다 자바 스레드를 만든다.
+
+### 스프링 컨테이너
+
+- 스프링 컨테이너는 `Bean`들의 생명주기를 관리한다.
+- `IoC`를 사용해 `Bean`들을 관리한다.
+
+### dispatcher servlet
+
+#### 개념
+
+- `dispatch` : 보내다.
+- 프론트 컨트롤러
+- 클라이언트로부터 요청이오면 `Tomcat`과 같은 서블릿 컨테이너가 요청을 받는다.
+  - 이때, 제일 앞에서 서버로 들어오는 모든 요청을 처리하는 것이 `dispatcher servlet`이다.
+
+### 장점
+
+- 기존에는 `URL` 매핑을 사용하기 위해서 모든 서블릿을 `web.xml`에 등록해줘야했지만 `dispatcher servlet`이 애플리케이션으로 들어오는 모든 요청을 핸들링해주어 작업을 편리하게 처리할 수 있게 되었다. 
+
+### 발생할 수 있는 문제
+
+- `dispatcher servlet`이 모든 요청을 처리하다보면 `image`나 `HTML` 파일을 불러오는 요청마저 전부`Controller`로 넘겨버릴 것이다.
+- 이를 해결하기 위한 방법은 ` <mvc:resources />`를 이용하는 것이다. 
+  - 해당 요청에 컨트롤러를 찾을 수 없는 경우, 2차적으로 설정된 경로에서 요청을 탐색하여 자원을 찾아낸다.
+
 ### Context Parameter
 
-- **Context parameter는 같은 웹 어플리케이션의 서블릿들이 같이 공유할 수 있는 매개변수이다.**
+- **Context parameter**는 같은 웹 어플리케이션의 서블릿들이 같이 공유할 수 있는 매개변수이다.
+- 여러 서블릿에서 공통으로 참조하는 값이 있을 경우 **context parameter**로 정의하면 유지보수하기 좋은 코드를 작성할 수 있다.
+
+### Context
+
+- **Context는 system을 핸들링 하기위해 존재**한다. 즉, 리소스 값 처리, 데이터베이스 및 기본 설정에 대한 액세스 권한 획득 등과 같은 서비스를 제공한다. Context는 현재 application이 동작하는 동안의 모든 환경을 핸들링한다고 생각하면 쉽다.
+
+#### Ref.
+
+[Context](https://www.crocus.co.kr/1696)
 
 ### MVC1 vs MVC2 vs SPRING MVC
 
@@ -282,6 +322,39 @@ Void
 - `back-end`와 `front-end`가 나누어져 분업이 편리하다.
 
 **SPRING MVC**
+
+![image](https://user-images.githubusercontent.com/49560745/100300508-83c3fb80-2fd9-11eb-8142-4d10d3072020.png)
+
+```
+1) 처리요청(URL) - Dispatcher Servlet
+2) HandlerMapping (URL과 매핑되는 컨트롤러 검색)
+3) HandlerMapping (URL과 매핑되는 컨트롤러 반환)
+4) controller (처리요청)
+5) modelAndView 리턴
+6) 실행결과 view에 요청
+7) 실행결과 리턴
+8) 응답생성 출력 요청
+9) JSP 생성 후 사용자에게 전달
+```
+
+```
+Request 
+-> DispatcherServlet 
+-> HandlerMapping 
+-> Controller 
+-> Service 
+-> DAO 
+-> DB 
+-> DAO 
+-> Service 
+-> Controller 
+-> DispatcherServlet 
+-> ViewResolver 
+-> View 
+-> Response
+```
+
+
 
 <br/>
 
