@@ -100,6 +100,11 @@ System.out.println(s1.equals(s3)); // true
 
 ![string pool](https://user-images.githubusercontent.com/49560745/107731916-6da51c00-6d3a-11eb-8189-e6b459e9c0f8.png)
 
+- 리터럴 `""`으로 생성한 `String`은 `Stirng Pool`에 저장된다.
+  - 이미 같은 문자열로 생성된 값이 있다면 같은 값을 참조한다.
+  - 따라서, `==` 키워드로 비교시 같은 문자열이라면 `true`를 반환한다.
+- `new` 연산자를 통해 생성한 `String`은 `Heap` 영역에 저장된다.
+
 #### Ref.
 
 [String vs StringBuilder vs StringBuffer](https://gwang920.github.io/java/stringType/)
@@ -124,6 +129,8 @@ Java Collection 같은 경우 같은 타입의 자료를 관리할 수 있는
 
 ### 메모리 구조
 
+![image](https://user-images.githubusercontent.com/49560745/108475972-ce050200-72d4-11eb-98a6-37b7e71021b9.png)
+
 #### Ref.
 
 [자바 JVM 메모리구조](https://m.blog.naver.com/PostView.nhn?blogId=kywpcm&logNo=30170981872&proxyReferer=https:%2F%2Fwww.google.com%2F)
@@ -132,3 +139,8 @@ Java Collection 같은 경우 같은 타입의 자료를 관리할 수 있는
 
 - 자식 클래스가 부모 클래스로부터 상속받은 멤버들을 참조할 때 사용하는 참조변수이다.
 - 부모 클래스와 자식 클래스의 멤버 이름이 같을 때 `super`를 사용해 접근할 수 있다.
+
+### JVM(Java Virtual Machine)
+
+- `OS`에 구애받지 않고 동작한다.
+- `JVM`은 자바의 바이트 코드를 실행할 수 있게 해주는 주체이며, `OS` 뿐만 아니라 `CPU(32 비트,64 비트)`에도 구애받지 않고 동작한다.
