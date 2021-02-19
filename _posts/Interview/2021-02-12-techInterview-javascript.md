@@ -27,10 +27,16 @@ last_modified_at:
 
 ### scope
 
-- `scope` : 허용범위
-
-- `global-scope` : 전역변수 scope
+- `scope` : 허용범위, 코드에 접근할 수 있는 범위
+- `global-scope` : 전역변수 scope, 최상위 scope
 - `local-scope` : 지역변수 scope
+- 전역 스코프안에 있는 하위 스코프를 지역스코프라고 한다.
+- 하위 스코프는 상위 스코프를 참조할 수 있다.
+- 상위 스코프는 하위 스코프를 참조할 수 없다.
+
+#### Ref.
+
+[스코프란?](https://velog.io/@mgm-dev/%EC%8A%A4%EC%BD%94%ED%94%84%EB%9E%80-%EB%AD%98%EA%B9%8C)
 
 ### hoisting
 
@@ -157,3 +163,43 @@ document.getElementById('size-16').onclick = size16;
 [MDN - Closure](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Closures)
 
 [생활코딩 - Closure](https://opentutorials.org/course/743/6544)
+
+### JS Engine
+
+![jsengine](https://user-images.githubusercontent.com/49560745/108459270-aa808e00-72b9-11eb-9ce1-1278bb7151d7.png)
+
+#### js Engine
+
+- 자바스크립트 엔진은 **Memory Heap** 과 **Call Stack**으로 이루어져있다.
+- **Memory Heap** : 메모리 할당이 일어나는 곳
+- **Call Stack** : 코드가 실행될 때 코드가 쌓이는 곳. 선입후출구조
+- 자바스크립트는 **단일 스레드** 프로그래밍언어이다. 즉, **Call Stack**이 하나이다.
+
+#### Web API
+
+- 브라우저에서 제공하는 **API**
+- DOM, Ajax, Timeout 등이 있다.
+- **Call Stack**에서 실행된 **비동기 함수**는 **Web API**를 호출하고, **Web API**는 콜백함수를 **Callback Queue**에 밀어넣는다.
+
+#### Callback Queue
+
+- 비동기적으로 실행되는 콜백함수가 보관되는 곳이다. 선입선출구조
+
+- **Event Listner**나 **setTimeout** 이후 실행되는 함수 등이 저장된다.
+
+#### Event Loop
+
+- 이벤트루프는 **Call Stack**과 **Callback Queue**의 상태를 점검하고, **Call Stack**이 빈상태가 되었을 때 **Callback Queue**의 첫번째 콜백을 **Call Stack**에 밀어넣는다.
+
+<br/>
+
+자바스크립트는 단일 스레드 프로그래밍언이이지만 **Web API**, **Callback Queue**, **Event Loop**를 활용해 비동기적인 처리를 할 수 있다.
+
+### Call back
+
+- 함수가 실행되고 난 후에 특정한 함수를 실행하는 것
+
+### 실행 컨텍스트(Execution Context)
+
+- 코드들이 실행되기 위한 환경
+
