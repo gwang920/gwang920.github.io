@@ -1,5 +1,5 @@
 ---
-title: [OS] 기술 면접 정리
+title: OS 기술 면접 정리
 toc: true
 categories:	
     - Interview
@@ -8,7 +8,7 @@ tags:
 last_modified_at: 
 ---
 
-# [OS] 기술 면접 정리
+
 
 `Daily Update`
 

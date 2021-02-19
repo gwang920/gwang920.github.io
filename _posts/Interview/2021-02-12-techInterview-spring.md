@@ -1,5 +1,5 @@
 ---
-title: [Spring] 기술 면접 정리
+title: Spring 기술 면접 정리
 toc: true
 categories:	
     - Interview
@@ -8,7 +8,7 @@ tags:
 last_modified_at: 
 ---
 
-# [Spring] 기술 면접 정리
+
 
 `Daily Update`
 
