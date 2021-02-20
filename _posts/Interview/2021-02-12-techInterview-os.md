@@ -45,3 +45,4 @@ Clients => Internet => Reverse Proxy => Servers
 - 익명성 (Forward proxy와 동일)
 - 로드밸런서 기능 : 부하 분산(요청을 나눠줌)
 
+### 프로세스 vs 스레드
