@@ -123,6 +123,28 @@ Void
 
 
 
+```
+로그인 요청 => login.jsp => loginAction.jsp => userDAO => loginAction.jsp
+=> main.jsp	
+```
+
+```
+파일명 : loginAction.jsp
+```
+
+```HTML
+<jsp:useBean id="user" class="user.User" scope="page"/>
+<jsp:setProperty name="user" property="userID"/>
+<jsp:setProperty name="user" property="userPassword"/>
+
+<!--user.java (DTO)에 setProperty로 ID,PS 설정-->
+
+UserDAO userDAO = new UserDAO();
+int result =userDAO.login(user.getUserID(),user.getUserPassword());
+```
+
+
+
 ### 스프링 컨테이너
 
 - 스프링 컨테이너는 `Bean`들의 생명주기를 관리한다.
