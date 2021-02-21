@@ -203,3 +203,7 @@ document.getElementById('size-16').onclick = size16;
 
 - 코드들이 실행되기 위한 환경
 
+### 원시 타입 vs 참조 타입
+
+- `javascript`에서  원시 값이란 **객체**가 아니면서 **메서드**도 가지지 않는 데이터이다.
+- 원시 값은 `string`,`number`,`bigint`,`boolean`,`undefined`,`symbol` 6가지 타입이있다.
