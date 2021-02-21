@@ -109,11 +109,64 @@ Void
 - 클라이언트의 요청을 처리해 결과를 반환해주는 역할
 - **서블릿 컨테이너**는 웹서버와 통신하기 위해 웹 소켓을 생성하고, 특정 포트에 리스팅하고, 스트림을 생성하는 등의 복잡한일들을 할 필요 없게 만들어준다.
 - **서블릿 컨테이너**의 대표적인 예는 `Tomcat`이다. 컨테이너는 요청이 들어올 때마다 자바 스레드를 만든다.
+- **서블릿**은 요청을 받아 처리하고, 다른 페이지로 넘겨주는 역할을 한다.
+
+### 서블릿 vs JSP
+
+| 서블릿                                                   | JSP                                                          |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| 웹 요청을 동적 처리하는 서버사이드 자바 프로그램         | 자바 기반의 서버사이드 스크립트 언어                         |
+| 자바 코드안에 HTML 코드 존재                             | HTML 코드 안에 JAVA 코드 존재                                |
+| 웹 개발을 위한 표준                                      | 서블릿을 보완하고 기술을 확장한 스크립트 방식 표준           |
+| DB와 통신, Business Logic 호출 등 (Controller 성격)      | 요청 결과를 나타내는 HTML 작성시 유리 (View 기능이 서블릿보다 특화 됨) |
+| 개발 생산성 저하, 서블릿 수정시 자바코드를 컴파일 해야함 | 쉬운 배포, JSP 수정시 WAS 가 알아서 처리하기 때문에 재배포 불필요 |
+
+
 
 ### 스프링 컨테이너
 
 - 스프링 컨테이너는 `Bean`들의 생명주기를 관리한다.
 - `IoC`를 사용해 `Bean`들을 관리한다.
+
+### 스프링 빈
+
+- 스프링 `Bean`이란 자바 객체이다.
+- 스프링 컨테이너에서 만들어지는 객체를 스프링 빈이라고 부를 뿐 일반 자바 객체와 다르지 않다.
+- 참고로 **자바 빈**은 스프링 빈과는 다르게 **DTO**, **VO** 등과 유사한 개념이다.
+
+```
+In spring, the objects that form the backbone of 
+your application and that are 
+managed by the Spring IoC container are called beans.
+
+스프링 IoC(Inversion of Control) 컨테이너에 의해서 관리되고 
+애플리케이션의 핵심을 이루는 객체들을 스프링에서는 빈즈(Beans)라고 부른다.
+
+
+
+A bean is an object that is instantiated, assembled, 
+and otherwise managed by a Spring Ioc container.
+
+빈은 스프링 Ioc 컨테이너에 의해서 인스턴스화되어 조립되거나 관리되는 객체를 말합니다.
+
+
+
+Otherwise, a bean is simply one of many objects in your application. 
+
+이같은 점을 제외하고 빈은 수많은 객체들중의 하나일 뿐입니다.
+
+
+
+Beans, and the dependencies among them, are reflected 
+in the configuration metadata used by a container.
+
+빈과 빈 사이의 의존성은 컨테이너가 사용하는 메타데이터 환경설정에 반영됩니다.
+
+```
+
+#### Ref.
+
+[Spring Bean](https://endorphin0710.tistory.com/93)
 
 ### dispatcher servlet
 
@@ -149,13 +202,13 @@ Void
 
 ### MVC1 vs MVC2 vs SPRING MVC
 
-**MVC1**
+**MVC1 (JSP)**
 
 - `html` 코드내에 자바코드가 공존하는 방식
 - 간단한 프로그램을 설계하는데 적합
 - `view`와 `controller`를 한 곳에서 처리하는 것
 
-**MVC2**
+**MVC2 (JSP + Servlet)**
 
 - `view`, `controller`, `model`을 분리해서 처리하는 것
 - 보여지는 화면을 구성하는 `view(JSP)` 페이지, 요청을 처리하는 `model(빈, 클래스)`, 제어하는 `controller(서블릿)`으로 확실하게 나뉜다.
