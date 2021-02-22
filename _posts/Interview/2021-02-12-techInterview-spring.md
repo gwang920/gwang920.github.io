@@ -29,7 +29,7 @@ last_modified_at:
 
 [springio](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/overview.html)
 
-## IoC(Inversion of Control)
+### IoC(Inversion of Control)
 
 - 프로그램의 흐름을 프레임워크가 주도하는 것
 - 객체의 생성부터 생명주기 관리를 컨테이너가 도맡아하는 것
@@ -132,7 +132,7 @@ Void
 파일명 : loginAction.jsp
 ```
 
-```HTML
+```html
 <jsp:useBean id="user" class="user.User" scope="page"/>
 <jsp:setProperty name="user" property="userID"/>
 <jsp:setProperty name="user" property="userPassword"/>
@@ -276,3 +276,96 @@ Request
 
 - 어노테이션은 **메타데이터(Metadata)**이다. 메타데이터는 다른 데이터를 설명하기 위한 데이터이다. 그래서 어노테이션은 코드를 설명하기 위한 데이터라고 정의할 수 있다.
 
+### web.xml
+
+#### ContextLoaderListner
+
+```xml
+ <listener>
+  	<listener-class>
+  	org.springframework.web.context.ContextLoaderListener
+  	</listener-class>
+  </listener>
+```
+
+- 계층별로 나눈 xml 설정파일이 있다고 가정할 때,
+  web.xml에서 모두 load되도록 등록할 때 사용
+
+#### servlet init-param
+
+```xml
+<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+    	</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/config/spring.xml</param-value>
+		</init-param>
+</servlet>
+```
+
+- 서블릿은 클라이언트로부터 최초 요청시 단 한번 초기화되며 생성
+- `init-param`은 서블릿을 초기화할 때 사용한다.
+
+[서블릿 initparam](https://dololak.tistory.com/47)
+
+#### servlet-mapping
+
+```xml
+<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.mc</url-pattern>
+</servlet-mapping>
+```
+
+- `controller`의 `URL` 매핑을 할 때 사용한다.
+
+#### Listner
+
+```xml
+<listener>
+		<listener-class>
+		org.springframework.web.util.Log4jConfigListener
+		</listener-class>
+</listener>
+```
+
+- 리스너는 어떠한 이벤트가 발생하면 호출되어 처리하는 객체
+
+#### context-param
+
+```xml
+<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/config/log4j.properties</param-value>
+</context-param>
+```
+
+-  웹 어플리케이션의 서블릿들이 같이 공유할 수 있는 매개변수
+
+### Web Server vs WAS(Web Aplication Server)
+
+#### Web Server
+
+- 정적인 컨텐츠 제공
+  - `WAS`를 거치지 않고 바로 자원을 제공한다.
+
+- 동적인 컨텐츠 제공을 위한 요청 **전달**
+  - 클라이언트의 요청을 `WAS`에 보내고, `WAS`로 부터 응답을 받아 클라이언트에게 전달한다.
+
+#### WAS
+
+- `DB`조회나 다양한 로직처리를 요구하는 **동적인 컨텐츠**를 제공하기 위한 Application Server
+- **웹 컨테이너**나 **서블릿 컨테이너**로 불린다.
+- **Web server** + **Web Container** 
+- 트랜잭션, 보안, 트래픽관리, DB 커넥션 풀 관리
+
+#### Web Server와 WAS를 같이 사용하는 이유
+
+- 기능을 분리하여 서버 부하 방지
+- 여러 대의 `WAS`연결 가능
+  - `Load Balancing`을 위해 `Web Server`를 사용
+
+[Web server vs WAS](https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html)
