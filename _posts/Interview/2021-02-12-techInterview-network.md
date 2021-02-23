@@ -88,11 +88,11 @@ Clients => Internet => Reverse Proxy => Servers
 1. 브라우저 주소창에 `URL`입력
 2. 해당 `HTTP` 요청은 `DNS` 서버로 전달된다. 이곳에서 `URL`에 대한 `IP`정보를 얻는다.
 3. `IP`정보를 받게되면 해당 `IP`주소로 `HTTP` 요청을 시도한다.(`TCP/IP`기반이라 `PORT`번호도 필요한데 `HTTP`통신은 기본적으로 `80`포트를 사용한다.)
-4. 신뢰성 보장을 위해 3번의 패킷 교환 과정을 거친다.(3 Way Handshake)
+4. 신뢰성 보장을 위해 3번의 패킷 교환 과정을 거친다. (3 Way Handshake)
    - SYN(client) => SYN/ACK(server) => ACK(client)
 5. 클라이언트의 요청을 처리한다.
 6. 서버에서 응답을 제공한다.
-7. 서버와 클라이언트의 연결을 끊기 위해 4번의 패킷 교환 과정을 거친다.(4 Way Handshake)
+7. 서버와 클라이언트의 연결을 끊기 위해 4번의 패킷 교환 과정을 거친다. (4 Way Handshake)
    - FIN(client) => ACK(server) => FIN(server) => ACK(client)
 
 **[참고]**
@@ -105,7 +105,7 @@ Clients => Internet => Reverse Proxy => Servers
 
 - 한번 요청하고, 응답하고 나면 연결을 끊는다.
 - 이전 요청에서 클라이언트가 뭘 했는지 알 수 없다. `Stateless`
-- 요청 시 마다 연결이 필요하기 때문에 많은 자원을 사용하게 된다.
+- 요청 시 마다 연결이 필요하기 때문에 많은 자원을 사용하게 된다. `connectionless`
   - 이를 방지하기 위해 일정시간 동안 연결시간을 유지하는 `keep-alive` 라는 옵션을 사용할 수 있다.
   - `General Header`에 `Connection` 값을 `keep-alive`로 설정하면 사용가능하다.
 
