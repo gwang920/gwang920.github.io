@@ -217,10 +217,13 @@ in the configuration metadata used by a container.
 ### Context
 
 - **Context는 system을 핸들링 하기위해 존재**한다. 즉, 리소스 값 처리, 데이터베이스 및 기본 설정에 대한 액세스 권한 획득 등과 같은 서비스를 제공한다. Context는 현재 application이 동작하는 동안의 모든 환경을 핸들링한다고 생각하면 쉽다.
+- **쉽게 말하자면 어떤 루틴이 실행될 때 변수값들, 이전에 실행된 함수들의 내부상태 등을 말하는 것입니다. 동일한 루틴이 여러번 실행되더라도 컨텍스트에 따라 다른 결과가 나올 수 있는 것이죠.**
 
 #### Ref.
 
 [Context](https://www.crocus.co.kr/1696)
+
+[kldp](https://kldp.org/node/51223)
 
 ### MVC1 vs MVC2 vs SPRING MVC
 
@@ -344,6 +347,15 @@ Request
 ```
 
 -  웹 어플리케이션의 서블릿들이 같이 공유할 수 있는 매개변수
+
+### pom.xml
+
+- 빌드/배포와 관련된 설정을 담고 있는 파일 **MAVEN**에서 메타 정보로 사용하는 파일
+- 자바 라이브러리를 관리하기 위한 저장소
+
+### spring.xml
+
+- 디비 연결 설정, 마이바티스, mapper와 같은 설정들이 저장되어있는 파일
 
 ### Web Server vs WAS(Web Aplication Server)
 

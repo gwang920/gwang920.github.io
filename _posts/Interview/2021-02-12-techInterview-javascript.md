@@ -17,7 +17,7 @@ last_modified_at:
 ### undefined vs null
 
 - `undefined` : 어떠한 값으로도 할당되지 않아 자료형이 정해지지 않은(undefined) 상태
-- `null` : null로 값이 할당된 상태. 즉 null은 자료형이 정해진(defined) 상태
+- `null` : null로 값이 할당된 상태. 즉 null은 자료형이 정해진(defined) 상태, 어떤 값이 의도적으로 비어있음을 표현
 
 ### var vs let vs const
 
