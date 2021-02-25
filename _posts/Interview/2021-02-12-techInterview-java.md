@@ -14,6 +14,16 @@ last_modified_at:
 
 ## JAVA
 
+### SOLID
+
+- SRP(Single Responsibility Principle) : 단일 책임 원칙
+- OCP(Open Closed Principle) : 개방 폐쇄 원칙
+- LSP(Liskov Substitution Principle) : 리스코프 치환 원칙
+- ISP(Interface Segregation Principle) : 인터페이스 분리 원칙
+- DIP(Dependency Inversion Principle) : 의존 역전 원칙
+
+
+
 ### 자바의 장점
 
 - 별도 메모리 관리 필요없이 `Garbage Collector`에서 불필요한 메모리를 관리해준다.
