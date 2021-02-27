@@ -312,6 +312,24 @@ if(map.containsKey(str)==false){
 
 ## String
 
+### 소문자, 대문자
+
+- `String`문자열의 문자 값을 `대 -> 소`로 변경할 때, `toLowerCase()` 메소드를 사용한다.
+
+````java
+String str="ABC";
+str=str.toLowerCase();
+//"abc";
+````
+
+- `String`문자열의 문자 값을 `소 -> 대`로 변경할 때, `toUpperCase()` 메소드를 사용한다.
+
+```java
+String str="abc";
+str=str.toLowerCase();
+//"ABC";
+```
+
 ### String to Array
 
 - `String` 문자열을 `Array`로 만들 때, `스트링명.split()` 메소드를 사용한다.
