@@ -154,11 +154,11 @@ https://brownbears.tistory.com/181
 - `Primary key` : 테이블에서 각 행(row)를 유일하게 구분하는 key
 - `Foreign key` : 하나의 테이블에 있는 열(column)으로는 그 의미를 표현할 수 없는 경우, 다른 테이블의 `Primary key` 열(column)을 반드시 참조해야하는 key
 
-### NoSQL
+### NoSQL(ex, MongoDB)
 
 #### 개념
 
-- Not Only SQL의 약자
+- `Not Only SQL` 의 약자
 - 분산 환경에서 대용량의 데이터를 빠르게 처리하기 위해 개발
   - 빅데이터를 `RDBMS`의 스키마에 맞춰 변경해 넣으면 매우 긴 시간의 **down time**이 발생
   - 관계모델, 트랜잭션 연산, 일관성, 속성을 유지하면서 분산환경에서 `RDBMS`를 조작하기 힘듦
@@ -171,3 +171,4 @@ https://brownbears.tistory.com/181
 - 대용량 데이터 저장
 - 분산형 구조를 통해 데이터의 백업본을 만들어 데이터 유실이나 서비스 중지에 대비
 - 읽기보다 쓰기 작업이 빠름
+
