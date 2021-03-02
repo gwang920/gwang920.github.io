@@ -17,7 +17,12 @@ last_modified_at:
 ### SOLID
 
 - SRP(Single Responsibility Principle) : 단일 책임 원칙
+  - 소프트웨어의 설계 부품(클래스, 함수 등)은 단 하나의 책임(기능)만 가져야한다.
+  - 응집도는 높고 결합도는 낮게
+  - 만약 한 클래스의 기능이 많아지면, 내부 함수끼리 강한 결합을 갖는다. 
+    - 이는 유지보수에 많은 비용이 발생해 책임을 분리하는 것이 좋다.
 - OCP(Open Closed Principle) : 개방 폐쇄 원칙
+  - 기존의 코드를 변경하지 않고(Closed) 기능을 수정하거나 추가할 수 있도록(Open) 설계해야한다.
 - LSP(Liskov Substitution Principle) : 리스코프 치환 원칙
 - ISP(Interface Segregation Principle) : 인터페이스 분리 원칙
 - DIP(Dependency Inversion Principle) : 의존 역전 원칙
