@@ -14,6 +14,14 @@ last_modified_at:
 
 ## Spring
 
+### 싱글톤
+
+클라이언트의 요청이 들어올때마다 Thread가 생성되고 Controller에 요청을 할텐데 어떻게 1개의 Controller만으로 요청들을 다 처리할 수 있는지?
+
+- 서버가 실행되고 Controller는 Spring Beans에 담겨있어 Client Thread의 요청이 들어오면 Controller객체를 새로 생성하지 않고 Spring Beans Container에서 꺼내쓰는 구조
+
+[슬기로운개발생활 개발자 면접후기](https://wise-develop.tistory.com/7) 
+
 ### 구조
 
 ![springcontainer](https://user-images.githubusercontent.com/49560745/108300423-a41fe280-71e3-11eb-9a6d-6025138a8103.png)

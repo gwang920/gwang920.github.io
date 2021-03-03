@@ -14,6 +14,15 @@ last_modified_at:
 
 ## JAVA
 
+### JDK 1.8
+
+- java1.8 은 java 8이라고 봐도된다.
+
+### JAVA 8에 새로 추가된 것
+
+- [Lamda 표현식](https://khj93.tistory.com/entry/JAVA-%EB%9E%8C%EB%8B%A4%EC%8B%9DRambda%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%82%AC%EC%9A%A9%EB%B2%95)
+- [Stream API](https://jeong-pro.tistory.com/165)
+
 ### SOLID 5원칙
 
 - SRP(Single Responsibility Principle) : 단일 책임 원칙
