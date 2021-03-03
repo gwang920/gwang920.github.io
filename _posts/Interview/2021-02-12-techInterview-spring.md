@@ -190,6 +190,16 @@ in the configuration metadata used by a container.
 
 [Spring Bean](https://endorphin0710.tistory.com/93)
 
+### 스프링빈은 쓰레드 safe 하지 않다.
+
+- 스프링 빈(bean)은 쓰레드 세이프 하지 않다.
+
+- 스프링 빈(bean) 클래스에 인스턴스 변수 멤버가 있지 않은지 확인해보자. 만약 존재한다면 읽기 전용인 경우만 허용한다. 값이 변하게 되는 변수인 경우는 지역 변수로 넣어버리자.
+
+#### Ref.
+
+[스프링 빈은 쓰레드 세이프 하지 않다!](https://siyoon210.tistory.com/140?category=839542)
+
 ### dispatcher servlet
 
 #### 개념
